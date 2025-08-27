@@ -1,0 +1,260 @@
+\chapter{Interfaz gráfica}
+\label{ch:ui}
+
+\section{Análisis}
+
+En esta sección se comenzará a trabajar en la aplicación, realizando en primer lugar un breve análisis para concretar sus requisitos.
+
+En el caso de la interfaz gráfica, el ámbito de uso difiere un poco del concretado para el firmware en la \autoref{sec:fw_analisis}. Esta se pretende usar desde Valeo para incluir en el dispositivo las ranuras que cada fabricante necesite antes de proporcionarles el PWM Box. Por lo tanto, se deduce que su uso va a ser en un entorno algo más administrativo que en el caso anterior.
+
+Si bien se anticipa, por lo tanto, que el usuario tenga un mayor nivel de entendimiento a la hora de manejar sistemas informáticos, sigue sin esperarse ningún tipo de conocimiento técnico. Solamente se asumirá algo de destreza en el uso de programas de ofimática y similares.
+
+Teniendo esto en cuenta, se determinarán los requisitos de la aplicación.
+
+\subsubsection{Comunicación con el dispositivo}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|m{2.5cm}|m{9.27cm}|}
+        \hline
+        \textbf{ID} & RF-1.1 \\
+        \hline
+        \textbf{Nombre} & Conectar con el dispositivo \\
+        \hline
+        \textbf{Descripción} & El sistema debe ser capaz de encontrar el puerto del dispositivo en el equipo y conectarse a él de forma automática, tanto desde Windows como desde Linux. \\
+        \hline
+        \textbf{Prioridad} & Alta \\
+        \hline
+    \end{tabular}
+    \caption{RF-1.1. Conectar con el dispositivo.}
+\end{table}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|m{2.5cm}|m{9.27cm}|}
+        \hline
+        \textbf{ID} & RF-1.2 \\
+        \hline
+        \textbf{Nombre} & Obtener la información básica del dispositivo \\
+        \hline
+        \textbf{Descripción} & El sistema debe poder obtener la información básica del dispositivo. Esto incluye su número de serie, su versión de \textit{hardware} y su versión de \textit{software}. \\
+        \hline
+        \textbf{Prioridad} & Alta \\
+        \hline
+    \end{tabular}
+    \caption{RF-1.2. Obtener la información básica del dispositivo.}
+\end{table}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|m{2.5cm}|m{9.27cm}|}
+        \hline
+        \textbf{ID} & RF-1.3 \\
+        \hline
+        \textbf{Nombre} & Obtener la configuración general del dispositivo \\
+        \hline
+        \textbf{Descripción} & El sistema debe tener la capacidad de obtener la configuración general del dispositivo, que consiste de su contraseña y la ranura por defecto establecida. \\
+        \hline
+        \textbf{Prioridad} & Alta \\
+        \hline
+    \end{tabular}
+    \caption{RF-1.3. Obtener la configuración general del dispositivo.}
+\end{table}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|m{2.5cm}|m{9.27cm}|}
+        \hline
+        \textbf{ID} & RF-1.4 \\
+        \hline
+        \textbf{Nombre} & Obtener las ranuras guardadas en el dispositivo \\
+        \hline
+        \textbf{Descripción} & El sistema debe comunicarse con el dispositivo para obtener las ranuras que estén guardadas en la memoria del mismo, incluyendo la información relativa a las señales PWM que las componen. \\
+        \hline
+        \textbf{Prioridad} & Alta \\
+        \hline
+    \end{tabular}
+    \caption{RF-1.4. Obtener las ranuras guardadas en el dispositivo.}
+\end{table}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|m{2.5cm}|m{9.27cm}|}
+        \hline
+        \textbf{ID} & RF-1.5 \\
+        \hline
+        \textbf{Nombre} & Enviar configuración general al dispositivo \\
+        \hline
+        \textbf{Descripción} & El sistema debe ser capaz de enviar de vuelta al dispositivo su configuración básica. \\
+        \hline
+        \textbf{Prioridad} & Alta \\
+        \hline
+    \end{tabular}
+    \caption{RF-1.5. Enviar configuración general al dispositivo.}
+\end{table}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|m{2.5cm}|m{9.27cm}|}
+        \hline
+        \textbf{ID} & RF-1.6 \\
+        \hline
+        \textbf{Nombre} & Enviar ranuras al dispositivo \\
+        \hline
+        \textbf{Descripción} & El sistema debe poder enviar ranuras configuradas al dispositivo. \\
+        \hline
+        \textbf{Prioridad} & Alta \\
+        \hline
+    \end{tabular}
+    \caption{RF-1.6. Enviar ranuras al dispositivo.}
+\end{table}
+
+\subsubsection{Gestión del dispositivo}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|m{2.5cm}|m{9.27cm}|}
+        \hline
+        \textbf{ID} & RF-2.1 \\
+        \hline
+        \textbf{Nombre} & Mostrar la información básica del dispositivo \\
+        \hline
+        \textbf{Descripción} & El sistema debe permitir al usuario consultar la información básica del dispositivo. \\
+        \hline
+        \textbf{Prioridad} & Alta \\
+        \hline
+    \end{tabular}
+    \caption{RF-2.1. Mostrar la información básica del dispositivo.}
+\end{table}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|m{2.5cm}|m{9.27cm}|}
+        \hline
+        \textbf{ID} & RF-2.2 \\
+        \hline
+        \textbf{Nombre} & Mostrar la configuración general del dispositivo \\
+        \hline
+        \textbf{Descripción} & El sistema debe al usuario visualizar la configuración general del dispositivo. \\
+        \hline
+        \textbf{Prioridad} & Alta \\
+        \hline
+    \end{tabular}
+    \caption{RF-2.2. Mostrar la configuración general del dispositivo.}
+\end{table}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|m{2.5cm}|m{9.27cm}|}
+        \hline
+        \textbf{ID} & RF-2.3 \\
+        \hline
+        \textbf{Nombre} & Modificar la configuración general del dispositivo \\
+        \hline
+        \textbf{Descripción} & El sistema debe permitir al usuario establecer una nueva contraseña y definir cuál será la ranura cargada por defecto. \\
+        \hline
+        \textbf{Prioridad} & Alta \\
+        \hline
+    \end{tabular}
+    \caption{RF-2.3. Mostrar la configuración general del dispositivo.}
+\end{table}
+
+\subsubsection{Gestión de ranuras}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|m{2.5cm}|m{9.27cm}|}
+        \hline
+        \textbf{ID} & RF-3.1 \\
+        \hline
+        \textbf{Nombre} & Crear ranuras nuevas \\
+        \hline
+        \textbf{Descripción} & El sistema debe permitir al usuario crear ranuras nuevas. \\
+        \hline
+        \textbf{Prioridad} & Alta \\
+        \hline
+    \end{tabular}
+    \caption{RF-3.1. Crear ranuras nuevas.}
+\end{table}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|m{2.5cm}|m{9.27cm}|}
+        \hline
+        \textbf{ID} & RF-3.2 \\
+        \hline
+        \textbf{Nombre} & Exportar ranuras al equipo \\
+        \hline
+        \textbf{Descripción} & El sistema debe permitir exportar las ranuras cargadas a la memoria del equipo en un formato adecuado. \\
+        \hline
+        \textbf{Prioridad} & Alta \\
+        \hline
+    \end{tabular}
+    \caption{RF-3.2. Exportar ranuras al equipo.}
+\end{table}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|m{2.5cm}|m{9.27cm}|}
+        \hline
+        \textbf{ID} & RF-3.3 \\
+        \hline
+        \textbf{Nombre} & Importar ranuras del equipo \\
+        \hline
+        \textbf{Descripción} & El sistema debe permitir al usuario importar las ranuras almacenadas con un determinado formato en la memoria del equipo. \\
+        \hline
+        \textbf{Prioridad} & Alta \\
+        \hline
+    \end{tabular}
+    \caption{RF-3.3. Importar ranuras del equipo.}
+\end{table}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|m{2.5cm}|m{9.27cm}|}
+        \hline
+        \textbf{ID} & RF-3.4 \\
+        \hline
+        \textbf{Nombre} & Visualizar la configuración de las ranuras \\
+        \hline
+        \textbf{Descripción} & El sistema permitir al usuario consultar los parámetros de las señales PWM que componen las ranuras cargadas. \\
+        \hline
+        \textbf{Prioridad} & Alta \\
+        \hline
+    \end{tabular}
+    \caption{RF-3.4. Visualizar la configuración de las ranuras.}
+\end{table}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|m{2.5cm}|m{9.27cm}|}
+        \hline
+        \textbf{ID} & RF-3.5 \\
+        \hline
+        \textbf{Nombre} & Modificar los parámetros de las ranuras cargadas \\
+        \hline
+        \textbf{Descripción} & El sistema debe permitir la creación de ranuras nuevas desde la propia aplicación. \\
+        \hline
+        \textbf{Prioridad} & Alta \\
+        \hline
+    \end{tabular}
+    \caption{RF-3.5. Obtener las ranuras guardadas en el dispositivo.}
+\end{table}
+
+\section{Diseño}
+
+La fase de diseño de la interfaz se comienza con un repaso de los requisitos. Teniendo en cuenta que su objetivo principal es ser usada en la industria automobilística, desde el comienzo del diseño se planteó un producto simple, con la mayor cantidad de información posible a simple vista.
+
+
+
+Esta idea inicial fue variando ligeramente conforme fuimos concretando algunas de las características a implementar, pero siempre se mantuvo fiel a su diseño original.
+
+
+
+El resultado final
+
+\section{Desarrollo}
+
+
+
+\section{Pruebas}

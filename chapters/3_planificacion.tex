@@ -1,0 +1,34 @@
+\section{Planificación temporal}
+
+Se dispone de un tiempo limitado para la realización de este proyecto. Planificar correctamente en qué invertirlo antes de comenzar a trabajar es muy importante, ya que puede prevenir un malgasto innecesario del mismo en tareas que no aporten suficiente al avance del desarrollo, así como proporcionar guías de actuación ante cualquier imprevisto que pueda surgir durante el proceso.
+
+% TODO: Añadir fuente para los créditos
+El Trabajo de Fin de Grado proporciona al estudiante 12 créditos ECTS en el Grado. Según [...], un crédito ECTS equivale a entre 25 y 30 horas de trabajo, por lo que podemos estimar que se espera en el TFG una inversión de unas 300 horas como mínimo. El segundo cuatrimestre del curso académico 24/25 tiene una duración de 15 semanas, lo cual resultaría en unas 20 horas de trabajo por semana, o unas 4 horas al día.
+
+Teniendo en cuenta los requisitos del proyecto, junto a este análisis realizado, se llega a la conclusión de que el modelo más compatible es un híbrido entre el modelo en cascada y la metodología ágil, siguiendo un desarrollo basado en funcionalidades. Se llevaría a cabo de la siguiente forma:
+
+\begin{itemize}
+    \item En primer lugar, se planificará el trabajo como un proceso lineal, lo cual encaja con las limitaciones temporales, y permite dividir el proceso de desarrollo en dos grandes fases: una para el dispositivo, y otra para la interfaz, para no desaprovechar el tiempo desarrollando el \textit{front-end} sin completar primero las características del \textit{back-end}.
+    % https://www.ptc.com/en/blogs/alm/when-why-how-to-use-the-agile-waterfall-hybrid-model
+    \item Después, se dividirá cada fase en distintas funcionalidades clave, que se irán implementando y probando una a una.
+\end{itemize}
+
+De esta forma, el avance en el proyecto es continuo, y se aprovechan las características ventajosas de ambos métodos. Por el lado del modelo en cascada, se evita invertir demasiado tiempo en la planificación de los distintos \textit{sprints}, de acuerdo al limitado tiempo disponible. Esto no resulta una desventaja, dado que los requisitos del proyecto están bien definidos desde el principio. En lo que a la metodología ágil respecta, se aprovecha la frecuente iteración, que asegura la calidad del producto final.
+
+Representando las distintas fases del modelo en cascada, obtendríamos una planificación parecida a la siguiente:
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=\textwidth]{gantt.png}
+	\caption{Diagrama de Gantt que muestra la organización de las distintas fases del proyecto a lo largo de las semanas.}
+\end{figure}
+
+\begin{itemize}
+    \item La fase de color azul representa un breve análisis inicial de los requisitos, para resolver las dudas que puedan surgir acerca de los objetivos del trabajo.
+    \item Las verdes corresponden al tiempo de diseño. En el caso del firmware conviene ser algo más generoso, teniendo en cuenta el tiempo de adaptación inicial al proyecto.
+    \item Las secciones rojas son las de desarrollo.
+    \item Las fases de pruebas vienen señaladas en color naranja, siendo la segunda un poco más extensa para poder hacer un repaso final.
+    \item En morado está marcada la fase de documentación, que incluye tanto la del código como la generación de esta memoria.
+\end{itemize}
+
+Las tareas a realizar en cada fase serán detelladas más a fondo en sus capítulos correspondientes.

@@ -1,0 +1,88 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64; rv:141.0) Gecko/20100101 Firefox/141.0" version="28.1.1">
+  <diagram name="Page-1" id="WYawWSnY1jUTtEUH2dBK">
+    <mxGraphModel dx="2020" dy="705" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="jXBDOfx_eb3t9IomCU-R-1" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="460" y="380" width="260" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="jXBDOfx_eb3t9IomCU-R-2" value="&lt;font face=&quot;Inter&quot;&gt;IO&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="460" y="360" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="jXBDOfx_eb3t9IomCU-R-3" value="&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Inter&quot; face=&quot;Inter&quot;&gt;rotary_control&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="400" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jXBDOfx_eb3t9IomCU-R-4" value="&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Inter&quot; face=&quot;Inter&quot;&gt;serial_control&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="400" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jXBDOfx_eb3t9IomCU-R-5" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="460" y="220" width="260" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="jXBDOfx_eb3t9IomCU-R-6" value="&lt;font face=&quot;Inter&quot;&gt;common&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="460" y="200" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="jXBDOfx_eb3t9IomCU-R-7" value="&lt;font face=&quot;Inter&quot;&gt;array&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="290" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jXBDOfx_eb3t9IomCU-R-8" value="&lt;font face=&quot;Inter&quot;&gt;queue&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="290" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jXBDOfx_eb3t9IomCU-R-9" value="&lt;font face=&quot;Inter&quot;&gt;util&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="240" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jXBDOfx_eb3t9IomCU-R-10" value="&lt;font face=&quot;Inter&quot;&gt;config&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="240" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jXBDOfx_eb3t9IomCU-R-11" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="160" y="220" width="260" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="jXBDOfx_eb3t9IomCU-R-12" value="&lt;font face=&quot;Inter&quot;&gt;sys&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="160" y="200" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="jXBDOfx_eb3t9IomCU-R-13" value="&lt;font face=&quot;Inter&quot;&gt;eeprom_control&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="290" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jXBDOfx_eb3t9IomCU-R-15" value="&lt;font face=&quot;Inter&quot;&gt;event_control&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="240" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jXBDOfx_eb3t9IomCU-R-16" value="&lt;font face=&quot;Inter&quot;&gt;lcd&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="240" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jXBDOfx_eb3t9IomCU-R-17" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="310" y="500" width="260" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="jXBDOfx_eb3t9IomCU-R-18" value="&lt;font face=&quot;Inter&quot;&gt;menu&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="310" y="480" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="jXBDOfx_eb3t9IomCU-R-19" value="&lt;font face=&quot;Inter&quot;&gt;pwm_menu&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="570" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jXBDOfx_eb3t9IomCU-R-20" value="&lt;font face=&quot;Inter&quot;&gt;pass_menu&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="520" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jXBDOfx_eb3t9IomCU-R-21" value="&lt;font face=&quot;Inter&quot;&gt;list_menu&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="520" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jXBDOfx_eb3t9IomCU-R-22" value="&lt;font face=&quot;Inter&quot;&gt;slow_menu&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="570" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jXBDOfx_eb3t9IomCU-R-23" value="&lt;font face=&quot;Inter&quot;&gt;sys_menu&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="620" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jXBDOfx_eb3t9IomCU-R-25" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="160" y="380" width="260" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="jXBDOfx_eb3t9IomCU-R-26" value="&lt;font face=&quot;Inter&quot;&gt;pwm&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="160" y="360" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="jXBDOfx_eb3t9IomCU-R-28" value="&lt;font face=&quot;Inter&quot;&gt;virtual_pwm&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="400" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="jXBDOfx_eb3t9IomCU-R-29" value="&lt;font face=&quot;Inter&quot;&gt;pwm_gen&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="400" width="100" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
