@@ -8,8 +8,6 @@
     \graphicspath{{resources/}}
 \usepackage{pdflscape}
 
-\usepackage{amsmath}
-
 \usepackage{listings}
 \usepackage{dcolumn}
     \newcolumntype{.}{D{.}{\esperiod}{-1}}
@@ -26,6 +24,10 @@
 \usepackage{afterpage}
 \usepackage{longtable}
     \usepackage{array}
+% \usepackage{float}  % Placeins alternative
+%     \restylefloat{table}
+\usepackage[section]{placeins}
+\usepackage{amsmath}
 \usepackage{hyperref}
     \hypersetup{
         pdfauthor = {Jose Manuel García Cazorla (jmgarcaz@correo.ugr.es)},

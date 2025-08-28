@@ -5,45 +5,45 @@ The style file: bababbrv-fl.bst
 Database file #1: bibliografia.bib
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Warning--empty language in k&r
-You've used 2 entries,
+You've used 3 entries,
             2793 wiz_defined-function locations,
-            648 strings with 6026 characters,
-and the built_in function-call counts, 743 in all, are:
-= -- 66
-> -- 15
+            655 strings with 6280 characters,
+and the built_in function-call counts, 932 in all, are:
+= -- 88
+> -- 16
 < -- 2
-+ -- 7
++ -- 8
 - -- 4
-* -- 66
-:= -- 107
-add.period$ -- 5
-call.type$ -- 2
-change.case$ -- 8
+* -- 77
+:= -- 133
+add.period$ -- 7
+call.type$ -- 3
+change.case$ -- 11
 chr.to.int$ -- 0
-cite$ -- 3
-duplicate$ -- 42
-empty$ -- 76
+cite$ -- 4
+duplicate$ -- 52
+empty$ -- 100
 format.name$ -- 8
-if$ -- 162
+if$ -- 209
 int.to.chr$ -- 0
-int.to.str$ -- 2
+int.to.str$ -- 3
 missing$ -- 3
-newline$ -- 24
+newline$ -- 28
 num.names$ -- 5
-pop$ -- 14
+pop$ -- 17
 preamble$ -- 1
-purify$ -- 6
+purify$ -- 9
 quote$ -- 0
-skip$ -- 21
+skip$ -- 28
 stack$ -- 0
-substring$ -- 23
-swap$ -- 16
+substring$ -- 29
+swap$ -- 17
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 4
+type$ -- 8
 warning$ -- 1
 while$ -- 6
-width$ -- 3
-write$ -- 39
+width$ -- 4
+write$ -- 49
 (There was 1 warning)

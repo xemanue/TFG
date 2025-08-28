@@ -17,6 +17,10 @@
 \btxnamefont {B.~\btxlastnamefont {{Dennis M. Ritchie}}}\btxauthorcolon\ \btxtitlefont {The C Programming Language}.
 \newblock Prentice-Hall software series. \btxpublisherfont {Prentice Hall}, \btxeditionnumshort {2nd}{.}, 1988\ifbtxprintISBN {, \mbox{\btxISBN~\btxISBNfont {9789688802052}}}.
 
+\bibitem {atmega2560}
+Microchip\btxauthorcolon\ \btxtitlefont {ATmega640/V-1280/V-1281/V-2560/V2561/V [DATASHEET]}, 2020.
+\newblock {\latintext \btxurlfont{https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/ATmega640-1280-1281-2560-2561-Datasheet-DS40002211A.pdf}}, Rev. DS40002211A-05/2020.
+
 \bibitem {chapman}
 \btxnamefont {I.\btxfnamespaceshort J. \btxlastnamefont {{Sang H. Son}}}\ (\btxeditorshort {.})\btxauthorcolon\ \btxtitlefont {Handbook of Real-Time and Embedded Systems}, \btxchaptershort {.}\ Safe and Structured Used of Interrupts in Real-Time and Embedded Software, \btxpagesshort {.}\ 6--8.
 \newblock \btxpublisherfont {Chapman \& Hall}, \btxeditionnumshort {1st}{.}, 2007\ifbtxprintISBN {, \mbox{\btxISBN~\btxISBNfont {9781584886785}}}.

@@ -4,17 +4,154 @@
 \section{Análisis}
 \label{sec:fw_analisis}
 
-El primer paso para comenzar a trabajar en el firmware del dispositivo es realizar un análisis en el que se concreten los requisitos del sistema.
+El primer paso para comenzar a trabajar en el firmware del dispositivo es realizar un análisis en el que se concreten los requisitos de las funcionalidade a incorporar al sistema.
 
 Como se comentó en la sección \ref{sec:motivacion}, este proyecto es producto de las necesidades de Valeo, una empresa distribuidora de partes de vehículos. Junto a estas, pretenden también proporcionar a sus fabricantes herramientas para probar su correcto funcionamiento. Una de estas herramientas es el PWM Box.
 
 En base a esto, se puede determinar que nuestro producto será usado principalmente en un entorno similar a una fábrica de coches o un taller mecánico. El perfil de su usuario principal será, por lo tanto, el de alguien que no necesariamente tenga conocimientos tecnológicos. Si se espera cierta familiaridad con dispositivos del entorno industrial, con controles similares al nuestro y una interfaz del mismo estilo.
 
-Teniendo en cuenta las necesidades de la empresa y el perfil de este usuario, podemos definir los siguientes requisitos:
+Teniendo en cuenta las necesidades de la empresa y el perfil de este usuario, podemos definir los siguientes requisitos adicionales:
 
+\clearpage
 
+\subsubsection{Gestión de perfiles}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|m{2.5cm}|m{9.27cm}|}
+        \hline
+        \textbf{ID} & RF-1 \\
+        \hline
+        \textbf{Nombre} & Guardar perfiles \\
+        \hline
+        \textbf{Descripción} & El sistema debe permitir al usuario guardar la configuración activa en forma de perfil, que debe mantenerse en la memoria tras reiniciar el dispositivo. Esta operación debe estar protegida con contraseña, de forma que solo los usuarios autorizados puedan realizarla. \\
+        \hline
+        \textbf{Prioridad} & Alta \\
+        \hline
+    \end{tabular}
+    \caption{RF-1. Guardar perfiles.}
+\end{table}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|m{2.5cm}|m{9.27cm}|}
+        \hline
+        \textbf{ID} & RF-2 \\
+        \hline
+        \textbf{Nombre} & Cargar perfiles \\
+        \hline
+        \textbf{Descripción} & El sistema debe permitir al usuario cargar los perfiles almacenados en la memoria, estableciéndolos como activos. Esta operación debe estar protegida con contraseña, de forma que solo los usuarios autorizados puedan realizarla. \\
+        \hline
+        \textbf{Prioridad} & Alta \\
+        \hline
+    \end{tabular}
+    \caption{RF-2. Cargar perfiles.}
+\end{table}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|m{2.5cm}|m{9.27cm}|}
+        \hline
+        \textbf{ID} & RF-3 \\
+        \hline
+        \textbf{Nombre} & Eliminar perfiles \\
+        \hline
+        \textbf{Descripción} & El sistema debe permitir al usuario eliminar perfiles que estén actualmente almacenados en la memoria. Esta operación debe estar protegida con contraseña, de forma que solo los usuarios autorizados puedan realizarla. \\
+        \hline
+        \textbf{Prioridad} & Alta \\
+        \hline
+    \end{tabular}
+    \caption{RF-3. Eliminar perfiles.}
+\end{table}
+
+\clearpage
+
+\subsubsection{Gestión de la configuración del dispositivo}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|m{2.5cm}|m{9.27cm}|}
+        \hline
+        \textbf{ID} & RF-4 \\
+        \hline
+        \textbf{Nombre} & Guardar la contraseña \\
+        \hline
+        \textbf{Descripción} & El sistema debe almacenar la contraseña establecida en la memoria, de forma que esta se mantenga entre reinicios. \\
+        \hline
+        \textbf{Prioridad} & Alta \\
+        \hline
+    \end{tabular}
+    \caption{RF-4. Guardar la contraseña.}
+\end{table}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|m{2.5cm}|m{9.27cm}|}
+        \hline
+        \textbf{ID} & RF-5 \\
+        \hline
+        \textbf{Nombre} & Guardar el brillo de la pantalla \\
+        \hline
+        \textbf{Descripción} & Para la comodidad del usuario, el sistema debe almacenar la configuración de brillo del LCD en la memoria, de forma que esta se mantenga entre reinicios. \\
+        \hline
+        \textbf{Prioridad} & Media \\
+        \hline
+    \end{tabular}
+    \caption{RF-5. Guardar el brillo de la pantalla.}
+\end{table}
+
+\subsubsection{Funcionalidad de señales lentas}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|m{2.5cm}|m{9.27cm}|}
+        \hline
+        \textbf{ID} & RF-6 \\
+        \hline
+        \textbf{Nombre} & Mostrar secuencias disponibles \\
+        \hline
+        \textbf{Descripción} & El sistema debe permitir al usuario consultar las secuencias lentas disponibles para ejecutar. Este menú debe ser independiente al resto del sistema. \\
+        \hline
+        \textbf{Prioridad} & Alta \\
+        \hline
+    \end{tabular}
+    \caption{RF-6. Mostrar secuencias disponibles.}
+\end{table}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|m{2.5cm}|m{9.27cm}|}
+        \hline
+        \textbf{ID} & RF-7 \\
+        \hline
+        \textbf{Nombre} & Ejecutar secuencias lentas \\
+        \hline
+        \textbf{Descripción} & El sistema debe permitir al usuario ejecutar las distintas secuencias lentas proporcionadas. \\
+        \hline
+        \textbf{Prioridad} & Alta \\
+        \hline
+    \end{tabular}
+    \caption{RF-7. Ejecutar secuencias lentas.}
+\end{table}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|m{2.5cm}|m{9.27cm}|}
+        \hline
+        \textbf{ID} & RF-8 \\
+        \hline
+        \textbf{Nombre} & Parar la ejecución de secuencias lentas \\
+        \hline
+        \textbf{Descripción} & El sistema debe permitir al usuario parar la ejecución de la secuencia activa en cualquier momento. \\
+        \hline
+        \textbf{Prioridad} & Alta \\
+        \hline
+    \end{tabular}
+    \caption{RF-8. Parar la ejecución de secuencias lentas.}
+\end{table}
 
 \section{Diseño}
+\label{sec:fw_diseño}
 
 Al tratarse de un desarrollo en proceso, el diseño de la arquitectura general del sistema ya estaba realizado. En este aspecto, los cambios a realizar son los derivados de la redistribución del código de algunas partes, que como se determinó en la sección \ref{sec:inginv}, dificultaba la incorporación de nuevas características.
 
@@ -76,7 +213,7 @@ En primer lugar se definirán las siguientes unidades:
     \item\textbf{Slot:} Llamado así por ser la unidad en la que se compartimentalizará la memoria (ranuras), representa una forma de agrupar señales PWM. Permitirá al usuario definir distintos modelos de coches de forma que cada PWM esté destinado a probar un grupo distinto de luces de faros. Consistirá de 8 señales PWM y de un nombre identificativo. Se añadirá, además, una variable que indicará si la ranura está ocupada o no. Esto permitirá evitar borrados reales de memoria, prolongando su vida útil y disminuyendo el coste en cuanto a rendimiento de la escritura.
 \end{itemize}
 
-Otros parámetros que se necesitarán guardar son:
+Otros parámetros que se necesitarán guardar, teniendo en cuenta los requisitos establecidos son:
 
 \begin{itemize}
     \item\textbf{Valor de inicialización:} Servirá para determinar si la memoria contiene o no datos, ya que en caso de que no los contenga, necesitará ser inicializada con algunos valores por defecto.
@@ -85,13 +222,12 @@ Otros parámetros que se necesitarán guardar son:
     \item\textbf{Versión del software}.
     \item\textbf{Brillo de la pantalla:} Permitirá mantener el brillo establecido entre ejecuciones.
     \item\textbf{Ranura por defecto:} Indica la ranura de memoria que se cargará automáticamente al iniciar el PWM Box.
+    \item\textbf{Contraseña:} Debido al entorno en el que se plantea usar el dispositivo, descrito en la sección \ref{sec:fw_analisis}, no se estima necesario encriptar la contraseña de ninguna forma.
 \end{itemize}
-
-Según los requisitos establecidos 
 
 Dada la capacidad del usuario de añadir, borrar y reemplazar ranuras de memoria según desee, se prevee la necesidad de algún mecanismo adicional para determinar qué ranuras mostrar en el menú principal del dispositivo. Con este fin, se incluirá también un vector auxiliar, que contendrá el índice de las ranuras de la memoria en el orden en el que se les muestra al usuario. Actúa, por así decirlo, como un traductor entre el índice de las ranuras visibles al usuario y el índice de las mismas internamente. Esto puede entenderse más fácilmente con una representación, que se incluye en la \autoref{fig:eeprom_operations}
 
-\begin{figure}[h]
+\begin{figure}[h!]
     \centering
     \includegraphics[width=0.8\textwidth]{eeprom_operations.png}
     \caption{Representación del funcionamiento del vector auxiliar al realizar distintas operaciones sobre la EEPROM.}
@@ -100,18 +236,16 @@ Dada la capacidad del usuario de añadir, borrar y reemplazar ranuras de memoria
 
 \subsection{General}
 
-La organización de los archivos dentro del proyecto también se considera un aspecto importante a tener en cuenta para facilitar el trabajo. Añadir los archivos comentados en la subsección anterior a los ya existentes en el proyecto no resultaría beneficioso en este aspecto.
+La organización general de los archivos dentro del proyecto también se considera un aspecto importante a tener en cuenta para facilitar su manejo. Tras los cambios plantedos, algunos de los cuales incluyen la creación de aún más ficheros, esta necesidad se hace aún más aparente.
 
-Para tratarlo, se plantea cambiar la distribución a la mostrada en la \autoref{fig:fw_modules}.
+Para tratarlo, se plantea agruparlos en distintos directorios, a los que llamaremos módulos, de forma que queden distribuidos como se muestra en la figura \ref{fig:fw_modules}.
 
-\begin{figure}[ht]
+\begin{figure}[h!]
     \centering
 	\includegraphics[width=\textwidth]{fw_modules.png}
 	\caption{Distribución del código en distintos archivos y módulos.}
     \label{fig:fw_modules}
 \end{figure}
-
-En ella, podemos ver los distintos directorios, a los que llamamos módulos, en los que se dividirán los archivos de código. Cada uno de ellos se centrará en un aspecto del firmware. Se distinguen los siguientes:
 
 \begin{itemize}
     \item\textbf{Módulo del sistema:} Contiene la implementación de características claves para el funcionamiento del sistema.
@@ -123,18 +257,16 @@ En ella, podemos ver los distintos directorios, a los que llamamos módulos, en 
     \item\textbf{Módulo de archivos comunes:} Se tratan de utilidades genéricas, pensadas para ser usadas en común por las distintas partes del programa.
 \end{itemize}
 
-\subsection{Resultado final}
+De esta forma, los distintos archivos quedan más agrupados según su funcionalidad, haciendo más viable establecer cierta encapsulación del código. Esto es especialmente importante teniendo en cuenta que el lenguaje con el que se trata no se especializa en la programación orientada a objetos, por lo que no permite definir clases al contrario que su sucesor. Podemos ver cómo quedaría la ejecución del bucle principal en la representación de la figura \ref{fig:fw_loop}. Adicionalmente, la figura \ref{fig:fw_interrupts} muestra el manejo de las interrupciones.
 
-Tras estos cambios, el código queda más agrupado según su funcionalidad. Podemos ver cómo quedaría una ejecución del bucle principal en la representación de la \autoref{fig:fw_loop}. Adicionalmente, la \autoref{fig:fw_interrupts} recoge el manejo de las interrupciones.
-
-\begin{figure}
+\begin{figure}[h!]
     \centering
     \includegraphics[width=\paperwidth,angle=-90,origin=c]{fw_loop.png}
     \caption{Ejecución del bucle principal.}
     \label{fig:fw_loop}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{fw_interrupts.png}
     \caption{Ejecución de las distintas interrupciones.}
@@ -143,73 +275,90 @@ Tras estos cambios, el código queda más agrupado según su funcionalidad. Pode
 
 \section{Desarrollo}
 
-En esta sección se detallarán las decisiones enfrentadas durante la implementación del firmware, centrándose en los cambios propuestos. Para comentarlos más fácilmente, se dividirá la sección en distintas partes, tratando cada funcionalidad añadida por separado.
+En esta sección se detallarán las decisiones enfrentadas durante la implementación del firmware, centrando la atención en los requerimientos definidos.
 
-Antes de entrar en los cambios concretos, cabe destacar que también se ha realizado una extensa labor de limpieza del código, debido a una gran cantidad de funciones y variables sin usar, funciones redundantes y algunas prácticas que no se consideraban óptimas. En muchos casos, el código ha sido prácticamente reimplementando. No se pretende hacer referencia constante a ello, pero no mencionarlo sería subestimar el trabajo realizado en esta parte del proyecto.
+% Cabe destacar que también se ha realizado una extensa labor de limpieza del código, debido a una gran cantidad de declaraciones sin usar, definiciones redundantes y algunas prácticas que no se consideraban óptimas. En muchos casos, el código ha sido prácticamente reimplementando. Esto es, por supuesto, un aspecto subjetivo, por lo que no se hará referencia a ello nuevamente. Sin embargo, no mencionarlo sería subestimar el trabajo realizado en esta parte del proyecto.
+
+Cabe mencionar, como regla general, que la mayoría sino todos los apartados incluidos en esta sección hacen uso de una forma u otra del \textit{datasheet} del ATmega 2560\cite{atmega2560}, microcontrolador incluido en el Arduino Mega 2560 del que se hace uso en este proyecto.
+
+\subsection{Menú de señales lentas}
+
+La funcionalidad de este menú se basa en un contador ejecutado en el bucle principal, que se incrementa cada medio segundo. Este es el máximo común divisor de la frecuencia con la que se actualizan estas señales. Cuando el usuario escoge una secuencia, este contador comienza a incrementarse, y a compararse en cada unidad con los instantes en los que la señal debe cambiar, los cuales se encuentran definidos en un \textit{switch}. Esto permite cambiar la señal a una frecuencia menor de la que el dispositivo soporta de base, pudiendo realizar pruebas en faros que así lo requieran.
+
+Para que este menú sea independiente del resto del sistema, se ha implementado en el \textit{rotary encoder} la capacidad de detectar cuándo el botón ha sido mantenido (más detalles en la siguiente subsección). Cuando esto ocurra, el sistema mostrará esta pantalla.
+
+\subsection{\textit{Rotary encoder}}
+
+En este ámbito, el objetivo principal era el de corregir el funcionamiento algo errático del \textit{rotary encoder}. Sin embargo, la lógica del código presente no estaba del todo clara, por lo que se acabó reimplementando desde cero. Esto también ha permitido incluir la posibilidad de detectar pulsaciones largas del botón, como se ha mencionado en el apartado anterior.
+
+\subsubsection{Pulsaciones}
+
+El pin correspondiente del microcontrolador está programado para generar una interrupción en cada cambio de flanco. Esto, en el caso del botón, quiere decir que se generará una interrupción al pulsarse el mismo y otra al soltarse. En cada una, habrá por lo tanto que comprobar el estado del botón en ese instante. En caso de que se encuentre pulsado, se guardará en una variable ese instante de tiempo. Si por el contrario no está pulsado, se comparará la variable anterior con el instante actual (momento en el que termina la pulsación). De esta forma, se determina si el botón se ha pulsado o si se ha mantenido. Este será el resultado de la operación, cuyo evento correspondiente se añadirá al buffer en la rutina de la interrupción.
+
+A esto se le añade una pequeña lógica de \textit{debouncing}, que sólo tendrá en cuenta cada pulsación si la anterior se ha realizado fuera de una breve ventana de tiempo. Esto evita la detección de pulsaciones duplicadas debido a inexactitudes en el circuito del codificador.
+
+\subsubsection{Giros}
+
+La lógica para el giro del \textit{rotary encoder} es más compleja. Debido al funcionamiento del mismo, la dirección de giro se puede determinar según \textbf{el orden} en el que dos pines emitan voltaje. De esta forma, determinando la secuencia de estados por los que pasan los pines al realizar giros para las dos direcciones, se puede crear una máquina de estados. Esta, comprobando el estado actual de los pines al manejarse la interrupción, determinará cuándo se ha completado una rotación. Al igual que en el caso anterior, cuando esto ocurra, se incluirá el evento correspondiente en la cola de eventos, que será procesado por el sistema.
+
+Para seguir este método, también se programa el microcontrolador para que emita una interrupción en ambos flancos de ambos pines, y se va comparando su estado con el de la máquina de estados mencionada. Este funcionamiento se ha encontrado en la librería \url{https://github.com/buxtronix/arduino/tree/master/libraries/Rotary}, cuyo código fuente ha sido adaptado para funcionar en este proyecto.
+
+% Un rotary encoder consiste de un disco giratorio sobre el que se distribuyen unas zonas de contacto. El disco suele conectarse a tierra, mientras que las zonas de contacto servirán para transmitir voltaje. Al girar el rotary encoder, ambos pines A y B harán contacto con una de las zonas brevemente, generándose un pulso representable como una señal cuadrada.
+
+\subsection{Serial control}
+
+Una de los factores más importantes para la comunicación del puerto serie es configurar correctamente los puertos del microcontrolador. En este caso, se han habilitado las interrupciones RX (para la recepción) y TX (para el envío) y se ha configurado la comunicación para usar 8-bits por segmento.
+
+Una de las desventajas de usar el puerto seria para la comunicación, es que sus velocidades de transmisión no son especialmente altas. Por ello, se plantea activar el modo \textit{Double Speed Operation} del ATmega 2560 para llegar a 115200 baudios. Con este, el valor a establecer en el puerto UBBR vendrá dado por la siguiente ecuación: \cite{atmega2560}
+
+\begin{center}
+    \[UBBR = \frac{f_{OSC}}{8 \cdot BAUD} - 1\]
+\end{center}
+
+Habiendo configurado el microcontrolador, el resto de la implementación se basa en definir funciones básicas que accedan al registro UDR0. Posteriormente, se usan estan funciones para implementar el sistema de envío y recepcion de datos, ya cubiertos en la \ref{sec:fw_diseño}.
 
 \subsection{Memoria EEPROM}
 
-En un primer lugar, se definieron los siguientes tipos de datos:
+Esta parte se ha implementado utilizado el apoyo de la librería \verb|avr/eeprom.h|, que proporciona la directiva \verb|EEMEM|, la cual permite declarar variables en la memoria EEPROM. Estas, sin embargo, solo sirven para poder hacer referencia a la dirección de memoria en la que se encuentran los datos desde el programa. Para leer su valor o escribir en ellas, es necesario usar las funciones proporcionadas por la misma librería. Por ello, la mayoría de funciones incluídas en esta parte no son más que distintos \textit{getters} y \textit{setters} para las distintas variables determinadas en la sección \ref{sec:fw_diseño}.
 
-\begin{itemize}
-    \item\textbf{pwm\_t:} Representa una señal PWM en la memoria. Para ello, se almacenan los 4 parámetros principales de la señal (modo, frecuencia, ciclo y fase) junto a su nombre.
-    \item\textbf{slot\_t:} Representa el contenido de una ranura de memoria, siendo esta la unidad principal con la que trabajará la memoria. Consiste de 8 señales PWM y de un nombre. Se añadirá, además, una variable que indicará si la ranura está ocupada o no. Esto permitirá evitar borrados reales de memoria, prolongando su vida útil y disminuyendo el coste en rendimiento de la escritura.
-\end{itemize}
-
-Otros parámetros que se necesitarán guardar son:
-
-\begin{itemize}
-    \item\textbf{Valor de inicialización:} Servirá para determinar si la memoria contiene o no datos, ya que en caso de que no los contenga, necesitará ser inicializada.
-    \item\textbf{Número de serie:} Identificador del dispositivo.
-    \item\textbf{Contraseña:} Contraseña establecida en el dispositivo. Se guardará como un literal, que no es una buena práctica, pero no se considera necesario seguridad adicional considerando el público objetivo.
-    \item\textbf{Ranura por defecto:} Indica la ranura de memoria que se cargará automáticamente al iniciar el PWM Box.
-    \item\textbf{Brillo de la pantalla:} Permitirá mantener el brillo establecido entre ejecuciones.
-\end{itemize}
-
-A estos se une un vector auxiliar, que incluye el índice de las ranuras reales en el orden en el que se le muestra al usuario en el menú principal. Actúa, por así decirlo, como un traductor entre el índice de las ranuras visibles al usuario y el índice de las mismas internamente. Esto puede entenderse más fácilmente con una representación, que se incluye en la \autoref{fig:eeprom_operations}
-
-
+A estas se une el vector auxiliar tambien mencionado en la sección \ref{sec:fw_diseño}. Para facilitar su manejo y hacer el código más reutilizable, se ha implementado una pequeña librería que define las funciones básicas esperables de un vector.
 
 Con todo esto, el contenido de la memoria EEPROM puede verse en la \autoref{fig:eeprom_vars}.
 
-\begin{figure}
+\begin{figure}[h!]
     \centering
     \includegraphics[width=0.5\textwidth]{eeprom_vars.png}
     \caption{Contenido de la memoria EEPROM.}
     \label{fig:eeprom_vars}
 \end{figure}
 
-El uso de la directiva \verb|EEMEM|, de la librería \verb|avr/eeprom.h|, permite declarar variables en la memoria EEPROM. Estas, sin embargo, solo servirán para almacenar la dirección de memoria en la que se encuentran los datos. Para leerlos o escribirlos, es necesario usar las funciones proporcionadas por esa misma librería. Por ello, la mayoría de funciones incluídas en esta parte no son más que distintos \textit{getters} y \textit{setters} para las distintas variables mencionadas.
-
-\subsection{Rotary control}
-
-En este apartado, el objetivo principal era el de corregir el funcionamiento algo errático del \textit{rotary encoder}. Sin embargo, la lógica del código presente no estaba del todo clara, por lo que se acabó reimplementando todo de cero.
-
-Para la manipulación de puertos del microcontrolador, se usó por supuesto el manual del ATMega 2560\footnote{Descargable desde el siguiente enlace: \url{https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/ATmega640-1280-1281-2560-2561-Datasheet-DS40002211A.pdf}}.
-
-% TODO: Incluir imagen en la que se vea qué es un cambio de flanco (o algo así)
-
-\paragraph{Pulsaciones.} El microcontrolador está programado para generar una interrupción en cada cambio de flanco. Esto, en el caso del botón, significa que se generará una interrupción al pulsarse y otra al soltarse. En cada una, habrá por lo tanto que comprobar el estado del botón en ese instante. En caso de que se encuentre pulsado, se guardará en una variable ese instante de tiempo. Si por el contrario no está pulsado, se comparará la variable anterior con el instante actual (momento en el que termina la pulsación). De esta forma, se determina si el botón se ha pulsado o si se ha mantenido. Este será el resultado de la operación, cuyo evento correspondiente se añadirá al buffer.
-
-A esto se le añade una pequeña lógica de \textit{debouncing}, que sólo tendrá en cuenta cada pulsación si la anterior se ha realizado fuera de una breve ventana de tiempo. Esto evita detectar pulsaciones duplicadas debido a inexactitudes en el circuito del codificador.
-
-\paragraph{Giros.} La lógica para el giro del \textit{rotary encoder} es más compleja. Debido al funcionamiento del mismo, la dirección de giro se puede determinar según el orden en el que dos pines reciban voltaje. De esta forma, se puede crear una máquina de estados para comprobar la dirección del giro según ambos pines vayan o no transmitiendo corriente.
-
-Para ello, también se programa el microcontrolador para que emita una interrupción en ambos flancos de ambos pines, y se va comparando su estado con el de la máquina de estados mencionada. Este funcionamiento se ha encontrado en la librería \url{https://github.com/buxtronix/arduino/tree/master/libraries/Rotary}, cuyo código fuente ha sido adaptado para funcionar en este proyecto.
-
-% Un rotary encoder consiste de un disco giratorio sobre el que se distribuyen unas zonas de contacto. El disco suele conectarse a tierra, mientras que las zonas de contacto servirán para transmitir voltaje. Al girar el rotary encoder, ambos pines A y B harán contacto con una de las zonas brevemente, generándose un pulso representable como una señal cuadrada. 
-
-\subsection{Serial control}
-
-Para la comunicación por el puerto serie también ha sido necesario manipular los puertos del microcontrolador. Para ello, se han habilitado las interrupciones RX (para la recepción) y TX (para el envío) y se ha configurado la comunicación para usar 8-bits por segmento. En cuanto a la velocidad de transmisión, se ha activado la \textit{Double Speed Operation} del ATMega 2560 para llegar a los 115200 baudios.
-
-En cuanto a implementación se han programado, en primer lugar, funciones básicas para el envío y recepción de datos. Posteriormente, se han usado las mismas para implementar el sistema de envío y recepcion de datos, ya cubiertos en % TODO
-
-
-\subsection{Sistema}
-\subsection{Común}
-\subsection{PWM}
-
-
 \section{Pruebas}
 
+Debido a la naturaleza del trabajo, la mayoría de pruebas se han realizado de manera experimental, observando los efectos de los cambios realizados sobre los distintos elementos.
+
+Para comprobar que no se ha alterado la capacidad del dispositivo de emitir las señales de manera correcta, así como validar la implementación de las señales lentas, se ha usado un analizador lógico. En la figura \ref{fig:fw_pwm_signals} se muestran las señales PWM resultantes de distintas configuraciones. Adicionalmente, en las figuras \ref{fig:fw_slow_signal1} y \ref{fig:fw_slow_signal2}, se ven dos de las secuencias de señales lentas incluídas con el dispositivo.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{fw_pwm_signals.png}
+    \caption{Señales PWM con distintas configuraciones.}
+    \label{fig:fw_pwm_signals}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{fw_slow_signal1.png}
+    \caption{Una de las secuencias de señales lentas preconfiguradas.}
+    \label{fig:fw_slow_signal1}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{fw_slow_signal2.png}
+    \caption{Otra de las secuencias de señales lentas preconfiguradas.}
+    \label{fig:fw_slow_signal2}
+\end{figure}
+
+Estas pruebas han sido realizado con el Saleae Logic v1.2.40\footnote{https://support.saleae.com/logic-software/legacy-software/older-software-releases. Accedido el 28 de agosto de 2025.}, que es \textit{software} propietario. Sin embargo, también podría usarse una versión \textit{open-source} como puede ser Sigrok PulseView v0.4.2\footnote{https://sigrok.org/wiki/Downloads. Accedido el 28 de agosto de 2025.}.
+
+% TODO: Medir con el PulseView
