@@ -31,27 +31,29 @@
 \contentsline {subsection}{\numberline {3.2.2}Entrada/Salida}{19}{subsection.3.2.2}%
 \contentsline {subsubsection}{Especificaciones acerca de la comunicación por el puerto serie}{19}{section*.15}%
 \contentsline {subsection}{\numberline {3.2.3}Memoria EEPROM}{20}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}General}{21}{subsection.3.2.4}%
-\contentsline {section}{\numberline {3.3}Desarrollo}{26}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Menú de señales lentas}{26}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}\textit {Rotary encoder}}{26}{subsection.3.3.2}%
-\contentsline {subsubsection}{Pulsaciones}{26}{section*.16}%
-\contentsline {subsubsection}{Giros}{27}{section*.17}%
-\contentsline {subsection}{\numberline {3.3.3}Serial control}{27}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}Memoria EEPROM}{28}{subsection.3.3.4}%
-\contentsline {section}{\numberline {3.4}Pruebas}{28}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Interfaz gráfica}{31}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Análisis}{31}{section.4.1}%
-\contentsline {subsubsection}{Comunicación con el dispositivo}{31}{section*.18}%
-\contentsline {subsubsection}{Gestión del dispositivo}{33}{section*.19}%
-\contentsline {subsubsection}{Gestión de ranuras}{33}{section*.20}%
-\contentsline {section}{\numberline {4.2}Diseño}{34}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}JSON Manager}{35}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}PWM Types}{35}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}PWM Box}{35}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Main Window}{35}{subsection.4.2.4}%
-\contentsline {section}{\numberline {4.3}Desarrollo}{35}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Pruebas}{35}{section.4.4}%
+\contentsline {subsection}{\numberline {3.2.4}General}{23}{subsection.3.2.4}%
+\contentsline {section}{\numberline {3.3}Desarrollo}{27}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Menú de señales lentas}{27}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}\textit {Rotary encoder}}{27}{subsection.3.3.2}%
+\contentsline {subsubsection}{Pulsaciones}{27}{section*.16}%
+\contentsline {subsubsection}{Giros}{28}{section*.17}%
+\contentsline {subsection}{\numberline {3.3.3}Serial control}{28}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Memoria EEPROM}{29}{subsection.3.3.4}%
+\contentsline {section}{\numberline {3.4}Pruebas}{29}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Interfaz gráfica}{33}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Análisis}{33}{section.4.1}%
+\contentsline {subsubsection}{Comunicación con el dispositivo}{33}{section*.18}%
+\contentsline {subsubsection}{Gestión del dispositivo}{35}{section*.19}%
+\contentsline {subsubsection}{Gestión de ranuras}{35}{section*.20}%
+\contentsline {section}{\numberline {4.2}Diseño}{36}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}PWM Types}{39}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}JSON Manager}{39}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}PWM Box}{39}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Main}{39}{subsection.4.2.4}%
+\contentsline {subsubsection}{Opción 1: Envío de datos continuo}{40}{section*.21}%
+\contentsline {subsubsection}{Opción 2: Envío de datos controlado}{40}{section*.22}%
+\contentsline {section}{\numberline {4.3}Desarrollo}{41}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Pruebas}{41}{section.4.4}%
 \babel@toc {spanish}{}\relax 
 \babel@toc {spanish}{}\relax 
 \babel@toc {spanish}{}\relax 

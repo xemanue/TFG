@@ -26,7 +26,16 @@
     \usepackage{array}
 % \usepackage{float}  % Placeins alternative
 %     \restylefloat{table}
+
 \usepackage[section]{placeins}
+    \makeatletter  % Adds placeins functionality to subsections
+    \AtBeginDocument{%
+        \expandafter\renewcommand\expandafter\subsection\expandafter{%
+            \expandafter\@fb@secFB\subsection
+        }%
+    }
+    \makeatother
+
 \usepackage{amsmath}
 \usepackage{hyperref}
     \hypersetup{

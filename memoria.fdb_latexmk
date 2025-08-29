@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex memoria"] 1756404231.10083 "memoria.aux" "memoria.bbl" "memoria" 1756404823.47797 0
+["bibtex memoria"] 1756493136.06502 "memoria.aux" "memoria.bbl" "memoria" 1756493317.5598 0
   "./bibliografia.bib" 1756402416.35651 1223 400d607558a893718387c6b9d228af5f ""
   "/usr/share/texmf-dist/bibtex/bst/babelbib/bababbrv-fl.bst" 1755987285 27710 ba356996b02ef948e766fc42f63ceac8 ""
-  "memoria.aux" 1756404823.11238 14471 dde2a99e19d10188397d34ebdcc01de9 "pdflatex"
+  "memoria.aux" 1756493317.25798 15983 477b65b9f8f1fc395cca15f8915e3b79 "pdflatex"
   (generated)
   "memoria.bbl"
   "memoria.blg"
   (rewritten before read)
-["pdflatex"] 1756404821.16324 "memoria.tex" "memoria.pdf" "memoria" 1756404823.47823 0
+["pdflatex"] 1756493315.06962 "memoria.tex" "memoria.pdf" "memoria" 1756493317.56007 0
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1755987285 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1755987285 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1755987285 1536 02c06700a42be0f5a28664c7273f82e7 ""
@@ -138,17 +138,17 @@
   "chapters/2_estado_del_arte.tex" 1756145582.66561 21618 f994acdaf9f5e17f75c97b4482314cd9 ""
   "chapters/3_planificacion.tex" 1755972082.76991 3480 eba877ad5e20756e36a0ccc9513b7305 ""
   "chapters/4_firmware.tex" 1756404819.37861 24636 424cbeb92ecfdb432459aef75cd7cc07 ""
-  "chapters/5_interfaz.tex" 1756398399.49898 9194 744cdc0ba3b0c62d0af6c2933aaec6c0 ""
+  "chapters/5_interfaz.tex" 1756493315.00598 18352 84750ebd20fbfde461ea65ffdae117e5 ""
   "chapters/portada1.tex" 1755433698.33104 1055 ecd618a14b6bd25f1ec7821d55082524 ""
   "chapters/portada2.tex" 1755432853.12693 735 06c5e18778efcf4399cb7f85295b0562 ""
   "chapters/prefacio.tex" 1755453368.8395 4224 cfa173a208c095a53977aa3e52080814 ""
-  "memoria.aux" 1756404823.11238 14471 dde2a99e19d10188397d34ebdcc01de9 "pdflatex"
-  "memoria.bbl" 1756404231.21259 1753 2373130c59a7d0e57dde4ad8c839be91 "bibtex memoria"
-  "memoria.lof" 1756404823.11961 1764 2cb055eb4e922bb917a197413929cada "pdflatex"
-  "memoria.lot" 1756404823.11961 2777 3d7657f952fde871d5667e3a1a9a5e08 "pdflatex"
-  "memoria.out" 1756404823.11961 4825 ac2717441e1fe3ea391247988f4d1128 "pdflatex"
-  "memoria.tex" 1756403554.87256 3942 34c0612e12a03b4b14115f2349af9606 ""
-  "memoria.toc" 1756404823.11961 4339 67040eb84211990a0c984c2c7308933a "pdflatex"
+  "memoria.aux" 1756493317.25798 15983 477b65b9f8f1fc395cca15f8915e3b79 "pdflatex"
+  "memoria.bbl" 1756493136.17598 1753 2373130c59a7d0e57dde4ad8c839be91 "bibtex memoria"
+  "memoria.lof" 1756493317.26498 2225 ffc70b4102d5a92aab5e735481b346c9 "pdflatex"
+  "memoria.lot" 1756493317.26498 2756 95dc51eaa47f3ccc26828773b88d35b3 "pdflatex"
+  "memoria.out" 1756493317.26498 4787 f950b1925b3c27a648b6542f995cc5f0 "pdflatex"
+  "memoria.tex" 1756409771.27782 4182 a0bc7b6062c56cd0ed4a44d158fd8f3a ""
+  "memoria.toc" 1756493317.26498 4504 c28d9e2a569d28c5502fb0d534a8b55a "pdflatex"
   "resources/eeprom_operations.png" 1756032096.75072 41232 5e3ad60569bfac97503d23ba8b401b11 ""
   "resources/eeprom_vars.png" 1756033038.37969 48349 d27d240289ce4bf572aabaf3737649cf ""
   "resources/etsiit_logo.png" 1755365511.51415 15686 70bc5d741d9ed0241e268f68e916ccd7 ""
@@ -164,6 +164,10 @@
   "resources/logo_ugr.jpg" 1755364451.66011 37331 36715764ca5f2282a9a31c4aa2c47eb6 ""
   "resources/pwmbox_side.jpg" 1756028803.08985 3110663 1d2a202ace64de28451a8e309f15b8e5 ""
   "resources/pwmbox_top.jpg" 1756028671.05486 5278630 0be08d9195cabe3ed4fe478215474f2f ""
+  "resources/ui_diseño1.png" 1756405877.71466 39089 da70d33fa7f46592b3ff50e5da83d61a ""
+  "resources/ui_diseño2.png" 1756406766.53269 38648 bc5e8b8de2af4a11a1d7e79cee81633d ""
+  "resources/ui_diseño3.png" 1756407910.17774 48834 8c91cb04c4cf31807ef443bf3d9b08b8 ""
+  "resources/ui_diseño4.png" 1756408566.87577 60439 1278c0cace24dcf3ef318141f5babffb ""
   (generated)
   "memoria.aux"
   "memoria.lof"
