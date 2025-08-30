@@ -6,6 +6,7 @@
 
 \usepackage{graphicx}
     \graphicspath{{resources/}}
+\usepackage{subcaption}
 \usepackage{pdflscape}
 
 \usepackage{listings}
@@ -37,6 +38,8 @@
     \makeatother
 
 \usepackage{amsmath}
+\usepackage{eurosym}
+    \DeclareUnicodeCharacter{20AC}{\euro}
 \usepackage{hyperref}
     \hypersetup{
         pdfauthor = {Jose Manuel García Cazorla (jmgarcaz@correo.ugr.es)},
@@ -168,6 +171,10 @@
     \input{chapters/4_firmware.tex}
 
     \input{chapters/5_interfaz.tex}
+
+    \input{chapters/6_presupuesto.tex}
+
+    \input{chapters/7_conclusiones_y_trabajos_futuros.tex}
 
     \bibliographystyle{bababbrv-fl}
     \bibliography{bibliografia}

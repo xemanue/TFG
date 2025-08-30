@@ -1,0 +1,21 @@
+\chapter{Conclusiones y trabajos futuros}
+
+\section{Conclusiones}
+
+Este proyecto perseguía el objetivo de implementar nuevas funcionalidades en un dispositivo testeador de faros de vehículos, así como desarrollar una interfaz gráfica que lo complemente.
+
+Para ello, se ha implementado en el firmware del PWM Box la capacidad de almacenar perfiles de configuración en la memoria EEPROM del microcontrolador. También se ha desarrollado un nuevo menú, que permite comprobar el funcionamiento de faros que funcionen a una frecuencia menor de la que es capaz de generar el dispositivo usando señales PWM. Adicionalmente, se han corregido varios errores existentes que afectaban a la experiencia del usuario.
+
+En cuanto a la interfaz, se ha usado el \textit{framework} Qt en combinación con PySide6 para diseñar e implementar una aplicación multiplataforma que permita almecenar y enviar distintos perfiles al dispositivo. Además, se ha incluido la capacidad de exportar dichos perfiles en formato JSON, que luego puede ser importado de nuevo cuando se necesite.
+
+Todo esto se ha llevado a cabo teniendo en cuenta los requisitos propuestos en las secciones \ref{sec:fw_diseño} y \ref{sec:ui_diseño} respectivamente. Por ello, se puede considerar que los objetivos marcados se han cumplido eficazmente.
+
+En lo personal, estoy bastante satisfecho con el resultado final del proyecto. Me ha permitido poner en práctica muchos de los conocimientos adquiridos a lo largo del Grado, saliendo en ocasiones de mi zona de comfort para obtener otros nuevos.
+
+Si tuviera que mencionar un aspecto en el que considero que podría haberlo hecho mejor, sería en la gestión del tiempo. En muchas ocasiones a lo largo del desarrollo, he dejado que mi opinión personal sobre qué estaba bien y qué estaba "menos bien" dictara la parte que merecía más trabajo. Esto me ha hecho pasar demasiado tiempo intentando perfeccionar algunas secciones que no lo necesitaban realmente. En el futuro trataré de evitar guiarme en exceso por la subjetividad.
+
+Esto no quita que, a la vez, me sienta orgulloso de haber sido capaz de compaginar este proyecto con un puesto a tiempo completo de 43 horas semanales, y aun así haber obtenido un resultado que considero positivo.
+
+\section{Trabajos futuros}
+
+De cara al futuro

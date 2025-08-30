@@ -1,24 +1,27 @@
 \babel@toc {spanish}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Dispositivo PWM Box desde arriba.}}{2}{figure.1.1}%
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Lateral del dispositivo PWM Box.}}{2}{figure.1.2}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Dispositivo PWM Box desde arriba.}}{2}{figure.caption.7}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Lateral del dispositivo PWM Box.}}{2}{figure.caption.8}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Contenido de \textit {PWM\_BOX.RAR}.}}{5}{figure.2.1}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Diagrama de Gantt que muestra la organización de las distintas fases del proyecto a lo largo de las semanas.}}{14}{figure.2.2}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Contenido de \textit {PWM\_BOX.RAR}.}}{5}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Diagrama de Gantt que muestra la organización de las distintas fases del proyecto a lo largo de las semanas.}}{14}{figure.caption.15}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Representación del funcionamiento del vector auxiliar al realizar distintas operaciones sobre la EEPROM.}}{22}{figure.3.1}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Distribución del código en distintos archivos y módulos.}}{23}{figure.3.2}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Ejecución del bucle principal.}}{25}{figure.3.3}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Ejecución de las distintas interrupciones.}}{26}{figure.3.4}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Contenido de la memoria EEPROM.}}{29}{figure.3.5}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Señales PWM con distintas configuraciones.}}{30}{figure.3.6}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Una de las secuencias de señales lentas preconfiguradas.}}{30}{figure.3.7}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Otra de las secuencias de señales lentas preconfiguradas.}}{31}{figure.3.8}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Representación del funcionamiento del vector auxiliar al realizar distintas operaciones sobre la EEPROM.}}{22}{figure.caption.28}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Distribución del código en distintos archivos y módulos.}}{23}{figure.caption.29}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Ejecución del bucle principal.}}{25}{figure.caption.30}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Ejecución de las distintas interrupciones.}}{26}{figure.caption.31}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Contenido de la memoria EEPROM.}}{29}{figure.caption.34}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Señales PWM con distintas configuraciones.}}{30}{figure.caption.35}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Una de las secuencias de señales lentas preconfiguradas.}}{30}{figure.caption.36}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Otra de las secuencias de señales lentas preconfiguradas.}}{31}{figure.caption.37}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Primera iteración del diseño de la interfaz.}}{37}{figure.4.1}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Otra iteración del diseño de la interfaz.}}{37}{figure.4.2}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Otra iteración del diseño de la interfaz.}}{38}{figure.4.3}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Diseño final de la interfaz.}}{38}{figure.4.4}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Primera iteración del diseño de la interfaz.}}{37}{figure.caption.55}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Otra iteración del diseño de la interfaz.}}{37}{figure.caption.56}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Otra iteración del diseño de la interfaz.}}{38}{figure.caption.57}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Diseño final de la interfaz.}}{38}{figure.caption.58}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces A la izquierda, ventana para exportar ranuras. A la derecha, ventana para enviar ranuras al dispositivo}}{39}{figure.caption.59}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
 \babel@toc {spanish}{}\relax 
 \babel@toc {spanish}{}\relax 
 \babel@toc {spanish}{}\relax 
