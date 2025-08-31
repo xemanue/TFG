@@ -87,7 +87,7 @@ Teniendo esto en cuenta, se determinarán los requisitos de la aplicación.
         \hline
         \textbf{Nombre} & Enviar configuración general al dispositivo \\
         \hline
-        \textbf{Descripción} & El sistema debe ser capaz de enviar de vuelta al dispositivo su configuración básica. \\
+        \textbf{Descripción} & El sistema debe ser capaz de enviar de vuelta al dispositivo su configuración general. \\
         \hline
         \textbf{Prioridad} & Alta \\
         \hline
@@ -245,6 +245,58 @@ Teniendo esto en cuenta, se determinarán los requisitos de la aplicación.
     \caption{RF-14. Modificar los parámetros de las ranuras cargadas.}
 \end{table}
 
+\FloatBarrier
+
+\subsubsection{Requisitos no funcionales}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|m{2.5cm}|m{9.27cm}|}
+        \hline
+        \textbf{ID} & RNF-1 \\
+        \hline
+        \textbf{Nombre} & Usabilidad \\
+        \hline
+        \textbf{Descripción} & El sistema ha de ser sencillo e intuitivo para los usuarios. \\
+        \hline
+        \textbf{Prioridad} & Alta \\
+        \hline
+    \end{tabular}
+    \caption{RNF-1. Usabilidad.}
+\end{table}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|m{2.5cm}|m{9.27cm}|}
+        \hline
+        \textbf{ID} & RNF-2 \\
+        \hline
+        \textbf{Nombre} & Rendimiento \\
+        \hline
+        \textbf{Descripción} & El sistema debe ser fluido y responder a las acciones del usuario sin demoras excesivas. \\
+        \hline
+        \textbf{Prioridad} & Alta \\
+        \hline
+    \end{tabular}
+    \caption{RNF-2. Rendimiento.}
+\end{table}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|m{2.5cm}|m{9.27cm}|}
+        \hline
+        \textbf{ID} & RNF-3 \\
+        \hline
+        \textbf{Nombre} & Aspecto atractivo \\
+        \hline
+        \textbf{Descripción} & El sistema debe ser atractivo visualmente. \\
+        \hline
+        \textbf{Prioridad} & Media \\
+        \hline
+    \end{tabular}
+    \caption{RNF-3. Aspecto atractivo.}
+\end{table}
+
 \section{Diseño}
 \label{sec:ui_diseño}
 
@@ -335,7 +387,7 @@ Otro aspecto a tener en cuenta antes de comenzar la implementación, es el flujo
 
 \subsubsection{Opción 1: Envío de datos continuo}
 
-Se considera una forma más "moderna" de conceptualizar la aplicación. En ella, cualquier cambio realizado sobre los parámetros de las señales sería enviado automáticamente al dispositivo. De igual forma, las ranuras creadas se añadirían también de forma automática a este. Esto permitiría sustituir completamente los controles físicos del PWM Box.
+Se considera una forma más ``moderna'' de conceptualizar la aplicación. En ella, cualquier cambio realizado sobre los parámetros de las señales sería enviado automáticamente al dispositivo. De igual forma, las ranuras creadas se añadirían también de forma automática a este. Esto permitiría sustituir completamente los controles físicos del PWM Box.
 
 Esta sería la opción adecuada para una aplicación más orientada al ocio, que se pretenda distribuir para el uso cotidiano de todo tipo de usuarios. En este caso la comodidad que este enfoque ofrece sería ventajosa.
 
@@ -345,13 +397,59 @@ En este modelo de funcionamiento, se prioriza el control del usuario sobre el di
 
 Este es el enfoque que se ha elegido finalmente para la interfaz, ya que se considera más apropiado para el contexto y la forma en el que se usará. De esta manera, la aplicación servirá más como un almacen de perfiles, que podrán ser cargados en un PWM Box cuando se necesiten. Esta opción se alinea más con las necesidades expresadas por Valeo.
 
+\subsection{General}
+
+Habiendo planteado los distintos módulos, las interacciones entre ellos pueden modelarse a través de los diagramas de secuencia que se muestran a continuación.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{ui_recargar.png}
+    \caption{Flujo de ejecución al recargar la conexión con el dispositivo.}
+    \label{fig:ui_recargar}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{ui_enviar1.png}
+    \caption{Flujo de ejecución al enviar perfiles al dispositivo.}
+    \label{fig:ui_enviar1}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{ui_exportar.png}
+    \caption{Flujo de ejecución al exportar perfiles al equipo.}
+    \label{fig:ui_exportar}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{ui_importar.png}
+    \caption{Flujo de ejecución al importar perfiles desde el equipo.}
+    \label{fig:ui_importar}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{ui_contraseña.png}
+    \caption{Flujo de ejecución al mostrar y modificar la contraseña.}
+    \label{fig:ui_contraseña}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{ui_por_defecto.png}
+    \caption{Flujo de ejecución al establecer el perfil por defecto.}
+    \label{fig:ui_por_defecto}
+\end{figure}
+
 \section{Desarrollo}
 
-Para el desarrollo de la aplicación ha sido necesario el uso de la librería \textit{pyserial}\footnote{https://github.com/pyserial/pyserial}. Las funcionalidades que proporciona han permitido gestionar todos los aspectos de la comunicación por el puerto serie.
+Para el desarrollo de la aplicación ha sido necesario el uso de la librería \textit{pyserial}\cite{pyserial-lib}. Las funcionalidades que proporciona han permitido gestionar todos los aspectos de la comunicación por el puerto serie.
 
-También se ha hecho uso de la librería estándar \textit{json}\footnote{https://docs.python.org/3/library/json.html} para la codificación y decodificación de los archivos en este formato.
+También se ha hecho uso de la librería estándar \textit{json}\cite{json-lib} para la codificación y decodificación de los archivos en este formato.
 
-Por último, para la apariencia general de la aplicación, se ha usado el tema \textit{catppuccin latte}\footnote{https://catppuccin.com/} de la librería \textit{qt-themes}\footnote{https://github.com/beatreichenbach/qt-themes}.
+Por último, para la apariencia general de la aplicación, se ha usado el tema \textit{catppuccin latte} de la librería \textit{qt-themes}\cite{qtthemes-lib}.
 
 Durante el proceso de implementación se ha enfrentado una situación que no se había tenido en cuenta en la etapa de diseño: la forma de gestionar las distintas fuentes de las que puede provenir un perfil. Como se determinó en la definición de los \hyperref[subsub:ui_requisitos]{requisitos}, un perfil puede cargarse en la aplicación desde el dispositivo, desde un archivo importado, o puede ser directamente creado a través de la interfaz. Es conveniente manejar estas tres fuentes por separado, ya que cada una tiene ciertas peculiaridades. Por ejemplo, no tendría sentido permitir al usuario quitar de la aplicación un perfil que se encuentre cargado en el dispositivo, mientras que si lo tendría en el caso de tratarse de una ranura creada desde la interfaz.
 

@@ -4,10 +4,14 @@ Con el objetivo de estimar el coste de producción del proyecto en un escenario 
 
 \subsubsection{Costes de material}
 
-El equipo usado para este proyecto es un Lenovo T560, con un precio aproximado de 1400€. Se estima un ciclo de vida útil de unos 8 años, de los cuales medio año se ha dedicado al desarrollo de este trabajo. A este se le sumaría el coste de los distintos componentes del dispositivo. Luego:
+El equipo usado para este proyecto es un Lenovo T560, con un precio aproximado de 1400€. Se estima un ciclo de vida útil de unos 8 años, de los cuales alrededor de medio año se ha dedicado al desarrollo de este trabajo. También sería necesario incluir el coste de una licencia comercial de Qt Creator, que se usaría en el diseño y desarrollo de la interfaz. Por último, habría que tener en cuenta el coste de los distintos componentes del dispositivo. Con todo ello, se estima:
 
 \begin{itemize}
-    \item\textbf{Equipo:} \[\frac{1400\text{€}}{8\ \text{años}} * 0.5\ \text{años} = 87.5\text{€}\]
+    \item\textbf{Equipo:} \[\frac{1400\text{€}}{8\ \text{años}} \times 0.5\ \text{años} = 87.5\text{€} \]
+\end{itemize}
+
+\begin{itemize}
+    \item\textbf{Licencia Qt Creator:} \[ 3670\text{€/año} \times 0.5\ \text{años} = 1835\text{€} \]
 \end{itemize}
 
 \begin{itemize}
@@ -15,13 +19,54 @@ El equipo usado para este proyecto es un Lenovo T560, con un precio aproximado d
 \end{itemize}
 
 \begin{itemize}
-    \item\textbf{LCD:} \[ 52.8\text{€} \]
+    \item\textbf{Pantalla LCD 20x4:} \[ 10\text{€} \]
 \end{itemize}
 
 \begin{itemize}
-    \item\textbf{Arduino Mega 2560:} \[ 52.8\text{€} \]
+    \item\textbf{PCB:} \[ 20\text{€} \]
 \end{itemize}
 
 \begin{itemize}
-    \item\textbf{Arduino Mega 2560:} \[ 52.8\text{€} \]
+    \item\textbf{Carcasa:} \[ 50\text{€} \]
 \end{itemize}
+
+En total: \[ 87.5\text{€} + 1835\text{€} + 52.8\text{€} + 10\text{€} + 20\text{€} + 50\text{€} = 2055.3\text{€} \]
+
+\subsubsection{Coste de personal}
+
+Estimamos que el sueldo de un programador junior en la actualidad ronda los 9.25€/hora. El de uno senior, por otro lado, se estima en unos 23€/hora. Como duración del proyecto, se tendrá en cuenta el tiempo real, discutido en la \hyperref[ch:planificacion]{planificación temporal}.
+
+\begin{itemize}
+    \item\textbf{Programador junior:} \[ 9.25\text{€/hora} \times 450\ \text{horas} = 4162.5\text{€} \]
+\end{itemize}
+
+\begin{itemize}
+    \item\textbf{Programador senior:} \[ 23\text{€/hora} \times 2\ \text{horas} * 4\ \text{semanas} * 5\ \text{meses} = 920\text{€} \]
+\end{itemize}
+
+En total: \[ 4162.5\text{€} + 920\text{€} = 5082.5\text{€} \]
+
+\subsubsection{Costes indirectos}
+
+Para hacer una aproximación, se tendrán en cuenta:
+
+\begin{itemize}
+    \item\textbf{Luz:} \[ 85\text{€/mes} \times 5\ \text{meses} = 425\text{€} \]
+\end{itemize}
+
+\begin{itemize}
+    \item\textbf{Agua:}\[ 40\text{€/mes} \times 5\ \text{meses} = 200\text{€} \]
+\end{itemize}
+
+\begin{itemize}
+    \item\textbf{Internet:}\[ 25\text{€/mes} \times 5\ \text{meses} = 125\text{€} \]
+\end{itemize}
+
+En total: \[ 425\text{€} + 200\text{€} + 125\text{€} = 750\text{€} \]
+
+\subsubsection{Coste total}
+
+
+\[
+    \text{Coste total} = 2055.3\text{€} + 5082.5\text{€} + 750\text{€} = 7887.8\text{€}
+\]

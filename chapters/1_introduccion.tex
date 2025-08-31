@@ -1,65 +1,95 @@
 \chapter{Introducción}
+\label{ch:introduccion}
+
+Como es costumbre, esta memoria merece ser empezada por el principio: el ``qué'' y el ``por qué'' de este proyecto. Esa es la función que cumplirá esta introducción, en la que se contextualizarán los aspectos fundamentales del trabajo, así como la motivación detrás de su realización. A partir de ellos, se definirán los objetivos específicos que se tratarán de cumplir, y por último se describirá brevemente la estructura de este documento.
+
+\section{Contexto}
+
+Un microcontrolador es un circuito integrado programable que está compuesto de distintos bloques funcionales que cumplen tareas específicas. Este incluye en su interior los tres componentes esenciales de un ordenador (una CPU, memoria y mecanismos de entrada y salida), conviertiéndolo funcionalmente en un ordenador a pequeña escala.
+
+A pesar de su tamaño, son muy potentes, consumiendo menos energía que un ordenador convencional y a un precio mucho más bajo. Esto permite integrarlos en todo tipo de dispositivos, desde electrodomésticos o teléfonos móviles hasta aquellos usados en la automatización industrial y en la industria aeroespacial. Hoy en día son esenciales para muchas de las tareas que realizamos de manera cotidiana.
+
+Sin embargo, a pesar de sus numerosos beneficios, sus recursos son limitados, lo cual los hace menos apropiados para aplicaciones que necesiten una mayor cantidad de memoria o de procesamiento. Es por ello que usarlos de forma conjunta con un ordenador tradicional puede ser un factor clave en algunos casos.
 
 \section{Motivación}
 \label{sec:motivacion}
 
-Este trabajo se realiza a partir de la necesidad de Valeo, una empresa del ámbito automobilístico, de realizar pruebas más especificas sobre los faros que producen. El laboratorio de GranaSAT, del que mi tutor forma parte, fue el encargado de desarrollar las primeras versiones del dispositivo, que fueron anteriormente presentadas como Trabajos de Fin de Grado por Luis Sánchez (autor de la PCB y todo el apartado electrónico) y Rubén Sánchez (desarrollador de una parte del firmware), respectivamente.
+Este proyecto se realiza a partir de la necesidad de Valeo, una empresa distribuidora en el ámbito automobilístico, de proporcionar a sus fabricantes una forma de probar el funcionamiento de los faros de distintos vehículos.
 
-% TODO: Explicar aquí cómo es el dispositivo
-% Este dispositivo está compuesto por un Arduino... con una pantalla... genera señales PWM... que son...
+El laboratorio de GranaSAT, del que el tutor de este trabajo forma parte, fue el encargado de proporcionar una solución a dicha urgencia: usar un dispositivo basado en un microcontrolador para producir las señales PWM (\textit{Pulse-Width Modulation}) que alimentan dichos faros.
 
-Este dispositivo está compuesto por un Arduino Mega 2560, una pantalla LCD de 4 líneas, un \textit{rotary encoder} y 8 conectores de salida. Por cada uno de estos 8 conectores se produce una salida PWM configurable por el usuario, pensada para conectar y probar los distintos modos del faro de un vehículo. En la \autoref{fig:pwmbox_top} incluída se puede ver la parte superior del dispositivo. Por otro lado, la \autoref{fig:pwmbox_side} muestra su lateral.
+Esta ha sido presentada como Trabajo de Fin de Grado en años anteriores. Primero por Luis Sánchez, autor de la PCB y de todo el apartado electrónico, y luego por Rubén Sánchez, que se encargó de desarrollar el firmware del dispositivo.
 
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{pwmbox_top.jpg}
-    \caption{Dispositivo PWM Box desde arriba.}
-    \label{fig:pwmbox_top}
-\end{figure}
+Este dispositivo, al que llamamos PWM Box, ha sido usado por Valeo de forma satisfactoria. Sin embargo, se han vuelto a poner en contacto con GranaSAT para expresar una nueva necesidad: la capacidad de almacenar distintos perfiles de configuración para el dispositivo.
 
-\begin{figure}
-    \centering
-    \includegraphics[width=\textwidth]{pwmbox_side.jpg}
-    \caption{Lateral del dispositivo PWM Box.}
-    \label{fig:pwmbox_side}
-\end{figure}
+Para ello, se plantea en este trabajo la implementación de nuevas funcionalidades en el dispositivo que permitan resolver esta cuestión. Asimismo, se pretende proporcionar a la empresa una interfaz gráfica que les permita gestionar estas configuraciones sin tener que depender exclusivamente de la limitada memoria del microcontrolador.
 
+A su vez, esta tarea es idónea para complementar las competencias que he adquirido a lo largo de la mención de Ingeniería de Computadores del Grado. Por un lado, me permite poner en práctica lo aprendido en un proyecto real, mientras que por otro, constituye una forma de acercarme a un desarrollo algo más a alto nivel.
 
-\section{Conocimientos previos}
-\label{sec:conocimientos}
-
-En la realización de este trabajo se han puesto en práctica competencias adquiridas en distintas asigntauras de la titulación, y más concretamente de la rama que he cursado, \emph{Ingeniería de Computadores}. Por nombrar algunas:
-
-\begin{itemize}
-    \item\textbf{Fundamentos y Metodología de la Programación:} Tratándose de un trabajo de desarrollo, se deben mencionar las asignaturas del Grado en las que se establecen los pilares del conocimiento en programación de muchos estudiantes. Desde lo más básico hasta conceptos más complejos, una gran parte de su contenido se ha aplicado en el desarrollo de este TFG.
-    \item\textbf{Estructuras de Datos:} Como su nombre indica, se centra en los distintos contenedores de datos (vectores, colas, pilas, etc), sus particularidades, y cómo trabajar con ellos, conocimientos que han sido de gran utilidad a lo largo de este proyecto.
-    \item\textbf{Sistemas con Microprocesadores:} Esta asignatura sirve de introducción a numerosos aspectos de la programación de microcontroladores, culminando en la construcción de un robot de lucha usando un Arduino. Todo ello ha sido puesto en práctica para desarrollar el firmware expuesto.
-    \item\textbf{Sistemas Empotrados:} Complementa a la anterior, entrando más en detalle en la arquitectura de los microcontroladores, y aún a más bajo nivel. Aporta conocimientos que han sido de gran valor a lo largo de este proyecto.
-    % \item\textbf{Informática Gráfica:} En un principio la relación puede ser menos clara que en los casos anteriores, pero en ella construí una aplicación para visualizar modelos en 3D, un proyecto bastante similar a una parte de las tareas realizadas en este caso.
-\end{itemize}
+% \section{Conocimientos previos}
+% \label{sec:conocimientos}
+%
+% En la realización de este trabajo se han puesto en práctica competencias adquiridas en distintas asigntauras de la titulación, y más concretamente de la rama que he cursado, \emph{Ingeniería de Computadores}. Por nombrar algunas:
+%
+% \begin{itemize}
+%     \item\textbf{Fundamentos y Metodología de la Programación:} Tratándose de un trabajo de desarrollo, se deben mencionar las asignaturas del Grado en las que se establecen los pilares del conocimiento en programación de muchos estudiantes. Desde lo más básico hasta conceptos más complejos, una gran parte de su contenido se ha aplicado en el desarrollo de este TFG.
+%     \item\textbf{Estructuras de Datos:} Como su nombre indica, se centra en los distintos contenedores de datos (vectores, colas, pilas, etc), sus particularidades, y cómo trabajar con ellos, conocimientos que han sido de gran utilidad a lo largo de este proyecto.
+%     \item\textbf{Sistemas con Microprocesadores:} Esta asignatura sirve de introducción a numerosos aspectos de la programación de microcontroladores, culminando en la construcción de un robot de lucha usando un Arduino. Todo ello ha sido puesto en práctica para desarrollar el firmware expuesto.
+%     \item\textbf{Sistemas Empotrados:} Complementa a la anterior, entrando más en detalle en la arquitectura de los microcontroladores, y aún a más bajo nivel. Aporta conocimientos que han sido de gran valor a lo largo de este proyecto.
+% \end{itemize}
 
 \section{Objetivos}
 \label{sec:objetivos}
 
-El objetivo general de este TFG es mejorar el firmware de la versión existente del dispositivo, al que llamaremos \emph{PWM Box}, corrigiendo algunos errores presentes en ella y añadiendo nuevas funcionalidades. Además, se plantea la implementación de una interfaz gráfica compatible con Windows y Linux, que permita el almacenamiento y gestión de distintos perfiles de configuración para el dispositivo.
-
-A raíz de este, se han concretado otros objetivos más definidos:
+A continuación se definen los requisitos generales y específicos de este TFG, obtenidos a partir del contexto proporcionado en esta introducción.
 
 \begin{itemize}
-    \item\textbf{Ingeniería inversa de la versión actual:} Análisis en profundidad el estado actual del dispositivo, entendiendo su funcionamiento e identificando posibles mejoras a implementar.
-    \item\textbf{Almacenamiento de perfiles en el microcontrolador:} Utilización de la memoria EEPROM del microcontrolador para almecenar datos que convenga mantener de forma no volátil.
-    \item\textbf{Funcionalidad compatible con faros de baja velocidad:} Implementación de un nuevo modo de funcionamiento que permita también probar faros de baja velocidad, es decir, que requieran señales de una frecuencia inferior a las que el dispositivo está programado para producir.
-    \item\textbf{Interfaz gráfica:} Diseño de una aplicación para ordenador que permita gestionar la configuración del dispositivo tanto desde Windows como desde Linux. Esta ha de ser capaz de obtener las configuraciones almacenadas en el PWM Box, guardarlas de forma permanente en el disco, y posteriormente volver a cargarlas en el dispositivo.
+    \item\textbf{OG-1.} Mejorar el actual firmware del PWM Box.
+    \begin{itemize}
+        \item\textbf{OE-1.1.} Realización de una ingeniería inversa de la versión actual del firmware, con el objetivo de localizar y corregir posibles errores existentes.
+        \item\textbf{OE-1.2.} Desarrollar una funcionalidad que permita la utilización de la memoria EEPROM del microcontrolador para almacenar perfiles de configuración.
+        \item\textbf{OE-1.3.} Incluir un nuevo modo de funcionamiento que permita probar faros que requieran señales de una frecuencia inferior a la que el dispositivo es capaz de generar.
+    \end{itemize}
+    \item\textbf{OG-2.} Implementación de una interfaz gráfica complementaria.
+    \begin{itemize}
+        \item\textbf{OE-2.1.} Integrar la aplicación con el dispositivo, permitiendo el intercambio de información entre ambos.
+        \item\textbf{OE-2.2.} Implementar los mecanismos necesarios para permitir el envío de perfiles de configuración desde la interfaz al PWM Box.
+        \item\textbf{OE-2.3.} Incluir en la interfaz elementos que permitan visualizar y modificar las distintas configuraciones que esta almacene.
+        \item\textbf{OE-2.4.} Permitir la exportación e importación de perfiles de la interfaz al disco del ordenador.
+    \end{itemize}
 \end{itemize}
+
+Se determinan, adicionalmente, los siguientes objetivos de aprendizaje:
+
+\begin{itemize}
+    \item\textbf{OA-1.} Poner en práctica en un proyecto real los conociemientos adquiridos durante el Grado acerca de la programación a bajo nivel.
+    \item\textbf{OA-2.} Aprender sobre el diseño y desarrollo de una aplicación de escritorio.
+    \item\textbf{OA-3.} Adquirir destreza en algún lenguaje de programación que no haya usado durante la carrera.
+    \item\textbf{OA-4.} Llevar a cabo la integración de distintos sistemas independientes en un mismo producto final.
+\end{itemize}
+
+% El objetivo general de este TFG es mejorar el firmware de la versión existente del dispositivo, al que llamaremos \emph{PWM Box}, corrigiendo algunos errores presentes en ella y añadiendo nuevas funcionalidades. Además, se plantea la implementación de una interfaz gráfica compatible con Windows y Linux, que permita el almacenamiento y gestión de distintos perfiles de configuración para el dispositivo.
+%
+% A raíz de este, se han concretado otros objetivos más definidos:
+%
+% \begin{itemize}
+%     \item\textbf{Ingeniería inversa de la versión actual:} Análisis en profundidad el estado actual del dispositivo, entendiendo su funcionamiento e identificando posibles mejoras a implementar.
+%     \item\textbf{Almacenamiento de perfiles en el microcontrolador:} Utilización de la memoria EEPROM del microcontrolador para almecenar datos que convenga mantener de forma no volátil.
+%     \item\textbf{Funcionalidad compatible con faros de baja velocidad:} Implementación de un nuevo modo de funcionamiento que permita también probar faros de baja velocidad, es decir, que requieran señales de una frecuencia inferior a las que el dispositivo está programado para producir.
+%     \item\textbf{Interfaz gráfica:} Diseño de una aplicación para ordenador que permita gestionar la configuración del dispositivo tanto desde Windows como desde Linux. Esta ha de ser capaz de obtener las configuraciones almacenadas en el PWM Box, guardarlas de forma permanente en el disco, y posteriormente volver a cargarlas en el dispositivo.
+% \end{itemize}
 
 \section{Estructura del documento}
 
 Este documento se divide en distintos apartados, centrándose cada uno en un aspecto distinto del tema que trata:
 
 \begin{itemize}
-    \item\textbf{Introdución:} El primer apartado, en el cual nos encontramos, sirve de introducción al proyecto. Proporciona información general del desarrollo que se va a abordar, proporcionando contexto y definiendo a grandes rasgos algunos de las tareas que se van a llevar a cabo.
-    \item\textbf{Estado del arte:} En segundo lugar, se realizará un análisis del estado del proyecto antes de empezar a trabajar en él. Se tratará de describir de forma detallada las características de las versiones anteriores del firmware, identificando áreas en las que mejorar y comenzando a tomar algunas decisiones de cara al diseño de la aplicación.
-    \item\textbf{Tecnologías:} En este apartado se hará una comparativa de las diferentes tecnologías y herramientas que se han planteado usar en el transcurso del desarrollo, detallando brevemente las motivación de cada una de las elecciones tomadas.
-    \item\textbf{Diseño y desarrollo:} Esta parte se centrará en el proceso de ideación y posterior creación de la solución final, explicando paso a paso distintos aspectos de interés del desarrollo.
+    \item\textbf{Introdución:} El primer apartado, en el cual nos encontramos, sirve de introducción al proyecto. Proporciona información general del desarrollo que se va a abordar, proporcionando contexto y definiendo a grandes rasgos las tareas que se esperan cumplir.
+    \item\textbf{Estado del arte:} En segundo lugar, se realizará un análisis del estado del proyecto antes de empezar a trabajar en él. Se tratará de describir de forma detallada las características de las versiones anteriores del firmware, identificando áreas en las que mejorar y comenzando a tomar algunas decisiones de cara a la propuesta.
+    \item\textbf{Planificación temporal:} En este apartado se describirá la metodología seguida para llevar a cabo el trabajo, planificando de antemano cuánto tiempo invertir en cada una de sus partes.
+    \item\textbf{Firmware:} Constituye el principio de la propuesta. En él se desarrollan las distintas fases en las que se ha decidido enfrentar esta parte del proyecto.
+    \item\textbf{Interfaz:} Segunda parte de la propuesta, en la que se abordan los distintos aspectos definidos para la implementación de la interfaz gráfica.
+    \item\textbf{Presupuesto:} En este apartado se realiza una breve estimación del coste total del desarrollo del proyecto, desglosado según su procedencia.
+    \item\textbf{Conclusiones y trabajo futuro:} Finalmente, se concluirá la memoria reflexionando sobre el cumplimiento de los objetivos fijados. También se mencionarán algunos aspectos en los que se considera que hay cabida para mejoras, en caso de que continúe trabajando en el proyecto.
 \end{itemize}
 

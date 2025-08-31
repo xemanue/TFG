@@ -4,7 +4,7 @@
 \section{Análisis}
 \label{sec:fw_analisis}
 
-El primer paso para comenzar a trabajar en el firmware del dispositivo es realizar un análisis en el que se concreten los requisitos de las funcionalidade a incorporar al sistema.
+El primer paso para comenzar a trabajar en el firmware del dispositivo es realizar un análisis en el que se concreten los requisitos de las funcionalidades a incorporar al sistema.
 
 Como se comentó en la sección \ref{sec:motivacion}, este proyecto es producto de las necesidades de Valeo, una empresa distribuidora de partes de vehículos. Junto a estas, pretenden también proporcionar a sus fabricantes herramientas para probar su correcto funcionamiento. Una de estas herramientas es el PWM Box.
 
@@ -150,6 +150,58 @@ Teniendo en cuenta las necesidades de la empresa y el perfil de este usuario, po
     \caption{RF-8. Parar la ejecución de secuencias lentas.}
 \end{table}
 
+\FloatBarrier
+
+\subsubsection{Requisitos no funcionales}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|m{2.5cm}|m{9.27cm}|}
+        \hline
+        \textbf{ID} & RNF-1 \\
+        \hline
+        \textbf{Nombre} & Usabilidad \\
+        \hline
+        \textbf{Descripción} & El sistema ha de ser sencillo e intuitivo para los usuarios. \\
+        \hline
+        \textbf{Prioridad} & Alta \\
+        \hline
+    \end{tabular}
+    \caption{RNF-1. Usabilidad.}
+\end{table}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|m{2.5cm}|m{9.27cm}|}
+        \hline
+        \textbf{ID} & RNF-2 \\
+        \hline
+        \textbf{Nombre} & Rendimiento \\
+        \hline
+        \textbf{Descripción} & El sistema debe ser fluido y responder a las acciones del usuario sin demoras. \\
+        \hline
+        \textbf{Prioridad} & Alta \\
+        \hline
+    \end{tabular}
+    \caption{RNF-2. Rendimiento.}
+\end{table}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|m{2.5cm}|m{9.27cm}|}
+        \hline
+        \textbf{ID} & RNF-3 \\
+        \hline
+        \textbf{Nombre} & Extensibilidad \\
+        \hline
+        \textbf{Descripción} & El sistema debe estar diseñado de forma que sea sencillo añadir nuevas características. \\
+        \hline
+        \textbf{Prioridad} & Media \\
+        \hline
+    \end{tabular}
+    \caption{RNF-3. Extensibilidad.}
+\end{table}
+
 \section{Diseño}
 \label{sec:fw_diseño}
 
@@ -209,7 +261,7 @@ Para el manejo de la memoria EEPROM, cabe especificar qué datos será necesario
 En primer lugar se definirán las siguientes unidades:
 
 \begin{itemize}
-    \item\textbf{PWM:} Representación de una señal PWM en la memoria. Consistirá de sus 4 parámetros principales (modo, frecuencia, ciclo y fase), así como un nombre identificativo (por ejemplo, "Intermitentes").
+    \item\textbf{PWM:} Representación de una señal PWM en la memoria. Consistirá de sus 4 parámetros principales (modo, frecuencia, ciclo y fase), así como un nombre identificativo (por ejemplo, ``Intermitentes'').
     \item\textbf{Slot:} Llamado así por ser la unidad en la que se compartimentalizará la memoria (ranuras), representa una forma de agrupar señales PWM. Permitirá al usuario definir distintos modelos de coches de forma que cada PWM esté destinado a probar un grupo distinto de luces de faros. Consistirá de 8 señales PWM y de un nombre identificativo. Se añadirá, además, una variable que indicará si la ranura está ocupada o no. Esto permitirá evitar borrados reales de memoria, prolongando su vida útil y disminuyendo el coste en cuanto a rendimiento de la escritura.
 \end{itemize}
 
@@ -359,6 +411,6 @@ Para comprobar que no se ha alterado la capacidad del dispositivo de emitir las 
     \label{fig:fw_slow_signal2}
 \end{figure}
 
-Estas pruebas han sido realizado con el Saleae Logic v1.2.40\footnote{https://support.saleae.com/logic-software/legacy-software/older-software-releases. Accedido el 28 de agosto de 2025.}, que es \textit{software} propietario. Sin embargo, también podría usarse una versión \textit{open-source} como puede ser Sigrok PulseView v0.4.2\footnote{https://sigrok.org/wiki/Downloads. Accedido el 28 de agosto de 2025.}.
+Estas pruebas han sido realizado con el Saleae Logic v1.2.40\cite{saleae-logic}, que es \textit{software} propietario. Sin embargo, también podría usarse una versión \textit{open-source} como puede ser Sigrok PulseView v0.4.2\cite{sigrok-pv}.
 
 % TODO: Medir con el PulseView
