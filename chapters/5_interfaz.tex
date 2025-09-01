@@ -445,11 +445,11 @@ Habiendo planteado los distintos módulos, las interacciones entre ellos pueden 
 
 \section{Desarrollo}
 
-Para el desarrollo de la aplicación ha sido necesario el uso de la librería \textit{pyserial}\cite{pyserial-lib}. Las funcionalidades que proporciona han permitido gestionar todos los aspectos de la comunicación por el puerto serie.
+Para el desarrollo de la aplicación ha sido necesario el uso de la librería \textit{pyserial} \cite{pyserial-lib}. Las funcionalidades que proporciona han permitido gestionar todos los aspectos de la comunicación por el puerto serie.
 
-También se ha hecho uso de la librería estándar \textit{json}\cite{json-lib} para la codificación y decodificación de los archivos en este formato.
+También se ha hecho uso de la librería estándar \textit{json} \cite{json-lib} para la codificación y decodificación de los archivos en este formato.
 
-Por último, para la apariencia general de la aplicación, se ha usado el tema \textit{catppuccin latte} de la librería \textit{qt-themes}\cite{qtthemes-lib}.
+Por último, para la apariencia general de la aplicación, se ha usado el tema \textit{catppuccin latte} de la librería \textit{qt-themes} \cite{qtthemes-lib}.
 
 Durante el proceso de implementación se ha enfrentado una situación que no se había tenido en cuenta en la etapa de diseño: la forma de gestionar las distintas fuentes de las que puede provenir un perfil. Como se determinó en la definición de los \hyperref[subsub:ui_requisitos]{requisitos}, un perfil puede cargarse en la aplicación desde el dispositivo, desde un archivo importado, o puede ser directamente creado a través de la interfaz. Es conveniente manejar estas tres fuentes por separado, ya que cada una tiene ciertas peculiaridades. Por ejemplo, no tendría sentido permitir al usuario quitar de la aplicación un perfil que se encuentre cargado en el dispositivo, mientras que si lo tendría en el caso de tratarse de una ranura creada desde la interfaz.
 

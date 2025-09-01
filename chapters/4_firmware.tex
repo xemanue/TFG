@@ -168,6 +168,7 @@ Teniendo en cuenta las necesidades de la empresa y el perfil de este usuario, po
         \hline
     \end{tabular}
     \caption{RNF-1. Usabilidad.}
+    \label{tab:rnf2}
 \end{table}
 
 \begin{table}[h!]
@@ -274,10 +275,10 @@ Otros parámetros que se necesitarán guardar, teniendo en cuenta los requisitos
     \item\textbf{Versión del software}.
     \item\textbf{Brillo de la pantalla:} Permitirá mantener el brillo establecido entre ejecuciones.
     \item\textbf{Ranura por defecto:} Indica la ranura de memoria que se cargará automáticamente al iniciar el PWM Box.
-    \item\textbf{Contraseña:} Debido al entorno en el que se plantea usar el dispositivo, descrito en la sección \ref{sec:fw_analisis}, no se estima necesario encriptar la contraseña de ninguna forma.
+    \item\textbf{Contraseña:} Debido al entorno en el que se plantea usar el dispositivo y al nivel de conocimiento técnico de sus usuarios, descrito en el anterior \hyperref[sec:fw_analisis]{análisis}, no se estima necesario encriptar la contraseña de ninguna forma.
 \end{itemize}
 
-Dada la capacidad del usuario de añadir, borrar y reemplazar ranuras de memoria según desee, se prevee la necesidad de algún mecanismo adicional para determinar qué ranuras mostrar en el menú principal del dispositivo. Con este fin, se incluirá también un vector auxiliar, que contendrá el índice de las ranuras de la memoria en el orden en el que se les muestra al usuario. Actúa, por así decirlo, como un traductor entre el índice de las ranuras visibles al usuario y el índice de las mismas internamente. Esto puede entenderse más fácilmente con una representación, que se incluye en la \autoref{fig:eeprom_operations}
+Dada la capacidad del usuario de añadir, borrar y reemplazar ranuras de memoria según desee, se prevee la necesidad de algún mecanismo adicional para determinar qué ranuras mostrar en el menú principal del dispositivo. Con este fin, se incluirá también un vector auxiliar, que contendrá el índice de las ranuras de la memoria en el orden en el que se les muestra al usuario. Actúa, por así decirlo, como un traductor entre el índice de las ranuras visibles al usuario y el índice de las mismas internamente. Esto puede entenderse más fácilmente con una representación, que se incluye en la figura \ref{fig:eeprom_operations}
 
 \begin{figure}[h!]
     \centering
@@ -331,7 +332,7 @@ En esta sección se detallarán las decisiones enfrentadas durante la implementa
 
 % Cabe destacar que también se ha realizado una extensa labor de limpieza del código, debido a una gran cantidad de declaraciones sin usar, definiciones redundantes y algunas prácticas que no se consideraban óptimas. En muchos casos, el código ha sido prácticamente reimplementando. Esto es, por supuesto, un aspecto subjetivo, por lo que no se hará referencia a ello nuevamente. Sin embargo, no mencionarlo sería subestimar el trabajo realizado en esta parte del proyecto.
 
-Cabe mencionar, como regla general, que la mayoría sino todos los apartados incluidos en esta sección hacen uso de una forma u otra del \textit{datasheet} del ATmega 2560\cite{atmega2560}, microcontrolador incluido en el Arduino Mega 2560 del que se hace uso en este proyecto.
+Cabe mencionar, como regla general, que la mayoría sino todos los apartados incluidos en esta sección hacen uso de una forma u otra del \textit{datasheet} del ATmega 2560 \cite{atmega2560}, microcontrolador incluido en el Arduino Mega 2560 del que se hace uso en este proyecto.
 
 \subsection{Menú de señales lentas}
 
@@ -375,7 +376,7 @@ Esta parte se ha implementado utilizado el apoyo de la librería \verb|avr/eepro
 
 A estas se une el vector auxiliar tambien mencionado en la sección \ref{sec:fw_diseño}. Para facilitar su manejo y hacer el código más reutilizable, se ha implementado una pequeña librería que define las funciones básicas esperables de un vector.
 
-Con todo esto, el contenido de la memoria EEPROM puede verse en la \autoref{fig:eeprom_vars}.
+Con todo esto, el contenido de la memoria EEPROM puede verse en la figura \ref{fig:eeprom_vars}.
 
 \begin{figure}[h!]
     \centering
@@ -383,6 +384,14 @@ Con todo esto, el contenido de la memoria EEPROM puede verse en la \autoref{fig:
     \caption{Contenido de la memoria EEPROM.}
     \label{fig:eeprom_vars}
 \end{figure}
+
+Cuando, más adelante en el desarrollo, se comenzó a trabajar en la interfaz, se detectó un gran problema con el rendimiento a la hora de obtener los datos del dispositivo. El causante era que se estaban leyendo los datos directamente de la EEPROM siempre que la interfaz los pedía. Cada tiempo de acceso a un dato en memoria supone una gran penalización en el rendimiento del programa, que se hizo aparente incluso al leer únicamente la contraseña. Si se mantenía este funcionamiento, la calidad del producto final se vería muy perjudicada.
+
+Es por ello que hubo que tomar la decisión de mantener en todo momento una copia de los datos de la EEPROM en la memoria del programa.
+
+Por un lado, esto soluciona el problema comentado, ya que leer datos de la RAM es mucho más rápido que el caso anterior. Además, puede evitar escrituras innecesarias en la EEPROM, comparando el valor que se pretende guardar con el presente para detectar si realmente ha habido un cambio (también posible anteriormente, pero con la penalización del tiempo de acceso). Esto supone una mayor vida útil de la memoria programable.
+
+Sin embargo, dado que la directiva \verb|EEMEM| ya reserva espacio para las variables en la memoria RAM, esto provoca en la práctica que las variables de la memoria EEPROM ocupen el doble de espacio. Dado que la memoria RAM del Arduino Mega 2560 tiene el doble de tamaño que su EEPROM, esto solo reduce en dos el número de perfiles que podemos almacenar, lo cual se considera un precio justo a pagar para cumplir el \hyperref[tab:rnf2]{RNF-2}.
 
 \section{Pruebas}
 
@@ -411,6 +420,4 @@ Para comprobar que no se ha alterado la capacidad del dispositivo de emitir las 
     \label{fig:fw_slow_signal2}
 \end{figure}
 
-Estas pruebas han sido realizado con el Saleae Logic v1.2.40\cite{saleae-logic}, que es \textit{software} propietario. Sin embargo, también podría usarse una versión \textit{open-source} como puede ser Sigrok PulseView v0.4.2\cite{sigrok-pv}.
-
-% TODO: Medir con el PulseView
+Estas pruebas han sido realizado con el Saleae Logic v1.2.40 \cite{saleae-logic}, que es \textit{software} propietario. Sin embargo, también podría usarse una versión \textit{open-source} como puede ser Sigrok PulseView v0.4.2 \cite{sigrok-pv}.

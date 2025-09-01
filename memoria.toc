@@ -40,7 +40,7 @@
 \contentsline {subsubsection}{Giros}{32}{section*.35}%
 \contentsline {subsection}{\numberline {4.3.3}Serial control}{32}{subsection.4.3.3}%
 \contentsline {subsection}{\numberline {4.3.4}Memoria EEPROM}{33}{subsection.4.3.4}%
-\contentsline {section}{\numberline {4.4}Pruebas}{33}{section.4.4}%
+\contentsline {section}{\numberline {4.4}Pruebas}{34}{section.4.4}%
 \contentsline {chapter}{\numberline {5}Interfaz gráfica}{37}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Análisis}{37}{section.5.1}%
 \contentsline {subsubsection}{Comunicación con el dispositivo}{37}{section*.40}%

@@ -1,7 +1,6 @@
 \documentclass[a4paper,11pt]{book}
 
 \usepackage[utf8]{inputenc}
-
 \usepackage[spanish]{babel}\decimalpoint
 
 \usepackage{graphicx}
@@ -9,7 +8,6 @@
 \usepackage{subcaption}
 \usepackage{pdflscape}
 
-\usepackage{listings}
 \usepackage{dcolumn}
     \newcolumntype{.}{D{.}{\esperiod}{-1}}
     \makeatletter
@@ -40,83 +38,27 @@
 \usepackage{amsmath}
 \usepackage{eurosym}
     \DeclareUnicodeCharacter{20AC}{\euro}
+
+\usepackage[x11names]{xcolor}
+
 \usepackage{hyperref}
     \hypersetup{
+        colorlinks = true,
+        linkcolor = OrangeRed3,
+        urlcolor = RoyalBlue3,
+        citecolor = Chartreuse4,
+        %
         pdfauthor = {Jose Manuel García Cazorla (jmgarcaz@correo.ugr.es)},
         pdftitle = {Aplicación de control para testeador de faros de vehículos},
         pdfkeywords = {firmware, microcontrolador, Arduino, PWM, aplicación, frontend, C, Python, QT},
         pdfproducer = {pdflatex}
     }
-\usepackage{url}
-\usepackage{colortbl}
 \usepackage[stable]{footmisc}
 \usepackage{pdfpages}
 \usepackage[fixlanguage]{babelbib}
 
-\renewcommand{\chaptermark}[1]{\markboth{\textbf{#1}}{}}
 \renewcommand{\sectionmark}[1]{\markright{\textbf{\thesection. #1}}}
-
 \setlength{\headheight}{1.5\headheight}
-
-\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
-
-\newtheorem{teorema}{Teorema}[chapter]
-\newtheorem{ejemplo}{Ejemplo}[chapter]
-\newtheorem{definicion}{Definición}[chapter]
-
-\definecolor{gray97}{gray}{.97}
-\definecolor{gray75}{gray}{.75}
-\definecolor{gray45}{gray}{.45}
-\definecolor{gray30}{gray}{.94}
-
-\lstset{
-    frame=Ltb,
-    framerule=0.5pt,
-    aboveskip=0.5cm,
-    framextopmargin=3pt,
-    framexbottommargin=3pt,
-    framexleftmargin=0.1cm,
-    framesep=0pt,
-    rulesep=.4pt,
-    backgroundcolor=\color{gray97},
-    rulesepcolor=\color{black},
-    %
-    stringstyle=\ttfamily,
-    showstringspaces = false,
-    basicstyle=\scriptsize\ttfamily,
-    commentstyle=\color{gray45},
-    keywordstyle=\bfseries,
-    %
-    numbers=left,
-    numbersep=6pt,
-    numberstyle=\tiny,
-    numberfirstline = false,
-    breaklines=true
-}
-
-\lstnewenvironment{listing}[1][]
-    {\lstset{#1}\pagebreak[0]}{\pagebreak[0]}
-
-    \lstdefinestyle{CodigoC}{
-        basicstyle=\scriptsize,
-        frame=single,
-        language=C,
-        numbers=left
-    }
-    \lstdefinestyle{CodigoC++}{
-        basicstyle=\small,
-        frame=single,
-        backgroundcolor=\color{gray30},
-        language=C++,
-        numbers=left
-    }
-    \lstdefinestyle{Consola}{
-        basicstyle=\scriptsize\bf\ttfamily,
-        backgroundcolor=\color{gray30},
-        frame=single,
-        numbers=none
-    }
-\newcommand{\bigrule}{\titlerule[0.5mm]}
 
 \makeatletter
 \def\clearpage{
@@ -135,11 +77,9 @@
 }
 \makeatother
 
-
 \begin{document}
 
     \input{chapters/portada1.tex}
-
     \input{chapters/portada2.tex}
 
     \cleardoublepage
@@ -155,34 +95,16 @@
     \mainmatter
     \setlength{\parskip}{5pt}
 
-    % \chapter
-    % \section
-    % \subsection
-    % \subsubsection
-    % \paragraph
-    % \subparagraph
-
     \input{chapters/1_introduccion.tex}
-
     \input{chapters/2_estado_del_arte.tex}
-
     \input{chapters/3_planificacion.tex}
-    
     \input{chapters/4_firmware.tex}
-
     \input{chapters/5_interfaz.tex}
-
     \input{chapters/6_presupuesto.tex}
-
     \input{chapters/7_conclusiones_y_trabajos_futuros.tex}
 
     \bibliographystyle{bababbrv-fl}
     \bibliography{bibliografia}
-
-    % \nocite{*}
-    % \bibliography{bibliografia/bibliografia}\addcontentsline{toc}{chapter}{Bibliografía}
-
-    \appendix
 
     \chapter*{}
     \thispagestyle{empty}

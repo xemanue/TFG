@@ -37,7 +37,7 @@ Con esto, se procede a realizar una clasificación básica de los distintos fich
 
 \begin{itemize}
     \item{\textbf{Archivos HEX:}} Estos contienen datos en formato hexadecimal. Por el nombre, se pueden distinguir entre los que contienen datos para la memoria no volátil del microcontrolador (EEPROM), y los que contienen el programa en sí.
-    \item{\textbf{Archivos BAT:}} Se tratan de archivos de comandos para Windows. Examinando su contenido, se puede ver que todos ellos ejecutan comandos de un programa llamado AVRDUDE\footnote{\url{https://github.com/avrdudes/avrdude}}.\\
+    \item{\textbf{Archivos BAT:}} Se tratan de archivos de comandos para Windows. Examinando su contenido, se puede ver que todos ellos ejecutan comandos de un programa llamado AVRDUDE.\\
     AVRDUDE es una utilidad multiplataforma para la programación de microcontroladores AVR, entre los que se encuentran los usados por Arduino. Permite todo tipo de operaciones de carga y descarga de datos de las distintas memorias del microcontrolador. Es una herramienta usada muy comúnmente, funcionando incluso de \textit{back-end} en otros entornos de desarrollo.
     \item{\textbf{Archivos de código:}} Por un lado tendríamos las cabeceras y su implementación, en los usuales archivos H y C. Por otro lado, encontramos un archivo INO, que es el tipo usado por Arduino IDE para distinguir que se trata del archivo principal del proyecto. Este contiene las funciones \verb|setup()| y \verb|loop()|, que definen el flujo básico del programa: la primera se ejecuta una vez al inicio, y la segunda conforma el bucle principal de ejecución.
 \end{itemize}
@@ -98,7 +98,7 @@ De esta parte se extraen varios puntos a mejorar. Por un lado, el archivo es dem
 
 Por otro lado, las variables que hacen referencia a los distintos menús se encuentran agrupadas en estructuras independientes. De esta forma se consigue que no haya conflicto entre ellas, pero hacen el código mucho menos legible debido a la longitud de cada una de sus referencias.
 
-Esto trae consigo numerosos problemas que dificultan el mantenimiento del código, tanto a la hora de corregir errores existentes como al tratar de extender las funcionalidades del dispositivo, que son dos de los objetivos de este trabajo.
+Esto trae consigo numerosos problemas que dificultan el mantenimiento del código, tanto a la hora de corregir errores existentes como al tratar de extender las funcionalidades del dispositivo, que son dos de los \hyperref[sec:objetivos]{objetivos} de este trabajo.
 
 Adicionalmente, se ha detectado el incorrecto funcionamiento del \textit{rotary encoder} en determinados menús, en los que las direcciones de giro están invertidas.
 
@@ -114,7 +114,7 @@ En esta sección destacaré las distintas herramientas y tecnologías involucrad
 
 \subsection{Sistema operativo}
 
-Hasta ahora, todo el código usado en el proyecto se ha desarrollado en Windows. Dada la necesidad de comprobar el funcionamiento del producto final tanto en este como en Linux (establecida como objetivo en la \autoref{sec:objetivos}), el sistema operativo a usar no es un aspecto decisivo a tener en cuenta en este caso. Al fin y al cabo, todo el software que se utilice ha de ser compatible con ambos.
+Hasta ahora, todo el código usado en el proyecto se ha desarrollado en Windows. Dada la necesidad de comprobar el funcionamiento del producto final tanto en este como en Linux (establecida como objetivo en la sección \hyperref[sec:objetivos]{Objetivos}), el sistema operativo a usar no es un aspecto decisivo a tener en cuenta en este caso. Al fin y al cabo, todo el software que se utilice ha de ser compatible con ambos.
 
 Sin embargo, en este caso, se ha decidido usar Linux por preferencia personal. Esto puede resultar un inconveniente a la hora de usar los archivos BAT proporcionados al comienzo del proyecto. Sin embargo, como se comentó en la sección anterior, el programa al que estos hacen referencia es multiplataforma, por lo que bastaría con transferirlos a un \textit{script} en Bash si fuese necesario.
 
@@ -132,9 +132,9 @@ Teniendo en cuenta que el objetivo actual de este ámbito es añadir algunas car
 
 \subsubsection{Interfaz}
 
-Para el desarrollo de la interfaz se necesita una librería gráfica que sea compatible tanto con Windows como con Linux, dado uno de los objetivos definidos en la \autoref{sec:objetivos}. Debido a ello, así como a experiencias previas, se ha optado por el uso de Qt.
+Para el desarrollo de la interfaz se necesita una librería gráfica que sea compatible tanto con Windows como con Linux, dado uno de los \hyperref[sec:objetivos]{objetivos} definidos anteriormente. Debido a ello, así como a experiencias previas, se ha optado por el uso de Qt.
 
-Qt se trata de un \textit{framework} multiplataforma que permite la creación de interfaces gráficas compatibles con Linux, Windows, macOS, Android y otros sistemas empotrados sin necesidad de modificar el código base. Qt proporciona licencias comerciales, pero también está disponible como código abierto a través de \textit{Qt Project}. Su uso está muy extendido en la comunidad de Linux, siendo uno de los ejemplos más representativos KDE Plasma\cite{kde-plasma}, un entorno gráfico \textit{open-source} incluido en la mayor parte de las distribuciones más usadas.
+Qt se trata de un \textit{framework} multiplataforma que permite la creación de interfaces gráficas compatibles con Linux, Windows, macOS, Android y otros sistemas empotrados sin necesidad de modificar el código base. Qt proporciona licencias comerciales, pero también está disponible como código abierto a través de \textit{Qt Project}. Su uso está muy extendido en la comunidad de Linux, siendo uno de los ejemplos más representativos KDE Plasma \cite{kde-plasma}, un entorno gráfico \textit{open-source} incluido en la mayor parte de las distribuciones más usadas.
 
 Qt fue creada para ser usada con C++, pero en la actualidad tiene soporte para otros lenguajes de programación, como Python. Esta versión resulta especialmente interesante par este proyecto, ya que una característica a destacar de Python es su extensibilidad a través del uso de módulos, que podría facilitar la integración de la aplicación con el dispositivo.
 
