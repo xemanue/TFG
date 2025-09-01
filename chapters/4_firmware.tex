@@ -395,9 +395,11 @@ Sin embargo, dado que la directiva \verb|EEMEM| ya reserva espacio para las vari
 
 \section{Pruebas}
 
-Debido a la naturaleza del trabajo, la mayoría de pruebas se han realizado de manera experimental, observando los efectos de los cambios realizados sobre los distintos elementos.
+Conforme se ha ido completando el desarrollo de los distintos módulos, sus funcionalidades han sido validadas a través de pruebas unitarias, de integración y finalmente de aceptación.
 
-Para comprobar que no se ha alterado la capacidad del dispositivo de emitir las señales de manera correcta, así como validar la implementación de las señales lentas, se ha usado un analizador lógico. En la figura \ref{fig:fw_pwm_signals} se muestran las señales PWM resultantes de distintas configuraciones. Adicionalmente, en las figuras \ref{fig:fw_slow_signal1} y \ref{fig:fw_slow_signal2}, se ven dos de las secuencias de señales lentas incluídas con el dispositivo.
+Debido a la naturaleza del trabajo, la mayoría de estas pruebas se han realizado de manera experimental, observando la reacción del dispositivo a las acciones del usuario y comprobando que el resultado de las mismas es el esperado.
+
+Para determinar que no se ha alterado la capacidad del dispositivo de emitir las señales de manera correcta, así como validar la implementación de las señales lentas, se ha usado un analizador lógico como comprobación adicional. En la figura \ref{fig:fw_pwm_signals} se muestran las señales PWM resultantes de distintas configuraciones. Adicionalmente, en las figuras \ref{fig:fw_slow_signal1} y \ref{fig:fw_slow_signal2}, se ven dos de las secuencias de señales lentas incluídas con el dispositivo.
 
 \begin{figure}[h!]
     \centering
@@ -420,4 +422,4 @@ Para comprobar que no se ha alterado la capacidad del dispositivo de emitir las 
     \label{fig:fw_slow_signal2}
 \end{figure}
 
-Estas pruebas han sido realizado con el Saleae Logic v1.2.40 \cite{saleae-logic}, que es \textit{software} propietario. Sin embargo, también podría usarse una versión \textit{open-source} como puede ser Sigrok PulseView v0.4.2 \cite{sigrok-pv}.
+Estas pruebas han sido realizado con el Saleae Logic v1.2.40 \cite{saleae-logic}, que es \textit{software} propietario. Sin embargo, se ha comprobado usando Sigrok PulseView v0.4.2 \cite{sigrok-pv}, una alternativa \textit{open-source}, y el resultado ha sido idéntico.
