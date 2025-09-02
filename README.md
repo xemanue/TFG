@@ -1,20 +1,17 @@
-# Trabajo de Fin de Grado: Aplicación de control para testeador de faros de vehículos
-## Autor: Jose Manuel García Cazorla
-## Tutor: Andrés María Roldán Aranda
+# Aplicación de control para testeador de faros de vehículos
 
----
+- **Autor**: Jose Manuel García Cazorla
+- **Tutor**: Andrés María Roldán Aranda
 
-# Documentación
+## Documentación
 
 La memoria de este proyecto está escrita en LaTeX
 
-## Dependencias
+### Dependencias
 
-- Latexmk, disponible a través de [TeX Live](https://www.tug.org/texlive/), entre otros)
+- Latexmk, disponible a través de [TeX Live](https://www.tug.org/texlive/), entre otros
 - GNU Make
 
-## Compilación
+### Compilación
 
-```
-make
-```
+Simplemente ejecutar `make`.
