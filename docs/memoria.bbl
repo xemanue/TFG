@@ -1,0 +1,77 @@
+\begin{thebibliography}{1}
+  \providebibliographyfont{name}{}%
+  \providebibliographyfont{lastname}{}%
+  \providebibliographyfont{title}{\emph}%
+  \providebibliographyfont{jtitle}{\btxtitlefont}%
+  \providebibliographyfont{etal}{\emph}%
+  \providebibliographyfont{journal}{}%
+  \providebibliographyfont{volume}{}%
+  \providebibliographyfont{ISBN}{\MakeUppercase}%
+  \providebibliographyfont{ISSN}{\MakeUppercase}%
+  \providebibliographyfont{url}{\url}%
+  \providebibliographyfont{numeral}{}%
+  \expandafter\btxselectlanguage\expandafter {\btxfallbacklanguage}
+
+\expandafter\btxselectlanguage\expandafter {\btxfallbacklanguage}
+\bibitem {qtthemes-lib}
+\btxnamefont {\btxlastnamefont {beatreichenbach}}\btxauthorcolon\ \btxtitlefont
+  {\btxifchangecase {qt-themes}{qt-themes}}.
+\newblock {\latintext
+  \btxurlfont{https://github.com/beatreichenbach/qt-themes}}, Accedido el 31 de
+  agosto de 2025.
+
+\bibitem {k&r}
+\btxnamefont {B.~\btxlastnamefont {{Dennis M. Ritchie}}}\btxauthorcolon\
+  \btxtitlefont {The C Programming Language}.
+\newblock Prentice-Hall software series. \btxpublisherfont {Prentice Hall},
+  \btxeditionnumshort {2nd}{.}, 1988\ifbtxprintISBN {,
+  \mbox{\btxISBN~\btxISBNfont {9789688802052}}}.
+
+\bibitem {json-lib}
+\btxnamefont {P.\btxfnamespaceshort S. \btxlastnamefont
+  {Foundation}}\btxauthorcolon\ \btxtitlefont {\btxifchangecase {json}{json}}.
+\newblock {\latintext
+  \btxurlfont{https://docs.python.org/3/library/json.html}}, Accedido el 31 de
+  agosto de 2025.
+
+\bibitem {kde-plasma}
+\btxnamefont {\btxlastnamefont {KDE}}\btxauthorcolon\ \btxtitlefont
+  {\btxifchangecase {Plasma desktop}{Plasma Desktop}}.
+\newblock {\latintext \btxurlfont{https://kde.org/plasma-desktop/}}, Accedido
+  el 31 de agosto de 2025.
+
+\bibitem {atmega2560}
+Microchip\btxauthorcolon\ \btxtitlefont {ATmega640/V-1280/V-1281/V-2560/V2561/V
+  [DATASHEET]}, 2020.
+\newblock {\latintext
+  \btxurlfont{https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/ATmega640-1280-1281-2560-2561-Datasheet-DS40002211A.pdf}},
+  Rev. DS40002211A-05/2020.
+
+\bibitem {pyserial-lib}
+\btxnamefont {\btxlastnamefont {pserial}}\btxauthorcolon\ \btxtitlefont
+  {\btxifchangecase {pyserial}{pyserial}}.
+\newblock {\latintext \btxurlfont{https://github.com/pyserial/pyserial}},
+  Accedido el 31 de agosto de 2025.
+
+\bibitem {saleae-logic}
+\btxnamefont {\btxlastnamefont {Saleae}}\btxauthorcolon\ \btxtitlefont
+  {\btxifchangecase {Saleae logic 1.x}{Saleae Logic 1.x}}.
+\newblock {\latintext
+  \btxurlfont{https://support.saleae.com/logic-software/legacy-software/older-software-releases}},
+  Accedido el 31 de agosto de 2025.
+
+\bibitem {chapman}
+\btxnamefont {I.\btxfnamespaceshort J. \btxlastnamefont {{Sang H. Son}}}\
+  (\btxeditorshort {.})\btxauthorcolon\ \btxtitlefont {Handbook of Real-Time
+  and Embedded Systems}, \btxchaptershort {.}\ Safe and Structured Used of
+  Interrupts in Real-Time and Embedded Software, \btxpagesshort {.}\ 6--8.
+\newblock \btxpublisherfont {Chapman \& Hall}, \btxeditionnumshort {1st}{.},
+  2007\ifbtxprintISBN {, \mbox{\btxISBN~\btxISBNfont {9781584886785}}}.
+
+\bibitem {sigrok-pv}
+\btxnamefont {\btxlastnamefont {Sigrok}}\btxauthorcolon\ \btxtitlefont
+  {\btxifchangecase {Pulseview}{PulseView}}.
+\newblock {\latintext \btxurlfont{https://sigrok.org/wiki/Downloads}}, Accedido
+  el 31 de agosto de 2025.
+
+\end{thebibliography}

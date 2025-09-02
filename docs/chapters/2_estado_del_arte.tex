@@ -114,7 +114,7 @@ En esta sección destacaré las distintas herramientas y tecnologías involucrad
 
 \subsection{Sistema operativo}
 
-Hasta ahora, todo el código usado en el proyecto se ha desarrollado en Windows. Dada la necesidad de comprobar el funcionamiento del producto final tanto en este como en Linux (establecida como objetivo en la sección \hyperref[sec:objetivos]{Objetivos}), el sistema operativo a usar no es un aspecto decisivo a tener en cuenta en este caso. Al fin y al cabo, todo el software que se utilice ha de ser compatible con ambos.
+Hasta ahora, todo el código usado en el proyecto se ha desarrollado en Windows. Dada la necesidad de comprobar el funcionamiento del producto final tanto en este como en Linux (establecida como objetivo en la sección \ref{sec:objetivos}), el sistema operativo a usar no es un aspecto decisivo a tener en cuenta en este caso. Al fin y al cabo, todo el software que se utilice ha de ser compatible con ambos.
 
 Sin embargo, en este caso, se ha decidido usar Linux por preferencia personal. Esto puede resultar un inconveniente a la hora de usar los archivos BAT proporcionados al comienzo del proyecto. Sin embargo, como se comentó en la sección anterior, el programa al que estos hacen referencia es multiplataforma, por lo que bastaría con transferirlos a un \textit{script} en Bash si fuese necesario.
 
@@ -126,7 +126,7 @@ En general, al no ser algo relevante en el proyecto, consideramos que la familia
 
 El lenguaje de programación usado actualmente en el proyecto es C. C es un lenguaje de programación de propósito general diseñado originalmente para su uso en el sistema operativo UNIX, estando este, junto a la mayoría de programas usados en él, escritos en C. Sin embargo, su uso a lo largo del tiempo ha transcendido su objetivo inicial, convirtiéndose en un lenguaje muy ampliamente usado en la actualidad, debido entre otros factores a la eficiencia del código que produce y a su portabilidad. Dispone de estructuras típicas de los lenguajes de alto nivel, permitiendo a su vez un gran control del sistema a bajo nivel. Esto lo convierte en un lenguaje muy versátil, pudiendo llegar a ser más conveniente y efectivo en la ejecución de diversas tareas que otras alternativas más potentes. \cite{k&r}
 
-Estando esta parte del proyecto basada en la programación de un Arduino, la otra opción disponible sería usar C++. Este surgió con la intención de extender el lenguaje de programación C a través de la inclusión de características de la programación orientada a objetos. A lo largo del tiempo, se fueron también incorporando a él otras funciones propias de la programación genérica, de la programación estructurada, facilidades para la programación a bajo nivel... Es por ello que se suele considerar a C++ un lenguaje de programación multiparadigma. C++ es un lenguaje muy completo, manteniendo la eficiencia de C pero añadiendo un gran número de características de lenguajes de más alto nivel, siendo apropiado para el desarrollo de programas, videojuegos o servidores.
+Estando esta parte del proyecto basada en la programación de un Arduino, otra opción disponible sería usar C++. Este surgió con la intención de extender el lenguaje de programación C a través de la inclusión de características de la programación orientada a objetos. A lo largo del tiempo, se fueron también incorporando a él otras funciones propias de la programación genérica, de la programación estructurada, facilidades para la programación a bajo nivel... Es por ello que se suele considerar a C++ un lenguaje de programación multiparadigma. C++ es un lenguaje muy completo, manteniendo la eficiencia de C pero añadiendo un gran número de características de lenguajes de más alto nivel, siendo apropiado para el desarrollo de programas, videojuegos o servidores.
 
 Teniendo en cuenta que el objetivo actual de este ámbito es añadir algunas características y pulir la implementación del firmware, se considera más apropiado continuar trabajando en el lenguaje con el que se empezó el proyecto, es decir, C. 
 
@@ -134,11 +134,13 @@ Teniendo en cuenta que el objetivo actual de este ámbito es añadir algunas car
 
 Para el desarrollo de la interfaz se necesita una librería gráfica que sea compatible tanto con Windows como con Linux, dado uno de los \hyperref[sec:objetivos]{objetivos} definidos anteriormente. Debido a ello, así como a experiencias previas, se ha optado por el uso de Qt.
 
-Qt se trata de un \textit{framework} multiplataforma que permite la creación de interfaces gráficas compatibles con Linux, Windows, macOS, Android y otros sistemas empotrados sin necesidad de modificar el código base. Qt proporciona licencias comerciales, pero también está disponible como código abierto a través de \textit{Qt Project}. Su uso está muy extendido en la comunidad de Linux, siendo uno de los ejemplos más representativos KDE Plasma \cite{kde-plasma}, un entorno gráfico \textit{open-source} incluido en la mayor parte de las distribuciones más usadas.
+Qt se trata de un \textit{framework} multiplataforma que permite la creación de interfaces gráficas compatibles con Linux, Windows, macOS y Android (entre otros) sin necesidad de modificar el código base. Qt proporciona licencias comerciales, pero también está disponible una versión de código abierto a través de \textit{Qt Project}. Su uso está muy extendido en la comunidad de Linux, siendo uno de los ejemplos más representativos KDE Plasma \cite{kde-plasma}, un entorno gráfico \textit{open-source} incluido en la mayor parte de las distribuciones más usadas.
 
-Qt fue creada para ser usada con C++, pero en la actualidad tiene soporte para otros lenguajes de programación, como Python. Esta versión resulta especialmente interesante par este proyecto, ya que una característica a destacar de Python es su extensibilidad a través del uso de módulos, que podría facilitar la integración de la aplicación con el dispositivo.
+Qt fue creado para ser usado con C++, pero en la actualidad tiene soporte para otros lenguajes de programación, como Python. Esta versión resulta especialmente interesante para este proyecto, debido a que la gran extensibilidad de este lenguaje podría facilitar la integración de la aplicación con el dispositivo.
 
 \subsection{Entorno de desarrollo}
+
+\subsubsection{Firmware}
 
 Para la programación del firmware, la opción más directa sería usar el IDE proporcionado por Arduino. Este incluye por defecto todas las opciones necesarias para trabajar con uno de sus microcontroladores, como la detección automática de dispositivos, la posibilidad de compilar y cargar el código pulsando un botón y un monitor del puerto serie, por mencionar algunas. Sin embargo, tras haberlo usado en alguna de las asignaturas del Grado, considero que le faltan algunas características deseables para un proyecto más complejo como este, como puede ser un explorador de archivos integrado, la posibilidad de incluir ficheros de distintos directorios, o la autocompletación de código.
 
@@ -146,6 +148,10 @@ Es por ello que finalmente se ha decidido usar un editor más genérico, como Vi
 
 \textit{PlatformIO} es un entorno de programación integrado en VSCode, que proporciona numerosos instrumentos que facilitan la programación de sistemas con microcontroladores. Algunos de ellos son justamente los mencionados anteriormente: un monitor del puerto serie, mecanismos para compilar y cargar código con solo pulsar un botón, etc.
 
-Otras extensiones que también se usarán a lo largo del desarrollo son la extensión oficial de GitHub, que permite sincronizar los cambios con un repositorio remoto desde la propia interfaz de VSCode, o la extensión de Doxygen, que facilita la generación de documentación para la herramienta del mismo nombre a través de \textit{snippets}.
+Otras extensiones que también se usarán a lo largo del desarrollo son la extensión oficial de GitHub, que permite sincronizar los cambios con un repositorio remoto desde la propia interfaz de VSCode, o la extensión de Doxygen, que facilita la generación de documentación a través de \textit{snippets}.
 
-Este IDE resulta también apropiado para el desarrollo de la interfaz, facilitando realizar las pruebas de integración al usar un mismo entorno.
+\subsubsection{Interfaz}
+
+Para el desarrollo de la aplicación, Qt permite el uso de archivos UI, que facilitan la declaración de los distintos elementos de la interfaz. Estos archivos usan formato XML, por lo que pueden ser algo difíciles de editar directamente. Por ello, se hará uso de la herramienta \textit{Qt Designer}, en la que se pueden colocar y configurar los elementos de una forma más visual, facilitando enormemente el proceso.
+
+En cuanto al desarrollo, VSCode proporciona también una extensión que añade soporte para Python, por lo que se plantea usar este mismo IDE. De esta forma, se facilita la realización de pruebas de integración, al usar un mismo entorno.
