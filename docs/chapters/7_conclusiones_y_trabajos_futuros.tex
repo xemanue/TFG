@@ -18,10 +18,22 @@ Esto no quita que, a la vez, me sienta orgulloso de haber sido capaz de compagin
 
 \section{Trabajos futuros}
 
-Aunque los cambios realizados hayan sido suficientes para completar el objetivo actual, aún cabe la posibilidad de mejorar el producto.
+Aunque los cambios realizados hayan sido suficientes para completar el objetivo actual, aún cabe la posibilidad de mejorar el producto en algunos aspectos. A continuación se comentan algunos de ellos, así como algunas posibles opciones que explorar para cada uno.
 
-En primer lugar, el número de ranuras que puede almacenar actualmente el dispositivo es limitado, permitiendo un máximo de sólo 10 perfiles. Esto no se debe a un límite en el tamaño de la memoria EEPROM, sino a que la forma en la que están declaradas sus variables para permitir un mayor rendimiento ocupa mucho espacio en la RAM. Con una mejor gestión de la misma a lo largo de todo el firmware, se podrían guardar un mayor número de ranuras.
+\subsubsection{Memoria}
 
-Esta ampliación de la memoria nos lleva a una siguiente mejora posible: la velocidad de transmisión. Actualmente, enviar el máximo número de ranuras posibles conlleva una espera de alrededor de dos minutos. Esto se debe a las limitaciones de la comunicación por el puerto serie, que requiere una espera entre cada envío de datos para asegurar que el dispositivo los reciba correctamente. Si se amplía el número de ranuras, también se incrementa el tiempo de espera al trasmitir este número de ranuras al PWM Box. Para solucionarlo, sería necesario plantear el uso de otro tipo de comunicación, o explorar la posibilidad de usar más de una UART al mismo tiempo.
+En primer lugar, el número de ranuras que puede almacenar actualmente el dispositivo es limitado, permitiendo un máximo de sólo 15 perfiles. Como se desarrolló en la subsección \ref{sub:fw_eeprom}, optimizando el uso de memoria RAM del programa se podrían conseguir almacenar dos ranuras más. Sin embargo, esto conllevaría una gran penalización en el tiempo de acceso a los datos, por lo que no se considera una solución real.
 
-Por último, aunque la interfaz gráfica se pretende usar desde un ordenador, siempre cabe la posibilidad de hacerla compatible con un mayor número de dispositivos. Para ello, se podría considerar una implementación usando otros \textit{frameworks} como Flutter o Electron.
+Cabría también la posibilidad de plantear una gestión dinámica de la memoria, que limitase el tamaño de las variables y vectores de cada ranura según el valor o el número de elementos que estas contengan. No obstante, sería una solución muy compleja que, en caso de que las variables contengan valores cercanos a sus máximos, no tendría ningún efecto.
+
+Una tercera solución, que si se cree más adecuada, sería desarrollar el almacenamiento de datos en una tarjeta SD. Esto requeriría una modificación del hardware para incluir el módulo correspondiente en el Arduino, pero resultaría una opción bastante interesante porque también permitiría el intercambio de información entre varios dispositivos PWM Box.
+
+\subsubsection{Comunicación}
+
+Esta posible ampliación de la memoria nos lleva a una siguiente mejora: la velocidad de transmisión de los datos. Actualmente, enviar el máximo número de ranuras posibles de la interfaz al dispositivo conlleva una espera de alrededor de dos minutos. Esto se debe a las limitaciones de la comunicación por el puerto serie, que requiere una espera entre cada envío de datos para asegurar que el dispositivo los reciba correctamente. Si se amplía el número de ranuras, también se incrementa el tiempo de espera al trasmitir ese nuevo número máximo de ranuras al PWM Box.
+
+Para solucionarlo, sería necesario plantear el uso de otro tipo de comunicación, o dado que el Arduino Mega 2560 tiene cuatro UARTs, explorar la posibilidad de usar más de una al mismo tiempo. No sería una solución simple, puesto que habría que mantener más de una conexión al mismo tiemo, y coordinarlas para que el orden final de los datos fuera siempre el adecuado, pero podría proponerse.
+
+\subsubsection{Interfaz}
+
+Por último, aunque la interfaz gráfica se pretende usar desde un ordenador, siempre cabe la posibilidad de aumentar la compatibilidad a un mayor número de sistemas. Para ello, se podría considerar una implementación usando otros \textit{frameworks} como Flutter, Electron o NodeJS, que son muy ampliamente usados en la actualidad.

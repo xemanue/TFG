@@ -329,8 +329,6 @@ De esta forma, los distintos archivos quedan más agrupados según su funcionali
 
 En esta sección se detallarán las decisiones enfrentadas durante la implementación del firmware, centrando la atención en los requerimientos definidos.
 
-% Cabe destacar que también se ha realizado una extensa labor de limpieza del código, debido a una gran cantidad de declaraciones sin usar, definiciones redundantes y algunas prácticas que no se consideraban óptimas. En muchos casos, el código ha sido prácticamente reimplementando. Esto es, por supuesto, un aspecto subjetivo, por lo que no se hará referencia a ello nuevamente. Sin embargo, no mencionarlo sería subestimar el trabajo realizado en esta parte del proyecto.
-
 Cabe mencionar, como regla general, que la mayoría sino todos los apartados incluidos en esta sección hacen uso de una forma u otra del \textit{datasheet} del ATmega 2560 \cite{atmega2560}, microcontrolador incluido en el Arduino Mega 2560 del que se hace uso en este proyecto.
 
 \subsection{Menú de señales lentas}
@@ -355,8 +353,6 @@ La lógica para el giro del \textit{rotary encoder} es más compleja. Debido al 
 
 Para seguir este método, también se programa el microcontrolador para que emita una interrupción en ambos flancos de ambos pines, y se va comparando su estado con el de la máquina de estados mencionada. Este funcionamiento se ha encontrado en la librería \url{https://github.com/buxtronix/arduino/tree/master/libraries/Rotary}, cuyo código fuente ha sido adaptado para funcionar en este proyecto.
 
-% Un rotary encoder consiste de un disco giratorio sobre el que se distribuyen unas zonas de contacto. El disco suele conectarse a tierra, mientras que las zonas de contacto servirán para transmitir voltaje. Al girar el rotary encoder, ambos pines A y B harán contacto con una de las zonas brevemente, generándose un pulso representable como una señal cuadrada.
-
 \subsection{Serial control}
 
 Una de los factores más importantes para la comunicación del puerto serie es configurar correctamente los puertos del microcontrolador. En este caso, se han habilitado las interrupciones RX (para la recepción) y TX (para el envío) y se ha configurado la comunicación para usar 8-bits por segmento.
@@ -370,6 +366,7 @@ Una de las desventajas de usar el puerto seria para la comunicación, es que sus
 Habiendo configurado el microcontrolador, el resto de la implementación se basa en definir funciones básicas que accedan al registro UDR0. Posteriormente, se usan estan funciones para implementar el sistema de envío y recepcion de datos, ya cubiertos en la \ref{sec:fw_diseño}.
 
 \subsection{Memoria EEPROM}
+\label{sub:fw_eeprom}
 
 Esta parte se ha implementado utilizado el apoyo de la librería \verb|avr/eeprom.h|, que proporciona la directiva \verb|EEMEM|, la cual permite declarar variables en la memoria EEPROM. Estas, sin embargo, solo sirven para poder hacer referencia a la dirección de memoria en la que se encuentran los datos desde el programa. Para leer su valor o escribir en ellas, es necesario usar las funciones proporcionadas por la misma librería. Por ello, la mayoría de funciones incluídas en esta parte no son más que distintos \textit{getters} y \textit{setters} para las distintas variables determinadas en la sección \ref{sec:fw_diseño}.
 
