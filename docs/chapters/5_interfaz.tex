@@ -255,14 +255,14 @@ Teniendo esto en cuenta, se determinarán los requisitos de la aplicación.
         \hline
         \textbf{ID} & RNF-1 \\
         \hline
-        \textbf{Nombre} & Usabilidad \\
+        \textbf{Nombre} & Manejabilidad \\
         \hline
         \textbf{Descripción} & El sistema ha de ser sencillo e intuitivo para los usuarios. \\
         \hline
         \textbf{Prioridad} & Alta \\
         \hline
     \end{tabular}
-    \caption{RNF-1. Usabilidad.}
+    \caption{RNF-1. Manejabilidad.}
 \end{table}
 
 \begin{table}[h!]
@@ -300,11 +300,11 @@ Teniendo esto en cuenta, se determinarán los requisitos de la aplicación.
 \section{Diseño}
 \label{sec:ui_diseño}
 
-La fase de diseño de la interfaz comienza con un prototipado visual de la aplicación. Teniendo en cuenta el análisis realizado, se plantea mantener un aspecto simple, estando la información acerca de las distintas señales en una misma ventana. De esta forma, todos los aspectos de interés se encontrarán a simple vista, evitando que el usuario pierda tiempo innecesariamente para enconrtar la información que busca. Esto se considera especialmente apropiado para el entorno al que se destina el producto.
+La fase de diseño de la interfaz comienza con un prototipado visual de la aplicación. Teniendo en cuenta el análisis realizado, se plantea mantener un aspecto simple, estando la información acerca de las distintas señales en una misma ventana. De esta forma, todos los aspectos de interés se encontrarán a simple vista, evitando que el usuario pierda tiempo innecesariamente para encontrar la información que busca. Esto se considera especialmente apropiado para el entorno al que se destina el producto.
 
-Las distintas operaciones adicionales, como enviar perfiles al dispositivo o exportar archivos, sí se realizarán en ventanas separadas. Aún así, la complejidad de las mismas se mantendrá al minimo, haciéndolas lo más intuitivas posible.
+Las distintas operaciones adicionales, como enviar perfiles al dispositivo o exportar archivos, sí se realizarán en ventanas separadas. Aún así, la complejidad de las mismas se mantendrá al mínimo, haciéndolas lo más intuitivas posible.
 
-Con todo ello, el primer prototipo al que se llega puede verse en la figura \ref{fig:ui_diseño1}. Sobre este se realizan numerosas iteraciones, centrándonos primero en incluir todas las funcionalidades necesarias, y posteriormente, en mejorar el aspecto, usabilidad y accesibilidad de la interfaz en general. En las figuras \ref{fig:ui_diseño2} y \ref{fig:ui_diseño3} se pueden ver dos ejemplos de este proceso, hasta llegar a la versión final, mostrada en las figuras \ref{fig:ui_diseño_final1} y \ref{fig:ui_diseño_final2}.
+Con todo ello, el primer prototipo al que se llega puede verse en la figura \ref{fig:ui_diseño1}. Sobre este se realizan numerosas iteraciones, centrándonos primero en incluir todas las funcionalidades necesarias, y posteriormente, en mejorar el aspecto, manejabilidad y accesibilidad de la interfaz en general. En las figuras \ref{fig:ui_diseño2} y \ref{fig:ui_diseño3} se pueden ver dos ejemplos de este proceso, hasta llegar a la versión final, mostrada en las figuras \ref{fig:ui_diseño_final1} y \ref{fig:ui_diseño_final2}.
 
 \begin{figure}[h!]
     \centering
@@ -355,7 +355,7 @@ En cuanto al diseño del \textit{software} del sistema, la idea principal ha sid
 
 \subsection{PWM Types}
 
-El primer aspecto a definir es la forma en la que se van a representar los PWM en esta parte del proyecto. Para ello, se crea el módulo PWM Types, cuyos objetos servirán como almacen de datos para las distintas señales PWM y perfiles cargados en la aplicación.
+El primer aspecto a definir es la forma en la que se van a representar los PWM en esta parte del proyecto. Para ello, se crea el módulo PWM Types, cuyos objetos servirán como almacén de datos para las distintas señales PWM y perfiles cargados en la aplicación.
 
 Un objeto de la clase PWM estará compuesto de la misma forma en la que se guardan las señales en la memoria del dispositivo (nombre, modo, frecuencia, ciclo, fase), pues estos son los parámetros externos que el usuario ha de ser capaz de modificar. De forma análoga, un objeto de la clase Slot contendrá su nombre y ocho objetos de la clase PWM.
 
@@ -394,7 +394,7 @@ Esta sería la opción adecuada para una aplicación más orientada al ocio, que
 
 En este modelo de funcionamiento, se prioriza el control del usuario sobre el dispositivo. Los cambios que se realicen en la aplicación tendrán que ser manualmente aplicados, asegurando que la forma en la que funcione el dispositivo en todo momento sea intencionada.
 
-Este es el enfoque que se ha elegido finalmente para la interfaz, ya que se considera más apropiado para el contexto y la forma en el que se usará. De esta manera, la aplicación servirá más como un almacen de perfiles, que podrán ser cargados en un PWM Box cuando se necesiten. Esta opción se alinea más con las necesidades expresadas por Valeo.
+Este es el enfoque que se ha elegido finalmente para la interfaz, ya que se considera más apropiado para el contexto y la forma en el que se usará. De esta manera, la aplicación servirá más como un almacén de perfiles, que podrán ser cargados en un PWM Box cuando se necesiten. Esta opción se alinea más con las necesidades expresadas por Valeo.
 
 \subsection{General}
 
@@ -460,6 +460,6 @@ Además, para evitar el bloqueo de la interfaz, se ha implementado la ejecución
 
 En un primer lugar, se han ido llevando a cabo pruebas unitarias a lo largo del desarrollo, poniendo especial atención en los aspectos más transparentes al usuario (por ejemplo, el intercambio de datos con el dispositivo). Su objetivo ha sido evaluar el funcionamiento de los aspectos más esenciales, cuyos errores pueden resultar más difíciles de detectar en fases futuras del desarrollo.
 
-Adicionalmete, tras completar cada funcionalidad general (envío de perfiles, exportación de archivos, etc.), se han realizado pruebas de integración para comprobar la validez del flujo de las operaciones, tal y como se han definido en los \hyperref[fig:ui_recargar]{diagramas de secuencia}.
+Adicionalmente, tras completar cada funcionalidad general (envío de perfiles, exportación de archivos, etc.), se han realizado pruebas de integración para comprobar la validez del flujo de las operaciones, tal y como se han definido en los \hyperref[fig:ui_recargar]{diagramas de secuencia}.
 
 Por último, cuando el desarrollo se ha completado, se han realizado pruebas de aceptación para asegurar el funcionamiento en conjunto de la aplicación, corrigiendo los pequeños errores encontrados.

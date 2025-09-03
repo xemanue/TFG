@@ -160,14 +160,14 @@ Teniendo en cuenta las necesidades de la empresa y el perfil de este usuario, po
         \hline
         \textbf{ID} & RNF-1 \\
         \hline
-        \textbf{Nombre} & Usabilidad \\
+        \textbf{Nombre} & Manejabilidad \\
         \hline
         \textbf{Descripción} & El sistema ha de ser sencillo e intuitivo para los usuarios. \\
         \hline
         \textbf{Prioridad} & Alta \\
         \hline
     \end{tabular}
-    \caption{RNF-1. Usabilidad.}
+    \caption{RNF-1. Manejabilidad.}
     \label{tab:rnf2}
 \end{table}
 
@@ -214,15 +214,15 @@ El principal aspecto a rediseñar está en la parte del sistema que muestra los 
 
 Por un lado, se creará un archivo de control, que será al que se haga referencia desde el resto del programa para hacer operaciones como cambiar de menú, actualizar la pantalla, cambiar el brillo del LCD, etc. Cuando se llamen a funciones que dependan de la pantalla que esté activa en ese momento, él será el que se encargue de delegar la tarea al menú que corresponda.
 
-Por otro lado, cada menú disponible tendrá un archivo separado en el que se implementarán como mínimo las versiones correspondientes de las 3 operaciones básicas (actualizar pantalla, girar \textit{rotary encoder} y pulsar \textit{rotary encoder}). Esto permite que, en menús que requieran funciones específicas (como será el caso del menú de señales lentas que se pretende añadir), estas funciones sólo sean accesibles desde el menú que coresponda.
+Por otro lado, cada menú disponible tendrá un archivo separado en el que se implementarán como mínimo las versiones correspondientes de las 3 operaciones básicas (actualizar pantalla, girar \textit{rotary encoder} y pulsar \textit{rotary encoder}). Esto permite que, en menús que requieran funciones específicas (como será el caso del menú de señales lentas que se pretende añadir), estas funciones sólo sean accesibles desde el menú que corresponda.
 
-En la figura \ref{fig:fw_modules} incluída más adelante podemos ver el resultado de esta división. Se destaca también la inclusión de un nuevo tipo de menú, el menú del sistema. Este se encargará de mostrar la secuencia de inicio y el salvapantallas, tareas que estaban antes también unificadas con el resto. También será útil una vez se incluya el almacenamiento de perfiles en la memoria, pues permitirá mostrar un aviso cuando se llene la memoria.
+En la figura \ref{fig:fw_modules} incluida más adelante podemos ver el resultado de esta división. Se destaca también la inclusión de un nuevo tipo de menú, el menú del sistema. Este se encargará de mostrar la secuencia de inicio y el salva-pantallas, tareas que estaban antes también unificadas con el resto. También será útil una vez se incluya el almacenamiento de perfiles en la memoria, pues permitirá mostrar un aviso cuando se llene la memoria.
 
 \subsection{Entrada/Salida}
 
-Para la parte de entrada/salida, también se entontraban agrupadas algunas funciones que no estaban del todo relacionadas entre sí. A la vez, se prevee necesario añadir nuevas funcionalidades relacionadas con la comunicación por el puerto serie para integrar el dispositivo con la interfaz gráfica, así como para solucionar los problemas detectados en el \textit{rotary encoder}.
+Para la parte de entrada/salida, también se encontraban agrupadas algunas funciones que no estaban del todo relacionadas entre sí. A la vez, se prevé necesario añadir nuevas funcionalidades relacionadas con la comunicación por el puerto serie para integrar el dispositivo con la interfaz gráfica, así como para solucionar los problemas detectados en el \textit{rotary encoder}.
 
-Es por ello que se ha decidido dividir también el código de esta parte en 3 archivos: uno para el puerto serie, otro para el codificador rotarorio, y un tercero para el manejo de eventos.
+Es por ello que se ha decidido dividir también el código de esta parte en 3 archivos: uno para el puerto serie, otro para el codificador rotatorio, y un tercero para el manejo de eventos.
 
 \subsubsection{Especificaciones acerca de la comunicación por el puerto serie}
 
@@ -262,7 +262,7 @@ En primer lugar se definirán las siguientes unidades:
 
 \begin{itemize}
     \item\textbf{PWM:} Representación de una señal PWM en la memoria. Consistirá de sus 4 parámetros principales (modo, frecuencia, ciclo y fase), así como un nombre identificativo (por ejemplo, ``Intermitentes'').
-    \item\textbf{Slot:} Llamado así por ser la unidad en la que se compartimentalizará la memoria (ranuras), representa una forma de agrupar señales PWM. Permitirá al usuario definir distintos modelos de coches de forma que cada PWM esté destinado a probar un grupo distinto de luces de faros. Consistirá de 8 señales PWM y de un nombre identificativo. Se añadirá, además, una variable que indicará si la ranura está ocupada o no. Esto permitirá evitar borrados reales de memoria, prolongando su vida útil y disminuyendo el coste en cuanto a rendimiento de la escritura.
+    \item\textbf{Slot:} Llamado así por ser la unidad en la que se compartimentará la memoria (ranuras), representa una forma de agrupar señales PWM. Permitirá al usuario definir distintos modelos de coches de forma que cada PWM esté destinado a probar un grupo distinto de luces de faros. Consistirá de 8 señales PWM y de un nombre identificativo. Se añadirá, además, una variable que indicará si la ranura está ocupada o no. Esto permitirá evitar borrados reales de memoria, prolongando su vida útil y disminuyendo el coste en cuanto a rendimiento de la escritura.
 \end{itemize}
 
 Otros parámetros que se necesitarán guardar, teniendo en cuenta los requisitos establecidos son:
@@ -277,7 +277,7 @@ Otros parámetros que se necesitarán guardar, teniendo en cuenta los requisitos
     \item\textbf{Contraseña:} Debido al entorno en el que se plantea usar el dispositivo y al nivel de conocimiento técnico de sus usuarios, descrito en el anterior \hyperref[sec:fw_analisis]{análisis}, no se estima necesario encriptar la contraseña de ninguna forma.
 \end{itemize}
 
-Dada la capacidad del usuario de añadir, borrar y reemplazar ranuras de memoria según desee, se prevee la necesidad de algún mecanismo adicional para determinar qué ranuras mostrar en el menú principal del dispositivo. Con este fin, se incluirá también un vector auxiliar, que contendrá el índice de las ranuras de la memoria en el orden en el que se les muestra al usuario. Actúa, por así decirlo, como un traductor entre el índice de las ranuras visibles al usuario y el índice de las mismas internamente. Esto puede entenderse más fácilmente con una representación, que se incluye en la figura \ref{fig:eeprom_operations}
+Dada la capacidad del usuario de añadir, borrar y reemplazar ranuras de memoria según desee, se prevé la necesidad de algún mecanismo adicional para determinar qué ranuras mostrar en el menú principal del dispositivo. Con este fin, se incluirá también un vector auxiliar, que contendrá el índice de las ranuras de la memoria en el orden en el que se les muestra al usuario. Actúa, por así decirlo, como un traductor entre el índice de las ranuras visibles al usuario y el índice de las mismas internamente. Esto puede entenderse más fácilmente con una representación, que se incluye en la figura \ref{fig:eeprom_operations}
 
 \begin{figure}[h!]
     \centering
@@ -288,7 +288,7 @@ Dada la capacidad del usuario de añadir, borrar y reemplazar ranuras de memoria
 
 \subsection{General}
 
-La organización general de los archivos dentro del proyecto también se considera un aspecto importante a tener en cuenta para facilitar su manejo. Tras los cambios plantedos, algunos de los cuales incluyen la creación de aún más ficheros, esta necesidad se hace aún más aparente.
+La organización general de los archivos dentro del proyecto también se considera un aspecto importante a tener en cuenta para facilitar su manejo. Tras los cambios planteados, algunos de los cuales incluyen la creación de aún más ficheros, esta necesidad se hace aún más aparente.
 
 Para tratarlo, se plantea agruparlos en distintos directorios, a los que llamaremos módulos, de forma que queden distribuidos como se muestra en la figura \ref{fig:fw_modules}.
 
@@ -302,7 +302,7 @@ Para tratarlo, se plantea agruparlos en distintos directorios, a los que llamare
 \begin{itemize}
     \item\textbf{Módulo del sistema:} Contiene la implementación de características claves para el funcionamiento del sistema.
         \begin{itemize}
-            \item\textbf{Módulo de E/S:} En él entontramos los archivos que definen el funcionamiento del \textit{rotary encoder} y de la UART, responsables de la comunicación con el usuario y la aplicación respectivamente.
+            \item\textbf{Módulo de E/S:} En él encontramos los archivos que definen el funcionamiento del \textit{rotary encoder} y de la UART, responsables de la comunicación con el usuario y la aplicación respectivamente.
             \item\textbf{Módulo de menús:} Agrupa la implementación de los distintos menús que usa el sistema.
         \end{itemize}
     \item\textbf{Módulo de PWM:} Se encarga de la generación y configuración de las señales de salida.
@@ -335,7 +335,7 @@ Cabe mencionar, como regla general, que la mayoría sino todos los apartados inc
 
 La funcionalidad de este menú se basa en un contador ejecutado en el bucle principal, que se incrementa cada medio segundo. Este es el máximo común divisor de la frecuencia con la que se actualizan estas señales. Cuando el usuario escoge una secuencia, este contador comienza a incrementarse, y a compararse en cada unidad con los instantes en los que la señal debe cambiar, los cuales se encuentran definidos en un \textit{switch}. Esto permite cambiar la señal a una frecuencia menor de la que el dispositivo soporta de base, pudiendo realizar pruebas en faros que así lo requieran.
 
-Para que este menú sea independiente del resto del sistema, se ha implementado en el \textit{rotary encoder} la capacidad de detectar cuándo el botón ha sido mantenido (más detalles en la siguiente subsección). Cuando esto ocurra, el sistema mostrará esta pantalla.
+Para que este menú sea independiente del resto del sistema, se ha implementado en el \textit{rotary encoder} la capacidad de detectar cuándo el botón ha sido mantenido (más detalles en la siguiente sección). Cuando esto ocurra, el sistema mostrará esta pantalla.
 
 \subsection{\textit{Rotary encoder}}
 
@@ -363,14 +363,14 @@ Una de las desventajas de usar el puerto seria para la comunicación, es que sus
     \[UBBR = \frac{f_{OSC}}{8 \cdot BAUD} - 1\]
 \end{center}
 
-Habiendo configurado el microcontrolador, el resto de la implementación se basa en definir funciones básicas que accedan al registro UDR0. Posteriormente, se usan estan funciones para implementar el sistema de envío y recepcion de datos, ya cubiertos en la \ref{sec:fw_diseño}.
+Habiendo configurado el microcontrolador, el resto de la implementación se basa en definir funciones básicas que accedan al registro UDR0. Posteriormente, se usan estas funciones para implementar el sistema de envío y recepción de datos, ya cubiertos en la \ref{sec:fw_diseño}.
 
 \subsection{Memoria EEPROM}
 \label{sub:fw_eeprom}
 
-Esta parte se ha implementado utilizado el apoyo de la librería \verb|avr/eeprom.h|, que proporciona la directiva \verb|EEMEM|, la cual permite declarar variables en la memoria EEPROM. Estas, sin embargo, solo sirven para poder hacer referencia a la dirección de memoria en la que se encuentran los datos desde el programa. Para leer su valor o escribir en ellas, es necesario usar las funciones proporcionadas por la misma librería. Por ello, la mayoría de funciones incluídas en esta parte no son más que distintos \textit{getters} y \textit{setters} para las distintas variables determinadas en la sección \ref{sec:fw_diseño}.
+Esta parte se ha implementado utilizado el apoyo de la librería \verb|avr/eeprom.h|, que proporciona la directiva \verb|EEMEM|, la cual permite declarar variables en la memoria EEPROM. Estas, sin embargo, solo sirven para poder hacer referencia a la dirección de memoria en la que se encuentran los datos desde el programa. Para leer su valor o escribir en ellas, es necesario usar las funciones proporcionadas por la misma librería. Por ello, la mayoría de funciones incluidas en esta parte no son más que distintos \textit{getters} y \textit{setters} para las distintas variables determinadas en la sección \ref{sec:fw_diseño}.
 
-A estas se une el vector auxiliar tambien mencionado en la sección \ref{sec:fw_diseño}. Para facilitar su manejo y hacer el código más reutilizable, se ha implementado una pequeña librería que define las funciones básicas esperables de un vector.
+A estas se une el vector auxiliar también mencionado en la sección \ref{sec:fw_diseño}. Para facilitar su manejo y hacer el código más reutilizable, se ha implementado una pequeña librería que define las funciones básicas esperables de un vector.
 
 Con todo esto, el contenido de la memoria EEPROM puede verse en la figura \ref{fig:eeprom_vars}.
 
@@ -395,7 +395,7 @@ Conforme se ha ido completando el desarrollo de los distintos módulos, sus func
 
 Debido a la naturaleza del trabajo, la mayoría de estas pruebas se han realizado de manera experimental, observando la reacción del dispositivo a las acciones del usuario y comprobando que el resultado de las mismas es el esperado.
 
-Para determinar que no se ha alterado la capacidad del dispositivo de emitir las señales de manera correcta, así como validar la implementación de las señales lentas, se ha usado un analizador lógico como comprobación adicional. En la figura \ref{fig:fw_pwm_signals} se muestran las señales PWM resultantes de distintas configuraciones. Adicionalmente, en las figuras \ref{fig:fw_slow_signal1} y \ref{fig:fw_slow_signal2}, se ven dos de las secuencias de señales lentas incluídas con el dispositivo.
+Para determinar que no se ha alterado la capacidad del dispositivo de emitir las señales de manera correcta, así como validar la implementación de las señales lentas, se ha usado un analizador lógico como comprobación adicional. En la figura \ref{fig:fw_pwm_signals} se muestran las señales PWM resultantes de distintas configuraciones. Adicionalmente, en las figuras \ref{fig:fw_slow_signal1} y \ref{fig:fw_slow_signal2}, se ven dos de las secuencias de señales lentas incluidas con el dispositivo.
 
 \begin{figure}[h!]
     \centering
@@ -407,14 +407,14 @@ Para determinar que no se ha alterado la capacidad del dispositivo de emitir las
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{fw_slow_signal1.png}
-    \caption{Una de las secuencias de señales lentas preconfiguradas.}
+    \caption{Una de las secuencias de señales lentas pre-configuradas.}
     \label{fig:fw_slow_signal1}
 \end{figure}
 
 \begin{figure}[h!]
     \centering
     \includegraphics[width=\textwidth]{fw_slow_signal2.png}
-    \caption{Otra de las secuencias de señales lentas preconfiguradas.}
+    \caption{Otra de las secuencias de señales lentas pre-configuradas.}
     \label{fig:fw_slow_signal2}
 \end{figure}
 

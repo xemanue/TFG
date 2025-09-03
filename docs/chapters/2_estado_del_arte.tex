@@ -22,7 +22,7 @@ Al comenzar el trabajo, se recibe por parte del tutor el prototipo del dispositi
     \label{fig:pwmbox_side}
 \end{figure}
 
-Este está compuesto por un Arduino Mega 2560, una pantalla LCD de 4 líneas, un \textit{rotary encoder} y 8 conectores de salida. Por cada uno de estos 8 conectores se produce una salida PWM cuyos parámetros (encencido, frecuencia, ciclo de trabajo y fase) pueden ser configurados por el usuario, pensada para conectar y probar los distintos modos del faro del vehículo.
+Este está compuesto por un Arduino Mega 2560, una pantalla LCD de 4 líneas, un \textit{rotary encoder} y 8 conectores de salida. Por cada uno de estos 8 conectores se produce una salida PWM cuyos parámetros (encendido, frecuencia, ciclo de trabajo y fase) pueden ser configurados por el usuario, pensada para conectar y probar los distintos modos del faro del vehículo.
 
 Por otro lado, se recibe un archivo comprimido que contiene el código existente del proyecto, así como alguna documentación escrita por sus previos contribuyentes. Estos archivos se muestran en la figura \ref{fig:fw_v0}.
 
@@ -49,8 +49,8 @@ Tras esta primera distinción, se pasa a hacer un análisis del código y de su 
 Consiste en el archivo principal INO que se mencionó anteriormente. En él, encontramos algunos elementos usados para determinar el flujo de ejecución del programa:
 
 \begin{itemize}
-    \item En primer lugar tenemos una cola de eventos, que recoje las acciones del usuario y permite al programa procesarlas en orden. Se desarrollará en una sección posterior.
-    \item Un contador de tiempo, que mide cuánto lleva el usuario sin interactuar con el dispositivo para mostrar u ocultar un salvapantallas.
+    \item En primer lugar tenemos una cola de eventos, que recoge las acciones del usuario y permite al programa procesarlas en orden. Se desarrollará en una sección posterior.
+    \item Un contador de tiempo, que mide cuánto lleva el usuario sin interactuar con el dispositivo para mostrar u ocultar un salva-pantallas.
     \item El uso de distintas interrupciones para el manejo de la entrada del usuario, la generación de la señal PWM de salida y la comunicación por UART. \end{itemize}
 
 Una cosa a comentar sobre el actual flujo del programa es el uso de interrupciones. Su uso es muy necesario para la generación de las señales PWM. Una interrupción se genera a una cierta frecuencia, y, dependiendo de los parámetros que introduzca el usuario, las señales cambian de estado cuando les corresponda. Esto asegura que los cambios se realizan en el momento preciso, mientras que si se gestionaran en el bucle principal, el momento exacto de las actualizaciones sería más incierto.
@@ -104,9 +104,9 @@ Adicionalmente, se ha detectado el incorrecto funcionamiento del \textit{rotary 
 
 \subsection{Vista general}
 
-Esta versión del firmware establece una buena base para el desarrollo. Define un flujo de ejecución sólido, y nos permite centrar los esfuerzos en realizar las correciones y mejoras oportunas sobre los distintos módulos de manera individual. De esta forma, se divide el trabajo en objetivos concretos que evitan grandes modificaciones que no sean estrictamente necesarias, así como consecuentes inversiones innecesarias de tiempo.
+Esta versión del firmware establece una buena base para el desarrollo. Define un flujo de ejecución sólido, y nos permite centrar los esfuerzos en realizar las correcciones y mejoras oportunas sobre los distintos módulos de manera individual. De esta forma, se divide el trabajo en objetivos concretos que evitan grandes modificaciones que no sean estrictamente necesarias, así como consecuentes inversiones innecesarias de tiempo.
 
-A su vez, de manera global, se han detectado en el código algunos puntos a mejorar en cuanto a legibilidad, presentación y usabilidad del código. Sin embargo, este es un aspecto subjetivo, por lo que no se cubrirá en esta memoria.
+A su vez, de manera global, se han detectado en el código algunos puntos a mejorar en cuanto a legibilidad, presentación y manejabilidad del código. Sin embargo, este es un aspecto subjetivo, por lo que no se cubrirá en esta memoria.
 
 \section{Tecnologías usadas}
 
@@ -142,7 +142,7 @@ Qt fue creado para ser usado con C++, pero en la actualidad tiene soporte para o
 
 \subsubsection{Firmware}
 
-Para la programación del firmware, la opción más directa sería usar el IDE proporcionado por Arduino. Este incluye por defecto todas las opciones necesarias para trabajar con uno de sus microcontroladores, como la detección automática de dispositivos, la posibilidad de compilar y cargar el código pulsando un botón y un monitor del puerto serie, por mencionar algunas. Sin embargo, tras haberlo usado en alguna de las asignaturas del Grado, considero que le faltan algunas características deseables para un proyecto más complejo como este, como puede ser un explorador de archivos integrado, la posibilidad de incluir ficheros de distintos directorios, o la autocompletación de código.
+Para la programación del firmware, la opción más directa sería usar el IDE proporcionado por Arduino. Este incluye por defecto todas las opciones necesarias para trabajar con uno de sus microcontroladores, como la detección automática de dispositivos, la posibilidad de compilar y cargar el código pulsando un botón y un monitor del puerto serie, por mencionar algunas. Sin embargo, tras haberlo usado en alguna de las asignaturas del Grado, considero que le faltan algunas características deseables para un proyecto más complejo como este, como puede ser un explorador de archivos integrado, la posibilidad de incluir ficheros de distintos directorios, o la completación de código.
 
 Es por ello que finalmente se ha decidido usar un editor más genérico, como Visual Studio Code. Este es un editor \textit{open-source} muy ligero, altamente personalizable para todo tipo de necesidades. Una parte de esta personalización la consigue gracias a un soporte nativo de extensiones, que permite a cualquier usuario que lo desee ampliar sus características y publicar su creación en un ``mercado de extensiones'' completamente gratuito. Un ejemplo de estas extensiones es \textit{PlatformIO}.
 

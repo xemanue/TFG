@@ -6,11 +6,11 @@ Este proyecto perseguía el objetivo de implementar nuevas funcionalidades en un
 
 Para ello, se ha implementado en el firmware del PWM Box la capacidad de almacenar perfiles de configuración en la memoria EEPROM del microcontrolador. También se ha desarrollado un nuevo menú, que permite comprobar el funcionamiento de faros que funcionen a una frecuencia menor de la que es capaz de generar el dispositivo usando señales PWM. Adicionalmente, se han corregido varios errores existentes que afectaban a la experiencia del usuario.
 
-En cuanto a la interfaz, se ha usado el \textit{framework} Qt en combinación con PySide6 para diseñar e implementar una aplicación multiplataforma que permita almecenar y enviar distintos perfiles al dispositivo. Además, se ha incluido la capacidad de exportar dichos perfiles en formato JSON, de forma que puedan ser importados de nuevo cuando se necesite.
+En cuanto a la interfaz, se ha usado el \textit{framework} Qt en combinación con PySide6 para diseñar e implementar una aplicación multiplataforma que permita almacenar y enviar distintos perfiles al dispositivo. Además, se ha incluido la capacidad de exportar dichos perfiles en formato JSON, de forma que puedan ser importados de nuevo cuando se necesite.
 
 Todo esto se ha llevado a cabo teniendo en cuenta los requisitos propuestos en las secciones \ref{sec:fw_diseño} y \ref{sec:ui_diseño} respectivamente. Por ello, se puede considerar que los objetivos marcados se han cumplido eficazmente.
 
-En lo personal, estoy bastante satisfecho con el resultado final del proyecto. Me ha permitido poner en práctica muchos de los conocimientos adquiridos a lo largo del Grado, saliendo en ocasiones de mi zona de comfort para obtener otros nuevos.
+En lo personal, estoy bastante satisfecho con el resultado final del proyecto. Me ha permitido poner en práctica muchos de los conocimientos adquiridos a lo largo del Grado, saliendo en ocasiones de mi zona de confort para obtener otros nuevos.
 
 Si tuviera que mencionar un aspecto en el que considero que podría haberlo hecho mejor, sería en la gestión del tiempo. En muchas ocasiones a lo largo del desarrollo, he dejado que mi opinión personal sobre qué estaba bien y qué estaba ``menos bien'' dictara la parte que merecía más trabajo. Esto me ha hecho pasar demasiado tiempo intentando perfeccionar algunas secciones que no lo necesitaban realmente. En el futuro trataré de evitar guiarme en exceso por mi juicio, y ceñirme mejor a la planificación inicial.
 
@@ -22,7 +22,7 @@ Aunque los cambios realizados hayan sido suficientes para completar el objetivo 
 
 \subsubsection{Memoria}
 
-En primer lugar, el número de ranuras que puede almacenar actualmente el dispositivo es limitado, permitiendo un máximo de sólo 15 perfiles. Como se desarrolló en la subsección \ref{sub:fw_eeprom}, optimizando el uso de memoria RAM del programa se podrían conseguir almacenar dos ranuras más. Sin embargo, esto conllevaría una gran penalización en el tiempo de acceso a los datos, por lo que no se considera una solución real.
+En primer lugar, el número de ranuras que puede almacenar actualmente el dispositivo es limitado, permitiendo un máximo de sólo 15 perfiles. Como se desarrolló en la sección \ref{sub:fw_eeprom}, optimizando el uso de memoria RAM del programa se podrían conseguir almacenar dos ranuras más. Sin embargo, esto conllevaría una gran penalización en el tiempo de acceso a los datos, por lo que no se considera una solución real.
 
 Cabría también la posibilidad de plantear una gestión dinámica de la memoria, que limitase el tamaño de las variables y vectores de cada ranura según el valor o el número de elementos que estas contengan. No obstante, sería una solución muy compleja que, en caso de que las variables contengan valores cercanos a sus máximos, no tendría ningún efecto.
 
@@ -32,7 +32,7 @@ Una tercera solución, que si se cree más adecuada, sería desarrollar el almac
 
 Esta posible ampliación de la memoria nos lleva a una siguiente mejora: la velocidad de transmisión de los datos. Actualmente, enviar el máximo número de ranuras posibles de la interfaz al dispositivo conlleva una espera de alrededor de dos minutos. Esto se debe a las limitaciones de la comunicación por el puerto serie, que requiere una espera entre cada envío de datos para asegurar que el dispositivo los reciba correctamente. Si se amplía el número de ranuras, también se incrementa el tiempo de espera al trasmitir ese nuevo número máximo de ranuras al PWM Box.
 
-Para solucionarlo, sería necesario plantear el uso de otro tipo de comunicación, o dado que el Arduino Mega 2560 tiene cuatro UARTs, explorar la posibilidad de usar más de una al mismo tiempo. No sería una solución simple, puesto que habría que mantener más de una conexión al mismo tiemo, y coordinarlas para que el orden final de los datos fuera siempre el adecuado, pero podría proponerse.
+Para solucionarlo, sería necesario plantear el uso de otro tipo de comunicación, o dado que el Arduino Mega 2560 tiene cuatro Arrates, explorar la posibilidad de usar más de una al mismo tiempo. No sería una solución simple, puesto que habría que mantener más de una conexión al mismo tiempo, y coordinarlas para que el orden final de los datos fuera siempre el adecuado, pero podría proponerse.
 
 \subsubsection{Interfaz}
 
