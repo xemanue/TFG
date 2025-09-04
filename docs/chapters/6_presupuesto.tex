@@ -4,30 +4,23 @@ Con el objetivo de estimar el coste de producción del proyecto en un escenario 
 
 \subsubsection{Costes de material}
 
-El equipo usado para este proyecto es un Lenovo T560, con un precio aproximado de 1400€. Se estima un ciclo de vida útil de unos 8 años, de los cuales alrededor de medio año se ha dedicado al desarrollo de este trabajo. También sería necesario incluir el coste de una licencia comercial de Qt Creator, que se usaría en el diseño y desarrollo de la interfaz. Por último, habría que tener en cuenta el coste de los distintos componentes del dispositivo. Con todo ello, se estima:
+En primer lugar, el equipo usado para este proyecto es un Lenovo T560, con un precio aproximado de 1400€. Se estima un ciclo de vida útil de unos 8 años, de los cuales alrededor de medio año se ha dedicado al desarrollo de este trabajo.
+
+También sería necesario incluir el coste de los distintos componentes requeridos para la construcción del PWM Box. Los principales aparecen listados a continuación, pero también se ha añadido un sobrecoste para otros elementos como cables, los conectores, etc.
+
+Por último, en cuanto al \textit{software}, la mayoría de programas usados son completamente \textit{open-source}. El único que sí tiene una versión comercial es Qt Designer, usado para el diseño de la interfaz gráfica. Su versión de código abierto se distribuye en su mayor parte bajo LGPLv3. Esta licencia obliga a cualquier producto que use el \textit{software} licenciado, incluso como librería, a ser distribuido también usando LGPLv3 o GPLv3. Por lo tanto, si realmente se pretendiese distribuir el producto final, habría que determinar qué tipo de licencia usaríamos para saber si existe la necesidad de adquirir una licencia comercial o no. Por hacer el ejemplo más completo e informativo, nos pondremos en el peor de los casos, y asumiremos que pretendemos distribuir el producto final como software propietario. \cite{qt-license} \cite{licenses}
+
+Teniendo todo esto en cuenta, el coste desglosado sería el siguiente:
 
 \begin{itemize}
     \item\textbf{Equipo:} \[\frac{1400\text{€}}{8\ \text{años}} \times 0.5\ \text{años} = 87.5\text{€} \]
-\end{itemize}
-
-\begin{itemize}
-    \item\textbf{Licencia Qt Creator:} \[ 3670\text{€/año} \times 0.5\ \text{años} = 1835\text{€} \]
-\end{itemize}
-
-\begin{itemize}
-    \item\textbf{Arduino Mega 2560:} \[ 52.8\text{€} \]
-\end{itemize}
-
-\begin{itemize}
-    \item\textbf{Pantalla LCD 20x4:} \[ 10\text{€} \]
-\end{itemize}
-
-\begin{itemize}
-    \item\textbf{PCB:} \[ 20\text{€} \]
-\end{itemize}
-
-\begin{itemize}
-    \item\textbf{Carcasa:} \[ 50\text{€} \]
+    \item\textbf{Arduino Mega 2560:} $ 52.8\text{€} $
+    \item\textbf{Pantalla LCD 20x4:} $ 10\text{€} $
+    \item\textbf{Rotary encoder:} $ 4\text{€} $
+    \item\textbf{PCB:} $ 20\text{€} $
+    \item\textbf{Carcasa:} $ 50\text{€} $
+    \item\textbf{Otros elementos varios (cables, conectores, etc.)} $ 30\text{€} $
+    \item\textbf{Licencia Qt Designer:} \[ 3670\text{€/año} \times 0.5\ \text{años} = 1835\text{€} \]
 \end{itemize}
 
 En total: \[ 87.5\text{€} + 1835\text{€} + 52.8\text{€} + 10\text{€} + 20\text{€} + 50\text{€} = 2055.3\text{€} \]

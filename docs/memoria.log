@@ -1,0 +1,1414 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.8.30)  4 SEP 2025 02:02
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**memoria.tex
+(./memoria.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(/usr/share/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2024/06/29 v1.4n Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/bk11.clo
+File: bk11.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count196
+\c@chapter=\count197
+\c@section=\count198
+\c@subsection=\count199
+\c@subsubsection=\count266
+\c@paragraph=\count267
+\c@subparagraph=\count268
+\c@figure=\count269
+\c@table=\count270
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen141
+) (/usr/share/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
+) (/usr/share/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2025/02/14 v25.4 The multilingual framework for pdfLaTeX, LuaLaTeX and XeLaTeX
+\babel@savecnt=\count271
+\U@D=\dimen142
+\l@unhyphenated=\language6
+ (/usr/share/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count272
+ (/usr/share/texmf-dist/tex/generic/babel-spanish/spanish.ldf
+Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
+\es@quottoks=\toks19
+\es@quotdepth=\count273
+Package babel Info: Making " an active character on input line 570.
+Package babel Info: Making . an active character on input line 675.
+Package babel Info: Making < an active character on input line 722.
+Package babel Info: Making > an active character on input line 722.
+)) (/usr/share/texmf-dist/tex/generic/babel/locale/es/babel-spanish.tex
+Package babel Info: Importing font and identification data for spanish
+(babel)             from babel-es.ini. Reported on input line 11.
+) (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks20
+) (/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+) (/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+ (/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen143
+\Gin@req@width=\dimen144
+) (/usr/share/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+ (/usr/share/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (/usr/share/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen145
+\captionmargin=\dimen146
+\caption@leftmargin=\dimen147
+\caption@rightmargin=\dimen148
+\caption@width=\dimen149
+\caption@indent=\dimen150
+\caption@parindent=\dimen151
+\caption@hangindent=\dimen152
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count274
+\c@continuedfloat=\count275
+)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count276
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count277
+) (/usr/share/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+ (/usr/share/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PDF (HO)
+ (/usr/share/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+) (/usr/share/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)) (/usr/share/texmf-dist/tex/latex/tools/dcolumn.sty
+Package: dcolumn 2023/07/08 v1.06 decimal alignment package (DPC)
+ (/usr/share/texmf-dist/tex/latex/tools/array.sty
+Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
+\col@sep=\dimen153
+\ar@mcellbox=\box52
+\extrarowheight=\dimen154
+\NC@list=\toks21
+\extratabsurround=\skip51
+\backup@length=\skip52
+\ar@cellbox=\box53
+)) (/usr/share/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks22
+\verbatim@line=\toks23
+\verbatim@in@stream=\read3
+) (/usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+\f@nch@headwidth=\skip53
+\f@nch@offset@elh=\skip54
+\f@nch@offset@erh=\skip55
+\f@nch@offset@olh=\skip56
+\f@nch@offset@orh=\skip57
+\f@nch@offset@elf=\skip58
+\f@nch@offset@erf=\skip59
+\f@nch@offset@olf=\skip60
+\f@nch@offset@orf=\skip61
+\f@nch@height=\skip62
+\f@nch@footalignment=\skip63
+\f@nch@widthL=\skip64
+\f@nch@widthC=\skip65
+\f@nch@widthR=\skip66
+\@temptokenb=\toks24
+) (/usr/share/texmf-dist/tex/latex/tools/afterpage.sty
+Package: afterpage 2023/07/04 v1.08 After-Page Package (DPC)
+\AP@output=\toks25
+\AP@partial=\box54
+\AP@footins=\box55
+) (/usr/share/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2024-10-27 v4.22 Multi-page Table package (DPC)
+\LTleft=\skip67
+\LTright=\skip68
+\LTpre=\skip69
+\LTpost=\skip70
+\LTchunksize=\count278
+\LTcapwidth=\dimen155
+\LT@head=\box56
+\LT@firsthead=\box57
+\LT@foot=\box58
+\LT@lastfoot=\box59
+\LT@gbox=\box60
+\LT@cols=\count279
+\LT@rows=\count280
+\c@LT@tables=\count281
+\c@LT@chunks=\count282
+\LT@p@ftn=\toks26
+) (/usr/share/texmf-dist/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
+) (/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2024/11/05 v2.17t AMS math features
+\@mathmargin=\skip71
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks27
+\ex@=\dimen156
+)) (/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen157
+) (/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count283
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count284
+\leftroot@=\count285
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count286
+\DOTSCASE@=\count287
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box61
+\strutbox@=\box62
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen158
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count288
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count289
+\dotsspace@=\muskip17
+\c@parentequation=\count290
+\dspbrk@lvl=\count291
+\tag@help=\toks28
+\row@=\count292
+\column@=\count293
+\maxfields@=\count294
+\andhelp@=\toks29
+\eqnshift@=\dimen159
+\alignsep@=\dimen160
+\tagshift@=\dimen161
+\tagwidth@=\dimen162
+\totwidth@=\dimen163
+\lineht@=\dimen164
+\@envbody=\toks30
+\multlinegap=\skip72
+\multlinetaggap=\skip73
+\mathdisplay@stack=\toks31
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+) (/usr/share/texmf-dist/tex/latex/eurosym/eurosym.sty
+Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
+\@eurobox=\box63
+)
+   defining Unicode char U+20AC (decimal 8364)
+ (/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+ (/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+ (/usr/share/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+) (/usr/share/texmf-dist/tex/latex/xcolor/x11nam.def
+File: x11nam.def 2024/09/29 v3.02 Predefined colors according to Unix/X11 (UK)
+) (/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2024-11-05 v7.01l Hypertext links for LaTeX
+ (/usr/share/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+) (/usr/share/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/usr/share/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+ (/usr/share/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+) (/usr/share/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/share/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)) (/usr/share/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
+ (/usr/share/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+ (/usr/share/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count295
+) (/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count296
+) (/usr/share/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+)
+\@linkdim=\dimen165
+\Hy@linkcounter=\count297
+\Hy@pagecounter=\count298
+ (/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2024-11-05 v7.01l Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (/usr/share/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count299
+ (/usr/share/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4157.
+Package hyperref Info: Link nesting OFF on input line 4162.
+Package hyperref Info: Hyper index ON on input line 4165.
+Package hyperref Info: Plain pages OFF on input line 4172.
+Package hyperref Info: Backreferencing OFF on input line 4177.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4424.
+\c@Hy@tempcnt=\count300
+ (/usr/share/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4763.
+\XeTeXLinkMargin=\dimen166
+ (/usr/share/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (/usr/share/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count301
+\Field@Width=\dimen167
+\Fld@charsize=\dimen168
+Package hyperref Info: Hyper figures OFF on input line 6042.
+Package hyperref Info: Link nesting OFF on input line 6047.
+Package hyperref Info: Hyper index ON on input line 6050.
+Package hyperref Info: backreferencing OFF on input line 6057.
+Package hyperref Info: Link coloring OFF on input line 6062.
+Package hyperref Info: Link coloring with OCG OFF on input line 6067.
+Package hyperref Info: PDF/A mode OFF on input line 6072.
+ (/usr/share/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count302
+\c@Item=\count303
+\c@Hfootnote=\count304
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2024-11-05 v7.01l Hyperref driver for pdfTeX
+ (/usr/share/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
+with kernel methods
+)
+\Fld@listcount=\count305
+\c@bookmark@seq@number=\count306
+ (/usr/share/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+ (/usr/share/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
+)
+\Hy@SectionHShift=\skip74
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 55.
+ (/usr/share/texmf-dist/tex/latex/footmisc/footmisc.sty
+Package: footmisc 2024/12/24 v6.0g a miscellany of footnote facilities
+\FN@temptoken=\toks32
+\footnotemargin=\dimen169
+\@outputbox@depth=\dimen170
+Package footmisc Info: Declaring symbol style bringhurst on input line 699.
+Package footmisc Info: Declaring symbol style chicago on input line 707.
+Package footmisc Info: Declaring symbol style wiley on input line 716.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 727.
+Package footmisc Info: Declaring symbol style lamport* on input line 747.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 768.
+)
+(/usr/share/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2025/01/30 v0.6e Insert pages of external PDF documents (AM)
+ (/usr/share/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+) (/usr/share/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count307
+\calc@Bcount=\count308
+\calc@Adimen=\dimen171
+\calc@Bdimen=\dimen172
+\calc@Askip=\skip75
+\calc@Bskip=\skip76
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count309
+\calc@Cskip=\skip77
+) (/usr/share/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
+\ESO@tempdima=\dimen173
+\ESO@tempdimb=\dimen174
+)
+\AM@pagewidth=\dimen175
+\AM@pageheight=\dimen176
+\AM@fboxrule=\dimen177
+ (/usr/share/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2025/01/30 v0.6e Pdfpages driver for pdfTeX (AM)
+)
+\pdfpages@includegraphics@status=\count310
+\AM@pagebox=\box64
+\AM@global@opts=\toks33
+\AM@pagecnt=\count311
+\AM@toc@title=\toks34
+\AM@lof@heading=\toks35
+\c@AM@survey=\count312
+\AM@templatesizebox=\box65
+) (/usr/share/texmf-dist/tex/latex/babelbib/babelbib.sty
+Package: babelbib 2021/01/06 v1.34 babelbib: multilingual bibliographies
+\c@btxromaniannumeral=\count313
+) (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count314
+\l__pdf_internal_box=\box66
+) (./memoria.aux
+LaTeX Info: Redefining \. on input line 11.
+LaTeX Info: Redefining \% on input line 11.
+LaTeX Info: Redefining \. on input line 213.
+LaTeX Info: Redefining \% on input line 213.
+LaTeX Info: Redefining \. on input line 214.
+LaTeX Info: Redefining \% on input line 214.
+LaTeX Info: Redefining \. on input line 216.
+LaTeX Info: Redefining \% on input line 216.
+LaTeX Info: Redefining \. on input line 217.
+LaTeX Info: Redefining \% on input line 217.
+)
+\openout1 = `memoria.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Info: Redefining \. on input line 80.
+LaTeX Info: Redefining \% on input line 80.
+ (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count315
+\scratchdimen=\dimen178
+\scratchbox=\box67
+\nofMPsegments=\count316
+\nofMParguments=\count317
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count318
+\MPscratchDim=\dimen179
+\MPnumerator=\count319
+\makeMPintoPDFobject=\count320
+\everyMPtoPDFconversion=\toks37
+) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+ (/usr/share/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
+ (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: longtable package is loaded.
+ (/usr/share/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)
+Package caption Info: End \AtBeginDocument code.
+Package hyperref Info: Link coloring ON on input line 80.
+ (./memoria.out) (./memoria.out)
+\@outlinefile=\write3
+\openout3 = `memoria.out'.
+
+
+babelbib: Set bibliography fall-back language to spanish
+babelbib: spanish.bdf loaded because language spanish defined.
+(/usr/share/texmf-dist/tex/latex/babelbib/spanish.bdf
+File: spanish.bdf 2021/01/06 v1.34 babelbib: multilingual bibliographies
+
+babelbib extension \btxifchangecaseoff added to \extrasspanish
+)
+babelbib: Load BibTeX extensions \bibsspanish for spanish
+babelbib: Set language for keywords in the bibliography fixed to spanish
+(./chapters/portada1.tex
+\centeroffset=\skip78
+<resources/logo_ugr.jpg, id=188, 186.6975pt x 55.6479pt>
+File: resources/logo_ugr.jpg Graphic file (type jpg)
+<use resources/logo_ugr.jpg>
+Package pdftex.def Info: resources/logo_ugr.jpg  used on input line 12.
+(pdftex.def)             Requested size: 323.9978pt x 96.57689pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 9--19
+[]$[]$ 
+ []
+
+<resources/etsiit_logo.png, id=189, 110.814pt x 40.4712pt>
+File: resources/etsiit_logo.png Graphic file (type png)
+<use resources/etsiit_logo.png>
+Package pdftex.def Info: resources/etsiit_logo.png  used on input line 29.
+(pdftex.def)             Requested size: 108.0011pt x 39.44412pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 23--35
+[]$[]$ 
+ []
+
+
+
+[1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./resources/logo_ugr.jpg> <./resources/etsiit_logo.png>]) (./chapters/portada2.tex
+
+[2
+
+]
+<resources/granasat_logo.png, id=206, 134.046pt x 132.462pt>
+File: resources/granasat_logo.png Graphic file (type png)
+<use resources/granasat_logo.png>
+Package pdftex.def Info: resources/granasat_logo.png  used on input line 12.
+(pdftex.def)             Requested size: 134.04565pt x 132.46167pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 8--17
+[]$[]$ 
+ []
+
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 21--27
+[]$[]$ 
+ []
+
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.29 \end{titlepage}
+                     [1 <./resources/granasat_logo.png>])
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.85     \cleardoublepage
+                          [2
+
+] (./chapters/prefacio.tex
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+
+ []
+
+
+
+[3]
+
+[4
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 32--33
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--36
+
+ []
+
+
+
+[5]
+
+[6
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
+
+ []
+
+
+
+[7]
+
+[8
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
+
+ []
+
+
+
+[9]
+
+[10
+
+])
+
+[11]
+
+[12
+
+] (./memoria.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+
+[1
+
+]
+LaTeX Info: Redefining \. on input line 73.
+LaTeX Info: Redefining \% on input line 73.
+LaTeX Info: Redefining \. on input line 74.
+LaTeX Info: Redefining \% on input line 74.
+LaTeX Info: Redefining \. on input line 75.
+LaTeX Info: Redefining \% on input line 75.
+LaTeX Info: Redefining \. on input line 76.
+LaTeX Info: Redefining \% on input line 76.
+)
+\tf@toc=\write4
+\openout4 = `memoria.toc'.
+
+
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
+(Font)              using `OT1/cmr/bx/n' instead on input line 93.
+
+
+Package spanish Warning: Replacing `OT1/cmr/bx/sc' by 
+(spanish)                faked small caps on input line 93.
+
+LaTeX Info: Redefining \. on input line 93.
+LaTeX Info: Redefining \% on input line 93.
+[2] (./memoria.lof
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+LaTeX Info: Redefining \. on input line 32.
+LaTeX Info: Redefining \% on input line 32.
+LaTeX Info: Redefining \. on input line 33.
+LaTeX Info: Redefining \% on input line 33.
+LaTeX Info: Redefining \. on input line 34.
+LaTeX Info: Redefining \% on input line 34.
+LaTeX Info: Redefining \. on input line 35.
+LaTeX Info: Redefining \% on input line 35.
+)
+\tf@lof=\write5
+\openout5 = `memoria.lof'.
+
+
+
+[3
+
+]
+
+[4
+
+] (./memoria.lot
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+LaTeX Info: Redefining \. on input line 37.
+LaTeX Info: Redefining \% on input line 37.
+LaTeX Info: Redefining \. on input line 38.
+LaTeX Info: Redefining \% on input line 38.
+LaTeX Info: Redefining \. on input line 39.
+LaTeX Info: Redefining \% on input line 39.
+LaTeX Info: Redefining \. on input line 40.
+LaTeX Info: Redefining \% on input line 40.
+)
+\tf@lot=\write6
+\openout6 = `memoria.lot'.
+
+
+
+[5]
+<resources/gh_qr.png, id=439, 222.8325pt x 222.8325pt>
+File: resources/gh_qr.png Graphic file (type png)
+<use resources/gh_qr.png>
+Package pdftex.def Info: resources/gh_qr.png  used on input line 107.
+(pdftex.def)             Requested size: 180.0pt x 180.0003pt.
+
+
+[6
+
+ <./resources/gh_qr.png>] (./chapters/1_introduccion.tex
+Cap\'{\i }tulo 1.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.18 
+      [1
+
+
+]
+
+LaTeX Info: Redefining \. on input line 40.
+LaTeX Info: Redefining \% on input line 40.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.40     \end{itemize}
+                       [2{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+
+LaTeX Info: Redefining \. on input line 78.
+LaTeX Info: Redefining \% on input line 78.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.78     \item\textbf
+                     {Firmware:} Constituye el principio de la propuesta. En... [3]) (./chapters/2_estado_del_arte.tex
+
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1 \chapter
+            {Estado del arte} [4]
+Cap\'{\i }tulo 2.
+<resources/pwmbox_top.jpg, id=463, 3843.35875pt x 2183.15625pt>
+File: resources/pwmbox_top.jpg Graphic file (type jpg)
+<use resources/pwmbox_top.jpg>
+Package pdftex.def Info: resources/pwmbox_top.jpg  used on input line 13.
+(pdftex.def)             Requested size: 360.0pt x 204.47052pt.
+<resources/pwmbox_side.jpg, id=464, 3628.55624pt x 1862.96pt>
+File: resources/pwmbox_side.jpg Graphic file (type jpg)
+<use resources/pwmbox_side.jpg>
+Package pdftex.def Info: resources/pwmbox_side.jpg  used on input line 20.
+(pdftex.def)             Requested size: 360.0pt x 184.82874pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.26 
+      [5
+
+ <./resources/pwmbox_top.jpg>]
+<resources/fw_files_v0.png, id=470, 1196.47pt x 630.355pt>
+File: resources/fw_files_v0.png Graphic file (type png)
+<use resources/fw_files_v0.png>
+Package pdftex.def Info: resources/fw_files_v0.png  used on input line 31.
+(pdftex.def)             Requested size: 288.0011pt x 151.73073pt.
+
+
+LaTeX Info: Redefining \. on input line 40.
+LaTeX Info: Redefining \% on input line 40.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.40     \item{
+               \textbf{Archivos BAT:}} Se tratan de archivos de comandos par... [6 <./resources/pwmbox_side.jpg> <./resources/fw_files_v0.png>]
+
+LaTeX Info: Redefining \. on input line 57.
+LaTeX Info: Redefining \% on input line 57.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.57 
+      [7]
+
+LaTeX Info: Redefining \. on input line 71.
+LaTeX Info: Redefining \% on input line 71.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.71 
+      [8]
+
+LaTeX Info: Redefining \. on input line 92.
+LaTeX Info: Redefining \% on input line 92.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.9}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.92     \item\textbf
+                     {Pulsación del botón:} Determina la acción a realiza... [9]
+
+LaTeX Info: Redefining \. on input line 110.
+LaTeX Info: Redefining \% on input line 110.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.10}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.110 
+       [10]
+
+LaTeX Info: Redefining \. on input line 128.
+LaTeX Info: Redefining \% on input line 128.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.128 
+       [11]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 146.
+LaTeX Info: Redefining \% on input line 146.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.12}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.146 
+       [12]) (./chapters/3_planificacion.tex
+
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+[13]
+
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+[14]
+Cap\'{\i }tulo 3.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[15
+
+]
+<resources/gantt.png, id=523, 945.5325pt x 441.65pt>
+File: resources/gantt.png Graphic file (type png)
+<use resources/gantt.png>
+Package pdftex.def Info: resources/gantt.png  used on input line 19.
+(pdftex.def)             Requested size: 360.0pt x 168.1522pt.
+
+
+LaTeX Info: Redefining \. on input line 36.
+LaTeX Info: Redefining \% on input line 36.
+[16 <./resources/gantt.png>]) (./chapters/4_firmware.tex
+
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+[17]
+
+[18
+
+]
+Cap\'{\i }tulo 4.
+
+
+[19]
+
+[20
+
+]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+[21
+
+]
+
+LaTeX Info: Redefining \. on input line 214.
+LaTeX Info: Redefining \% on input line 214.
+[22]
+
+LaTeX Info: Redefining \. on input line 232.
+LaTeX Info: Redefining \% on input line 232.
+[23]
+
+LaTeX Info: Redefining \. on input line 266.
+LaTeX Info: Redefining \% on input line 266.
+[24]
+<resources/eeprom_operations.png, id=573, 472.76625pt x 844.15375pt>
+File: resources/eeprom_operations.png Graphic file (type png)
+<use resources/eeprom_operations.png>
+Package pdftex.def Info: resources/eeprom_operations.png  used on input line 284.
+(pdftex.def)             Requested size: 288.0011pt x 514.25035pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+LaTeX Info: Redefining \. on input line 289.
+LaTeX Info: Redefining \% on input line 289.
+[25]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Info: Redefining \. on input line 292.
+LaTeX Info: Redefining \% on input line 292.
+[26 <./resources/eeprom_operations.png>]
+<resources/fw_modules.png, id=584, 584.1825pt x 414.54875pt>
+File: resources/fw_modules.png Graphic file (type png)
+<use resources/fw_modules.png>
+Package pdftex.def Info: resources/fw_modules.png  used on input line 297.
+(pdftex.def)             Requested size: 360.0pt x 255.47414pt.
+
+
+LaTeX Info: Redefining \. on input line 310.
+LaTeX Info: Redefining \% on input line 310.
+[27 <./resources/fw_modules.png>]
+<resources/fw_loop.png, id=592, 1151.30125pt x 493.845pt>
+File: resources/fw_loop.png Graphic file (type png)
+<use resources/fw_loop.png>
+Package pdftex.def Info: resources/fw_loop.png  used on input line 316.
+(pdftex.def)             Requested size: 597.50787pt x 256.30353pt.
+
+
+LaTeX Warning: Float too large for page by 25.3076pt on input line 319.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<resources/fw_interrupts.png, id=593, 603.25375pt x 604.2575pt>
+File: resources/fw_interrupts.png Graphic file (type png)
+<use resources/fw_interrupts.png>
+Package pdftex.def Info: resources/fw_interrupts.png  used on input line 323.
+(pdftex.def)             Requested size: 360.0pt x 360.59338pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+LaTeX Info: Redefining \. on input line 328.
+LaTeX Info: Redefining \% on input line 328.
+[28]
+
+[29 <./resources/fw_loop.png>]
+
+LaTeX Info: Redefining \. on input line 328.
+LaTeX Info: Redefining \% on input line 328.
+[30 <./resources/fw_interrupts.png>]
+
+LaTeX Info: Redefining \. on input line 347.
+LaTeX Info: Redefining \% on input line 347.
+[31
+
+]
+
+LaTeX Info: Redefining \. on input line 367.
+LaTeX Info: Redefining \% on input line 367.
+[32]
+Overfull \hbox (21.0871pt too wide) in paragraph at lines 371--372
+[]\OT1/cmr/m/n/10.95 Esta par-te se ha im-ple-men-ta-do uti-li-za-do el apo-yo de la li-brer^^S^^Pa [][]\OT1/cmtt/m/n/10.95 avr/eeprom.h[]\OT1/cmr/m/n/10.95 ,
+ []
+
+<resources/eeprom_vars.png, id=632, 440.64626pt x 385.44pt>
+File: resources/eeprom_vars.png Graphic file (type png)
+<use resources/eeprom_vars.png>
+Package pdftex.def Info: resources/eeprom_vars.png  used on input line 379.
+(pdftex.def)             Requested size: 180.0pt x 157.44916pt.
+
+
+LaTeX Info: Redefining \. on input line 386.
+LaTeX Info: Redefining \% on input line 386.
+[33 <./resources/eeprom_vars.png>]
+<resources/fw_pwm_signals.png, id=641, 1025.8325pt x 387.4475pt>
+File: resources/fw_pwm_signals.png Graphic file (type png)
+<use resources/fw_pwm_signals.png>
+Package pdftex.def Info: resources/fw_pwm_signals.png  used on input line 402.
+(pdftex.def)             Requested size: 360.0pt x 135.96928pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<resources/fw_slow_signal1.png, id=642, 1025.8325pt x 387.4475pt>
+File: resources/fw_slow_signal1.png Graphic file (type png)
+<use resources/fw_slow_signal1.png>
+Package pdftex.def Info: resources/fw_slow_signal1.png  used on input line 409.
+(pdftex.def)             Requested size: 360.0pt x 135.96928pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<resources/fw_slow_signal2.png, id=643, 1025.8325pt x 387.4475pt>
+File: resources/fw_slow_signal2.png Graphic file (type png)
+<use resources/fw_slow_signal2.png>
+Package pdftex.def Info: resources/fw_slow_signal2.png  used on input line 416.
+(pdftex.def)             Requested size: 360.0pt x 135.96928pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) (./chapters/5_interfaz.tex
+
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+[34]
+
+[35 <./resources/fw_pwm_signals.png> <./resources/fw_slow_signal1.png> <./resources/fw_slow_signal2.png>]
+
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+[36
+
+]
+Cap\'{\i }tulo 5.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \vbox (badness 1077) has occurred while \output is active []
+
+
+
+[37]
+
+LaTeX Warning: Text page 38 contains only floats.
+
+
+
+LaTeX Info: Redefining \. on input line 130.
+LaTeX Info: Redefining \% on input line 130.
+[38]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+LaTeX Info: Redefining \. on input line 248.
+LaTeX Info: Redefining \% on input line 248.
+[39]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+LaTeX Info: Redefining \. on input line 300.
+LaTeX Info: Redefining \% on input line 300.
+[40]
+<resources/ui_diseño1.png, id=690, 1284.8pt x 783.92876pt>
+File: resources/ui_diseño1.png Graphic file (type png)
+<use resources/ui_diseño1.png>
+Package pdftex.def Info: resources/ui_diseño1.png  used on input line 311.
+(pdftex.def)             Requested size: 341.9989pt x 208.67314pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<resources/ui_diseño2.png, id=691, 986.68625pt x 398.48875pt>
+File: resources/ui_diseño2.png Graphic file (type png)
+<use resources/ui_diseño2.png>
+Package pdftex.def Info: resources/ui_diseño2.png  used on input line 319.
+(pdftex.def)             Requested size: 341.9989pt x 138.12329pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<resources/ui_diseño3.png, id=692, 963.6pt x 498.86375pt>
+File: resources/ui_diseño3.png Graphic file (type png)
+<use resources/ui_diseño3.png>
+Package pdftex.def Info: resources/ui_diseño3.png  used on input line 326.
+(pdftex.def)             Requested size: 341.9989pt x 177.056pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<resources/ui_diseño4.png, id=693, 1097.09875pt x 582.175pt>
+File: resources/ui_diseño4.png Graphic file (type png)
+<use resources/ui_diseño4.png>
+Package pdftex.def Info: resources/ui_diseño4.png  used on input line 335.
+(pdftex.def)             Requested size: 324.8979pt x 172.40637pt.
+<resources/ui_diseño5.png, id=694, 1097.09875pt x 582.175pt>
+File: resources/ui_diseño5.png Graphic file (type png)
+<use resources/ui_diseño5.png>
+Package pdftex.def Info: resources/ui_diseño5.png  used on input line 339.
+(pdftex.def)             Requested size: 324.8979pt x 172.40637pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<resources/ui_diseño6.png, id=695, 1097.09875pt x 582.175pt>
+File: resources/ui_diseño6.png Graphic file (type png)
+<use resources/ui_diseño6.png>
+Package pdftex.def Info: resources/ui_diseño6.png  used on input line 347.
+(pdftex.def)             Requested size: 341.9989pt x 181.4762pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+LaTeX Info: Redefining \. on input line 352.
+LaTeX Info: Redefining \% on input line 352.
+[41]
+
+[42 <./resources/ui_diseño1.png> <./resources/ui_diseño2.png>]
+
+LaTeX Info: Redefining \. on input line 352.
+LaTeX Info: Redefining \% on input line 352.
+[43 <./resources/ui_diseño3.png> <./resources/ui_diseño4.png> <./resources/ui_diseño5.png>]
+
+LaTeX Info: Redefining \. on input line 352.
+LaTeX Info: Redefining \% on input line 352.
+[44 <./resources/ui_diseño6.png>]
+
+LaTeX Info: Redefining \. on input line 378.
+LaTeX Info: Redefining \% on input line 378.
+[45
+
+]
+
+LaTeX Info: Redefining \. on input line 398.
+LaTeX Info: Redefining \% on input line 398.
+[46]
+<resources/ui_recargar.png, id=732, 467.7475pt x 414.54875pt>
+File: resources/ui_recargar.png Graphic file (type png)
+<use resources/ui_recargar.png>
+Package pdftex.def Info: resources/ui_recargar.png  used on input line 405.
+(pdftex.def)             Requested size: 360.0pt x 319.07068pt.
+<resources/ui_enviar1.png, id=733, 608.2725pt x 293.095pt>
+File: resources/ui_enviar1.png Graphic file (type png)
+<use resources/ui_enviar1.png>
+Package pdftex.def Info: resources/ui_enviar1.png  used on input line 412.
+(pdftex.def)             Requested size: 360.0pt x 173.47015pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<resources/ui_exportar.png, id=734, 728.7225pt x 413.545pt>
+File: resources/ui_exportar.png Graphic file (type png)
+<use resources/ui_exportar.png>
+Package pdftex.def Info: resources/ui_exportar.png  used on input line 419.
+(pdftex.def)             Requested size: 360.0pt x 204.29208pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<resources/ui_importar.png, id=735, 568.1225pt x 373.395pt>
+File: resources/ui_importar.png Graphic file (type png)
+<use resources/ui_importar.png>
+Package pdftex.def Info: resources/ui_importar.png  used on input line 426.
+(pdftex.def)             Requested size: 360.0pt x 236.6189pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<resources/ui_contraseña.png, id=736, 608.2725pt x 333.245pt>
+File: resources/ui_contraseña.png Graphic file (type png)
+<use resources/ui_contraseña.png>
+Package pdftex.def Info: resources/ui_contraseña.png  used on input line 433.
+(pdftex.def)             Requested size: 360.0pt x 197.23318pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<resources/ui_por_defecto.png, id=737, 417.56pt x 242.9075pt>
+File: resources/ui_por_defecto.png Graphic file (type png)
+<use resources/ui_por_defecto.png>
+Package pdftex.def Info: resources/ui_por_defecto.png  used on input line 440.
+(pdftex.def)             Requested size: 360.0pt x 209.43379pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+LaTeX Info: Redefining \. on input line 445.
+LaTeX Info: Redefining \% on input line 445.
+[47 <./resources/ui_recargar.png>]
+
+[48 <./resources/ui_enviar1.png> <./resources/ui_exportar.png>]
+
+LaTeX Info: Redefining \. on input line 445.
+LaTeX Info: Redefining \% on input line 445.
+[49 <./resources/ui_importar.png> <./resources/ui_contraseña.png>]
+
+LaTeX Info: Redefining \. on input line 445.
+LaTeX Info: Redefining \% on input line 445.
+[50 <./resources/ui_por_defecto.png>]
+
+LaTeX Info: Redefining \. on input line 463.
+LaTeX Info: Redefining \% on input line 463.
+[51
+
+]) (./chapters/6_presupuesto.tex
+
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+[52]
+Cap\'{\i }tulo 6.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[53
+
+]
+
+LaTeX Warning: Hyper reference `ch:planificacion' on page 54 undefined on input line 30.
+
+
+
+[54]) (./chapters/7_conclusiones_y_trabajos_futuros.tex
+
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+[55]
+
+[56
+
+]
+Cap\'{\i }tulo 7.
+
+Underfull \vbox (badness 3746) has occurred while \output is active []
+
+
+
+[57]
+
+LaTeX Info: Redefining \. on input line 34.
+LaTeX Info: Redefining \% on input line 34.
+[58]) (./memoria.bbl
+
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+[59]
+
+[60
+
+]
+babelbib: Using the BibTeX style's default font for `name'.
+babelbib: Using the BibTeX style's default font for `lastname'.
+babelbib: Using the BibTeX style's default font for `title'.
+babelbib: Using the BibTeX style's default font for `jtitle'.
+babelbib: Using the BibTeX style's default font for `etal'.
+babelbib: Using the BibTeX style's default font for `journal'.
+babelbib: Using the BibTeX style's default font for `volume'.
+babelbib: Using the BibTeX style's default font for `ISBN'.
+babelbib: Using the BibTeX style's default font for `ISSN'.
+babelbib: Using the BibTeX style's default font for `url'.
+babelbib: Using the BibTeX style's default font for `numeral'.
+LaTeX Info: Redefining \sptext on input line 13.
+LaTeX Info: Redefining \lsc on input line 13.
+LaTeX Info: Redefining \. on input line 13.
+LaTeX Info: Redefining \% on input line 13.
+LaTeX Info: Redefining \dotlessi on input line 13.
+LaTeX Info: Redefining \sptext on input line 13.
+LaTeX Info: Redefining \lsc on input line 13.
+LaTeX Info: Redefining \. on input line 13.
+LaTeX Info: Redefining \% on input line 13.
+LaTeX Info: Redefining \dotlessi on input line 13.
+LaTeX Info: Redefining \sptext on input line 15.
+LaTeX Info: Redefining \lsc on input line 15.
+LaTeX Info: Redefining \. on input line 15.
+LaTeX Info: Redefining \% on input line 15.
+LaTeX Info: Redefining \dotlessi on input line 15.
+LaTeX Info: Redefining \sptext on input line 15.
+LaTeX Info: Redefining \lsc on input line 15.
+LaTeX Info: Redefining \. on input line 15.
+LaTeX Info: Redefining \% on input line 15.
+LaTeX Info: Redefining \dotlessi on input line 15.
+LaTeX Info: Redefining \sptext on input line 30.
+LaTeX Info: Redefining \lsc on input line 30.
+LaTeX Info: Redefining \. on input line 30.
+LaTeX Info: Redefining \% on input line 30.
+LaTeX Info: Redefining \dotlessi on input line 30.
+LaTeX Info: Redefining \sptext on input line 30.
+LaTeX Info: Redefining \lsc on input line 30.
+LaTeX Info: Redefining \. on input line 30.
+LaTeX Info: Redefining \% on input line 30.
+LaTeX Info: Redefining \dotlessi on input line 30.
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--47
+[]\OT1/cmr/m/n/10.95 Microchip: \OT1/cmr/m/it/10.95 ATmega640/V-1280/V-1281/V-2560/V2561/V [DA-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--47
+\OT1/cmr/m/it/10.95 TASHEET]\OT1/cmr/m/n/10.95 , 2020.  [][]$\OT1/cmtt/m/n/10.95 https : / / ww1 . microchip . com / downloads /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--47
+\OT1/cmtt/m/n/10.95 aemDocuments / documents / OTH / ProductDocuments / DataSheets /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--47
+\OT1/cmtt/m/n/10.95 ATmega640-[]1280-[]1281-[]2560-[]2561-[]Datasheet-[]DS40002211A . pdf$[][]\OT1/cmr/m/n/10.95 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--55
+[]\OT1/cmr/m/n/10.95 Saleae: \OT1/cmr/m/it/10.95 Sa-leae Lo-gic 1.x\OT1/cmr/m/n/10.95 .  [][]$\OT1/cmtt/m/n/10.95 https : / / support . saleae . com /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--55
+\OT1/cmtt/m/n/10.95 logic-[]software / legacy-[]software / older-[]software-[]releases$[][]\OT1/cmr/m/n/10.95 ,
+ []
+
+LaTeX Info: Redefining \sptext on input line 57.
+LaTeX Info: Redefining \lsc on input line 57.
+LaTeX Info: Redefining \. on input line 57.
+LaTeX Info: Redefining \% on input line 57.
+LaTeX Info: Redefining \dotlessi on input line 57.
+LaTeX Info: Redefining \sptext on input line 57.
+LaTeX Info: Redefining \lsc on input line 57.
+LaTeX Info: Redefining \. on input line 57.
+LaTeX Info: Redefining \% on input line 57.
+LaTeX Info: Redefining \dotlessi on input line 57.
+LaTeX Info: Redefining \sptext on input line 57.
+LaTeX Info: Redefining \lsc on input line 57.
+LaTeX Info: Redefining \. on input line 57.
+LaTeX Info: Redefining \% on input line 57.
+LaTeX Info: Redefining \dotlessi on input line 57.
+LaTeX Info: Redefining \sptext on input line 58.
+LaTeX Info: Redefining \lsc on input line 58.
+LaTeX Info: Redefining \. on input line 58.
+LaTeX Info: Redefining \% on input line 58.
+LaTeX Info: Redefining \dotlessi on input line 58.
+LaTeX Info: Redefining \sptext on input line 58.
+LaTeX Info: Redefining \lsc on input line 58.
+LaTeX Info: Redefining \. on input line 58.
+LaTeX Info: Redefining \% on input line 58.
+LaTeX Info: Redefining \dotlessi on input line 58.
+
+
+[61]
+LaTeX Info: Redefining \. on input line 64.
+LaTeX Info: Redefining \% on input line 64.
+LaTeX Info: Redefining \. on input line 64.
+LaTeX Info: Redefining \% on input line 64.
+)
+
+LaTeX Info: Redefining \. on input line 128.
+LaTeX Info: Redefining \% on input line 128.
+[62]
+
+[63
+
+] (./memoria.aux
+LaTeX Info: Redefining \. on input line 11.
+LaTeX Info: Redefining \% on input line 11.
+LaTeX Info: Redefining \. on input line 213.
+LaTeX Info: Redefining \% on input line 213.
+LaTeX Info: Redefining \. on input line 214.
+LaTeX Info: Redefining \% on input line 214.
+LaTeX Info: Redefining \. on input line 216.
+LaTeX Info: Redefining \% on input line 216.
+LaTeX Info: Redefining \. on input line 217.
+LaTeX Info: Redefining \% on input line 217.
+)
+ ***********
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+ ***********
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+Package rerunfilecheck Info: File `memoria.out' has not changed.
+(rerunfilecheck)             Checksum: 31E726B97E8583DE262F3990680BAC4B;5568.
+ ) 
+Here is how much of TeX's memory you used:
+ 15691 strings out of 475109
+ 255619 string characters out of 5765325
+ 698339 words of memory out of 5000000
+ 38239 multiletter control sequences out of 15000+600000
+ 567815 words of font info for 68 fonts, out of 8000000 for 9000
+ 40 hyphenation exceptions out of 8191
+ 75i,13n,80p,942b,960s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/eurosym/feymr10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on memoria.pdf (83 pages, 9516705 bytes).
+PDF statistics:
+ 963 PDF objects out of 1000 (max. 8388607)
+ 793 compressed objects within 8 object streams
+ 213 named destinations out of 1000 (max. 500000)
+ 509 words of extra memory for PDF output out of 10000 (max. 10000000)
+

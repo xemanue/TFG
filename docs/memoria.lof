@@ -1,0 +1,35 @@
+\babel@toc {spanish}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Dispositivo PWM Box desde arriba.}}{5}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Lateral del dispositivo PWM Box.}}{6}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Contenido de \textit {PWM\_BOX.RAR}.}}{6}{figure.caption.10}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagrama de Gantt que muestra la organización de las distintas fases del proyecto a lo largo de las semanas.}}{16}{figure.caption.16}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Representación del funcionamiento del vector auxiliar al realizar distintas operaciones sobre la EEPROM.}}{26}{figure.caption.33}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Distribución del código en distintos archivos y módulos.}}{27}{figure.caption.34}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Ejecución del bucle principal.}}{29}{figure.caption.35}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Ejecución de las distintas interrupciones.}}{30}{figure.caption.36}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Contenido de la memoria EEPROM.}}{33}{figure.caption.39}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Señales PWM con distintas configuraciones.}}{35}{figure.caption.40}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Una de las secuencias de señales lentas pre-configuradas.}}{35}{figure.caption.41}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Otra de las secuencias de señales lentas pre-configuradas.}}{35}{figure.caption.42}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Primera iteración del diseño de la interfaz.}}{42}{figure.caption.64}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Otra iteración del diseño de la interfaz.}}{42}{figure.caption.65}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Otra iteración del diseño de la interfaz.}}{43}{figure.caption.66}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Diseño final de la interfaz.}}{43}{figure.caption.67}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces A la izquierda, ventana para exportar ranuras. A la derecha, ventana para enviar ranuras al dispositivo}}{44}{figure.caption.68}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Flujo de ejecución al recargar la conexión con el dispositivo.}}{47}{figure.caption.71}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Flujo de ejecución al enviar perfiles al dispositivo.}}{48}{figure.caption.72}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Flujo de ejecución al exportar perfiles al equipo.}}{48}{figure.caption.73}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Flujo de ejecución al importar perfiles desde el equipo.}}{49}{figure.caption.74}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Flujo de ejecución al mostrar y modificar la contraseña.}}{49}{figure.caption.75}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Flujo de ejecución al establecer el perfil por defecto.}}{50}{figure.caption.76}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
