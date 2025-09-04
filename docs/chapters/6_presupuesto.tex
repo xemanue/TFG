@@ -12,54 +12,70 @@ Por último, en cuanto al \textit{software}, la mayoría de programas usados son
 
 Teniendo todo esto en cuenta, el coste desglosado sería el siguiente:
 
-\begin{itemize}
-    \item\textbf{Equipo:} \[\frac{1400\text{€}}{8\ \text{años}} \times 0.5\ \text{años} = 87.5\text{€} \]
-    \item\textbf{Arduino Mega 2560:} $ 52.8\text{€} $
-    \item\textbf{Pantalla LCD 20x4:} $ 10\text{€} $
-    \item\textbf{Rotary encoder:} $ 4\text{€} $
-    \item\textbf{PCB:} $ 20\text{€} $
-    \item\textbf{Carcasa:} $ 50\text{€} $
-    \item\textbf{Otros elementos varios (cables, conectores, etc.)} $ 30\text{€} $
-    \item\textbf{Licencia Qt Designer:} \[ 3670\text{€/año} \times 0.5\ \text{años} = 1835\text{€} \]
-\end{itemize}
+\begingroup
+    \renewcommand{\arraystretch}{1.2}
+    \begin{center}
+        \begin{tabular}{lr}
+            Equipo: & $ \frac{1400\text{€}}{8\ \text{años}} \times 0.5\ \text{años} = 87.5\text{€} $ \\
+            Arduino Mega 2560: & $ 52.8\text{€} $ \\
+            Pantalla LCD 20x4: & $ 10\text{€} $ \\
+            Rotary encoder: & $ 4\text{€} $ \\
+            PCB: & $ 20\text{€} $ \\
+            Carcasa: & $ 50\text{€} $ \\
+            Otros elementos: & $ 30\text{€} $ \\
+            Licencia Qt Designer: & $ 2270\text{€/año} \times 0.5\ \text{años} = 1135\text{€} $ \\
+            \hline
+            Total: & $ 1389.3\text{€} $
+        \end{tabular}
+    \end{center}
+\endgroup
 
-En total: \[ 87.5\text{€} + 1835\text{€} + 52.8\text{€} + 10\text{€} + 20\text{€} + 50\text{€} = 2055.3\text{€} \]
+\subsubsection{Costes de personal}
 
-\subsubsection{Coste de personal}
+Estimamos que el sueldo de un programador junior en la actualidad ronda los 9.25€/hora. El de uno senior, por otro lado, se aproxima a unos 23€/hora. Como duración del proyecto, se tendrá en cuenta el \hyperref[sec:tiempo_real]{tiempo invertido real}, en concordancia con lo comentado en la \hyperref[ch:planificacion]{planificación temporal}.
 
-Estimamos que el sueldo de un programador junior en la actualidad ronda los 9.25€/hora. El de uno senior, por otro lado, se estima en unos 23€/hora. Como duración del proyecto, se tendrá en cuenta el tiempo real, discutido en la \hyperref[ch:planificacion]{planificación temporal}.
-
-\begin{itemize}
-    \item\textbf{Programador junior:} \[ 9.25\text{€/hora} \times 450\ \text{horas} = 4162.5\text{€} \]
-\end{itemize}
-
-\begin{itemize}
-    \item\textbf{Programador senior:} \[ 23\text{€/hora} \times 2\ \text{horas} * 4\ \text{semanas} * 5\ \text{meses} = 920\text{€} \]
-\end{itemize}
-
-En total: \[ 4162.5\text{€} + 920\text{€} = 5082.5\text{€} \]
+\begingroup
+    \renewcommand{\arraystretch}{1.2}
+    \begin{center}
+        \begin{tabular}{lr}
+            Programador junior: & $ 9.25\text{€/hora} \times 450\ \text{horas} = 4162.5\text{€} $ \\
+            Programador senior: & $ 23\text{€/hora} \times 2\ \text{horas} \times 4\ \text{semanas} \times 5\ \text{meses} = 920\text{€} $ \\
+            \hline
+            Total: & $ 5082.5\text{€} $
+        \end{tabular}
+    \end{center}
+\endgroup
 
 \subsubsection{Costes indirectos}
 
-Para hacer una aproximación, se tendrán en cuenta:
+Para hacer una aproximación, se tendrán en cuenta los siguientes gastos:
 
-\begin{itemize}
-    \item\textbf{Luz:} \[ 85\text{€/mes} \times 5\ \text{meses} = 425\text{€} \]
-\end{itemize}
-
-\begin{itemize}
-    \item\textbf{Agua:}\[ 40\text{€/mes} \times 5\ \text{meses} = 200\text{€} \]
-\end{itemize}
-
-\begin{itemize}
-    \item\textbf{Internet:}\[ 25\text{€/mes} \times 5\ \text{meses} = 125\text{€} \]
-\end{itemize}
-
-En total: \[ 425\text{€} + 200\text{€} + 125\text{€} = 750\text{€} \]
+\begingroup
+    \renewcommand{\arraystretch}{1.2}
+    \begin{center}
+        \begin{tabular}{lr}
+            Luz: & $ 85\text{€/mes} \times 5\ \text{meses} = 425\text{€} $ \\
+            Agua: & $ 40\text{€/mes} \times 5\ \text{meses} = 200\text{€} $ \\
+            Internet: & $ 25\text{€/mes} \times 5\ \text{meses} = 125\text{€} $ \\
+            \hline
+            Total: & $ 750\text{€} $
+        \end{tabular}
+    \end{center}
+\endgroup
 
 \subsubsection{Coste total}
 
+En base a esto, el coste total sería:
 
-\[
-    \text{Coste total} = 2055.3\text{€} + 5082.5\text{€} + 750\text{€} = 7887.8\text{€}
-\]
+\begingroup
+    \renewcommand{\arraystretch}{1.2}
+    \begin{center}
+        \begin{tabular}{lr}
+            Costes de material: & $ 2055.3\text{€} $ \\
+            Costes de personal: & $ 5082.5\text{€} $ \\
+            Costes indirectos: & $ 750\text{€} $ \\
+            \hline
+            Total: & $ 7221.8\text{€} $
+        \end{tabular}
+    \end{center}
+\endgroup
