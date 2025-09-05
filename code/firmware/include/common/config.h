@@ -84,7 +84,7 @@
     //**************************//
     // Memory
 
-    #define NUM_SLOTS 15
+    #define NUM_SLOTS 12
 
     #define EE_PWM_NAME_SIZE 20 // Including '\0'
     #define EE_SLOT_NAME_SIZE 12 // Including '\0'
