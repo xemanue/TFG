@@ -1,4 +1,4 @@
-# Aplicación de control para testeador de faros de vehículos
+# Validación de patrones generados por un producto electrónico microcontrolado 
 
 - **Autor:** Jose Manuel García Cazorla
 - **Tutor:** Andrés María Roldán Aranda
