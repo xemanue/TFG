@@ -141,7 +141,6 @@ class PWMBox:
         found = False
 
         for i in comports():
-            print(i.device)
             # Use the device description to narrow our search
             if re.search("usb.serial", i.description, re.IGNORECASE):
                 candidate = Serial(port=i.device, baudrate=115200, timeout=1)
