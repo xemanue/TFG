@@ -1,0 +1,239 @@
+{
+    "num_slots": 4,
+    "slot 1": {
+        "name": "Seat Leon",
+        "pwm 1": {
+            "name": "Cortas",
+            "mode": 0,
+            "frq": 50.0,
+            "dty": 1,
+            "phs": 1
+        },
+        "pwm 2": {
+            "name": "Largas",
+            "mode": 0,
+            "frq": 25.0,
+            "dty": 2,
+            "phs": 2
+        },
+        "pwm 3": {
+            "name": "Interm Izq",
+            "mode": 1,
+            "frq": 70.0,
+            "dty": 3,
+            "phs": 3
+        },
+        "pwm 4": {
+            "name": "Interm Der",
+            "mode": 1,
+            "frq": 200.0,
+            "dty": 4,
+            "phs": 4
+        },
+        "pwm 5": {
+            "name": "Atras",
+            "mode": 2,
+            "frq": 10.0,
+            "dty": 5,
+            "phs": 5
+        },
+        "pwm 6": {
+            "name": "Freno",
+            "mode": 2,
+            "frq": 90.5,
+            "dty": 6,
+            "phs": 6
+        },
+        "pwm 7": {
+            "name": "Niebla",
+            "mode": 0,
+            "frq": 60.0,
+            "dty": 7,
+            "phs": 7
+        },
+        "pwm 8": {
+            "name": "Posicion",
+            "mode": 0,
+            "frq": 85.0,
+            "dty": 8,
+            "phs": 8
+        }
+    },
+    "slot 2": {
+        "name": "Audi A4",
+        "pwm 1": {
+            "name": "Interm Izq",
+            "mode": 0,
+            "frq": 50.0,
+            "dty": 1,
+            "phs": 1
+        },
+        "pwm 2": {
+            "name": "Interm Der",
+            "mode": 0,
+            "frq": 25.0,
+            "dty": 2,
+            "phs": 2
+        },
+        "pwm 3": {
+            "name": "Atras",
+            "mode": 1,
+            "frq": 70.0,
+            "dty": 3,
+            "phs": 3
+        },
+        "pwm 4": {
+            "name": "Niebla",
+            "mode": 1,
+            "frq": 43.0,
+            "dty": 2,
+            "phs": 2
+        },
+        "pwm 5": {
+            "name": "Freno",
+            "mode": 2,
+            "frq": 103.0,
+            "dty": 1,
+            "phs": 5
+        },
+        "pwm 6": {
+            "name": "Cortas",
+            "mode": 2,
+            "frq": 75.5,
+            "dty": 6,
+            "phs": 6
+        },
+        "pwm 7": {
+            "name": "Largas",
+            "mode": 0,
+            "frq": 65.0,
+            "dty": 23,
+            "phs": 7
+        },
+        "pwm 8": {
+            "name": "Posicion",
+            "mode": 0,
+            "frq": 12.0,
+            "dty": 76,
+            "phs": 8
+        }
+    },
+    "slot 3": {
+        "name": "Alfa Romeo",
+        "pwm 1": {
+            "name": "Posicion",
+            "mode": 1,
+            "frq": 17.0,
+            "dty": 17,
+            "phs": 17
+        },
+        "pwm 2": {
+            "name": "Atras",
+            "mode": 1,
+            "frq": 18.0,
+            "dty": 18,
+            "phs": 18
+        },
+        "pwm 3": {
+            "name": "Cortas",
+            "mode": 1,
+            "frq": 19.0,
+            "dty": 19,
+            "phs": 19
+        },
+        "pwm 4": {
+            "name": "Largas",
+            "mode": 1,
+            "frq": 20.0,
+            "dty": 20,
+            "phs": 20
+        },
+        "pwm 5": {
+            "name": "Interm Izq",
+            "mode": 1,
+            "frq": 21.0,
+            "dty": 21,
+            "phs": 21
+        },
+        "pwm 6": {
+            "name": "Interm Der",
+            "mode": 1,
+            "frq": 22.0,
+            "dty": 22,
+            "phs": 22
+        },
+        "pwm 7": {
+            "name": "Freno",
+            "mode": 1,
+            "frq": 23.0,
+            "dty": 23,
+            "phs": 23
+        },
+        "pwm 8": {
+            "name": "Niebla",
+            "mode": 1,
+            "frq": 24.0,
+            "dty": 24,
+            "phs": 24
+        }
+    },
+	"slot 4": {
+        "name": "BMW",
+        "pwm 1": {
+            "name": "Interm Izq",
+            "mode": 1,
+            "frq": 1.0,
+            "dty": 1,
+            "phs": 1
+        },
+        "pwm 2": {
+            "name": "Atras",
+            "mode": 1,
+            "frq": 9.0,
+            "dty": 2,
+            "phs": 2
+        },
+        "pwm 3": {
+            "name": "Freno",
+            "mode": 1,
+            "frq": 6.0,
+            "dty": 3,
+            "phs": 3
+        },
+        "pwm 4": {
+            "name": "Interm Der",
+            "mode": 1,
+            "frq": 1.0,
+            "dty": 4,
+            "phs": 4
+        },
+        "pwm 5": {
+            "name": "Cortas",
+            "mode": 1,
+            "frq": 76.0,
+            "dty": 5,
+            "phs": 5
+        },
+        "pwm 6": {
+            "name": "Niebla",
+            "mode": 1,
+            "frq": 3.0,
+            "dty": 85,
+            "phs": 6
+        },
+        "pwm 7": {
+            "name": "Posicion",
+            "mode": 1,
+            "frq": 43.0,
+            "dty": 7,
+            "phs": 7
+        },
+        "pwm 8": {
+            "name": "Largas",
+            "mode": 1,
+            "frq": 37.0,
+            "dty": 8,
+            "phs": 8
+        }
+    }
+}

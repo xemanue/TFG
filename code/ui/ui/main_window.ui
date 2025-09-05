@@ -1,0 +1,2892 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1090</width>
+    <height>580</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1090</width>
+    <height>580</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>580</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>GranaSAT PWM Box</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../res/res.qrc">
+    <normaloff>:/icons/granasat.png</normaloff>:/icons/granasat.png</iconset>
+  </property>
+  <property name="locale">
+   <locale language="Spanish" country="Spain"/>
+  </property>
+  <widget class="QWidget" name="central_widget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>1080</width>
+     <height>525</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>560</height>
+    </size>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>20</number>
+    </property>
+    <property name="sizeConstraint">
+     <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
+    </property>
+    <property name="leftMargin">
+     <number>20</number>
+    </property>
+    <property name="topMargin">
+     <number>20</number>
+    </property>
+    <property name="rightMargin">
+     <number>20</number>
+    </property>
+    <property name="bottomMargin">
+     <number>20</number>
+    </property>
+    <item>
+     <layout class="QVBoxLayout" name="sidebar" stretch="0,0,0,0">
+      <property name="spacing">
+       <number>20</number>
+      </property>
+      <property name="sizeConstraint">
+       <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <layout class="QVBoxLayout" name="info_layout1">
+        <property name="spacing">
+         <number>10</number>
+        </property>
+        <property name="sizeConstraint">
+         <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item alignment="Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop">
+         <widget class="QLabel" name="info_label">
+          <property name="maximumSize">
+           <size>
+            <width>1000</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:700;&quot;&gt;Info&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QFormLayout" name="info_layout2">
+          <property name="horizontalSpacing">
+           <number>10</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>10</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="port_label">
+            <property name="maximumSize">
+             <size>
+              <width>1000</width>
+              <height>15</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Puerto:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLabel" name="port_value">
+            <property name="maximumSize">
+             <size>
+              <width>1000</width>
+              <height>15</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>...</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="desc_label">
+            <property name="maximumSize">
+             <size>
+              <width>1000</width>
+              <height>15</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Descripción:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLabel" name="desc_value">
+            <property name="maximumSize">
+             <size>
+              <width>1000</width>
+              <height>15</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>...</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="serial_label">
+            <property name="maximumSize">
+             <size>
+              <width>1000</width>
+              <height>15</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>N° serie:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLabel" name="serial_value">
+            <property name="maximumSize">
+             <size>
+              <width>1000</width>
+              <height>15</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>...</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="hwver_label">
+            <property name="maximumSize">
+             <size>
+              <width>1000</width>
+              <height>15</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Versión HW:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="swver_label">
+            <property name="maximumSize">
+             <size>
+              <width>1000</width>
+              <height>15</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Versión SW:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLabel" name="hwver_value">
+            <property name="maximumSize">
+             <size>
+              <width>1000</width>
+              <height>15</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>...</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QLabel" name="swver_value">
+            <property name="maximumSize">
+             <size>
+              <width>1000</width>
+              <height>15</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>...</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="defslot_label">
+            <property name="maximumSize">
+             <size>
+              <width>1000</width>
+              <height>15</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Slot por defecto:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QLabel" name="defslot_value">
+            <property name="maximumSize">
+             <size>
+              <width>1000</width>
+              <height>15</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>...</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0" colspan="2">
+           <widget class="QPushButton" name="pass_button">
+            <property name="maximumSize">
+             <size>
+              <width>1000</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>Cambia la contraseña</string>
+            </property>
+            <property name="text">
+             <string>Contraseña</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normalon>:/icons/gear.png</normalon>
+             </iconset>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Orientation::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Policy::MinimumExpanding</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>1</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="device_layout">
+        <property name="spacing">
+         <number>10</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="device_label">
+          <property name="maximumSize">
+           <size>
+            <width>1000</width>
+            <height>15</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Dispositivo:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="device_layout2">
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="reload_button">
+            <property name="maximumSize">
+             <size>
+              <width>1000</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>Recarga las ranuras del dispositivo</string>
+            </property>
+            <property name="text">
+             <string>Recargar</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normalon>:/icons/arrow-circle-225-left.png</normalon>
+             </iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="send_button">
+            <property name="maximumSize">
+             <size>
+              <width>1000</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>Envia ranuras al dispositivo</string>
+            </property>
+            <property name="text">
+             <string>Enviar...</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normalon>:/icons/mail-send.png</normalon>
+             </iconset>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="file_layout">
+        <property name="spacing">
+         <number>10</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="file_label">
+          <property name="maximumSize">
+           <size>
+            <width>1000</width>
+            <height>15</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>A archivo:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="file_layout2">
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <property name="sizeConstraint">
+           <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="import_button">
+            <property name="maximumSize">
+             <size>
+              <width>1000</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>Importa ranuras de un fichero JSON</string>
+            </property>
+            <property name="text">
+             <string>Importar...</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normalon>:/icons/blue-document-import.png</normalon>
+             </iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="export_button">
+            <property name="maximumSize">
+             <size>
+              <width>1000</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>Exporta ranuras en formato JSON</string>
+            </property>
+            <property name="text">
+             <string>Exportar...</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normalon>:/icons/blue-document-export.png</normalon>
+             </iconset>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="Line" name="line">
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Orientation::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="spacing">
+       <number>40</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <layout class="QVBoxLayout" name="slot_layout1">
+        <property name="spacing">
+         <number>10</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="slot_label">
+          <property name="maximumSize">
+           <size>
+            <width>1000</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:700;&quot;&gt;Ranura&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="slot_layout2">
+          <property name="spacing">
+           <number>4</number>
+          </property>
+          <item>
+           <widget class="QComboBox" name="slot_value">
+            <property name="maximumSize">
+             <size>
+              <width>1000</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>Seleccionar ranura</string>
+            </property>
+            <property name="placeholderText">
+             <string>...</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="slot_rename_button">
+            <property name="maximumSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>Renombrar ranura</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normalon>:/icons/edit.png</normalon>
+             </iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="slot_default_button">
+            <property name="maximumSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>Establecer como ranura por defecto</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normalon>:/icons/star.png</normalon>
+             </iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="slot_new_button">
+            <property name="maximumSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>Nueva ranura (en la app)</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normalon>:/icons/plus.png</normalon>
+             </iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="slot_delete_button">
+            <property name="maximumSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>Quitar ranura (de la app)</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="../res/res.qrc">
+              <normaloff>:/icons/broom.png</normaloff>:/icons/broom.png</iconset>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="pwms_layout">
+        <property name="sizeConstraint">
+         <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <property name="spacing">
+         <number>40</number>
+        </property>
+        <item row="2" column="2">
+         <layout class="QVBoxLayout" name="pwm7_layout">
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="pwm7_label">
+            <property name="maximumSize">
+             <size>
+              <width>1000</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:700;&quot;&gt;PWM 7&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="name7_layout">
+            <property name="spacing">
+             <number>5</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLineEdit" name="name7_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="maxLength">
+               <number>19</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="name7_confirm">
+              <property name="maximumSize">
+               <size>
+                <width>25</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Confirma el cambio de nombre</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normalon>:/icons/tick.png</normalon>
+               </iconset>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="name7_cancel">
+              <property name="maximumSize">
+               <size>
+                <width>25</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Cancela el cambio de nombre</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normalon>:/icons/cross.png</normalon>
+               </iconset>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QFormLayout" name="params7_layout">
+            <property name="sizeConstraint">
+             <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
+            </property>
+            <property name="horizontalSpacing">
+             <number>8</number>
+            </property>
+            <property name="verticalSpacing">
+             <number>0</number>
+            </property>
+            <item row="0" column="0">
+             <widget class="QLabel" name="mode7_label">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Modo:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QComboBox" name="mode7_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Modo del PWM</string>
+              </property>
+              <property name="maxVisibleItems">
+               <number>3</number>
+              </property>
+              <property name="maxCount">
+               <number>3</number>
+              </property>
+              <property name="placeholderText">
+               <string>...</string>
+              </property>
+              <item>
+               <property name="text">
+                <string>OFF</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>PWM</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>ON</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="frq7_label">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Frecuencia:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QDoubleSpinBox" name="frq7_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Frecuencia del PWM</string>
+              </property>
+              <property name="suffix">
+               <string> Hz</string>
+              </property>
+              <property name="decimals">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <double>400.000000000000000</double>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="dty7_label">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Ciclo:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QSpinBox" name="dty7_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Ciclo del PWM</string>
+              </property>
+              <property name="suffix">
+               <string>%</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="phs7_label">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Fase:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QSpinBox" name="phs7_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Fase del PWM</string>
+              </property>
+              <property name="suffix">
+               <string>%</string>
+              </property>
+              <property name="minimum">
+               <number>-50</number>
+              </property>
+              <property name="maximum">
+               <number>50</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
+         <layout class="QVBoxLayout" name="pwm1_layout">
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="pwm1_label">
+            <property name="maximumSize">
+             <size>
+              <width>1000</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:700;&quot;&gt;PWM 1&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="name1_layout">
+            <property name="spacing">
+             <number>4</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLineEdit" name="name1_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="maxLength">
+               <number>19</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="name1_confirm">
+              <property name="maximumSize">
+               <size>
+                <width>25</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Confirma el cambio de nombre</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normalon>:/icons/tick.png</normalon>
+               </iconset>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="name1_cancel">
+              <property name="maximumSize">
+               <size>
+                <width>25</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Cancela el cambio de nombre</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normalon>:/icons/cross.png</normalon>
+               </iconset>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QFormLayout" name="params1_layout">
+            <property name="sizeConstraint">
+             <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
+            </property>
+            <property name="horizontalSpacing">
+             <number>8</number>
+            </property>
+            <property name="verticalSpacing">
+             <number>0</number>
+            </property>
+            <item row="0" column="0">
+             <widget class="QLabel" name="mode1_label">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Modo:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QComboBox" name="mode1_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Modo del PWM</string>
+              </property>
+              <property name="maxVisibleItems">
+               <number>3</number>
+              </property>
+              <property name="maxCount">
+               <number>3</number>
+              </property>
+              <property name="placeholderText">
+               <string>...</string>
+              </property>
+              <item>
+               <property name="text">
+                <string>OFF</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>PWM</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>ON</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="frq1_label">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Frecuencia:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QDoubleSpinBox" name="frq1_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Frecuencia del PWM</string>
+              </property>
+              <property name="suffix">
+               <string> Hz</string>
+              </property>
+              <property name="decimals">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <double>400.000000000000000</double>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="dty1_label">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Ciclo:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QSpinBox" name="dty1_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Ciclo del PWM</string>
+              </property>
+              <property name="suffix">
+               <string>%</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="phs1_label">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Fase:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QSpinBox" name="phs1_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Fase del PWM</string>
+              </property>
+              <property name="suffix">
+               <string>%</string>
+              </property>
+              <property name="minimum">
+               <number>-50</number>
+              </property>
+              <property name="maximum">
+               <number>50</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="2">
+         <layout class="QVBoxLayout" name="pwm3_layout">
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="pwm3_label">
+            <property name="maximumSize">
+             <size>
+              <width>1000</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:700;&quot;&gt;PWM 3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="name3_layout">
+            <property name="spacing">
+             <number>4</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLineEdit" name="name3_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="maxLength">
+               <number>19</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="name3_confirm">
+              <property name="maximumSize">
+               <size>
+                <width>25</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Confirma el cambio de nombre</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normalon>:/icons/tick.png</normalon>
+               </iconset>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="name3_cancel">
+              <property name="maximumSize">
+               <size>
+                <width>25</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Cancela el cambio de nombre</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normalon>:/icons/cross.png</normalon>
+               </iconset>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QFormLayout" name="params3_layout">
+            <property name="sizeConstraint">
+             <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
+            </property>
+            <property name="horizontalSpacing">
+             <number>8</number>
+            </property>
+            <property name="verticalSpacing">
+             <number>0</number>
+            </property>
+            <item row="0" column="0">
+             <widget class="QLabel" name="mode3_label">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Modo:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QComboBox" name="mode3_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Modo del PWM</string>
+              </property>
+              <property name="maxVisibleItems">
+               <number>3</number>
+              </property>
+              <property name="maxCount">
+               <number>3</number>
+              </property>
+              <property name="placeholderText">
+               <string>...</string>
+              </property>
+              <item>
+               <property name="text">
+                <string>OFF</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>PWM</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>ON</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="frq3_label">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Frecuencia:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QDoubleSpinBox" name="frq3_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Frecuencia del PWM</string>
+              </property>
+              <property name="suffix">
+               <string> Hz</string>
+              </property>
+              <property name="decimals">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <double>400.000000000000000</double>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="dty3_label">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Ciclo:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QSpinBox" name="dty3_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Ciclo del PWM</string>
+              </property>
+              <property name="suffix">
+               <string>%</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="phs3_label">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Fase:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QSpinBox" name="phs3_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Fase del PWM</string>
+              </property>
+              <property name="suffix">
+               <string>%</string>
+              </property>
+              <property name="minimum">
+               <number>-50</number>
+              </property>
+              <property name="maximum">
+               <number>50</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="1">
+         <layout class="QVBoxLayout" name="pwm2_layout">
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="pwm2_label">
+            <property name="maximumSize">
+             <size>
+              <width>1000</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:700;&quot;&gt;PWM 2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="name2_layout">
+            <property name="spacing">
+             <number>5</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLineEdit" name="name2_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="maxLength">
+               <number>19</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="name2_confirm">
+              <property name="maximumSize">
+               <size>
+                <width>25</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Confirma el cambio de nombre</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normalon>:/icons/tick.png</normalon>
+               </iconset>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="name2_cancel">
+              <property name="maximumSize">
+               <size>
+                <width>25</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Cancela el cambio de nombre</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normalon>:/icons/cross.png</normalon>
+               </iconset>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QFormLayout" name="params2_layout">
+            <property name="sizeConstraint">
+             <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
+            </property>
+            <property name="horizontalSpacing">
+             <number>8</number>
+            </property>
+            <property name="verticalSpacing">
+             <number>0</number>
+            </property>
+            <item row="0" column="0">
+             <widget class="QLabel" name="mode2_label">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Modo:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QComboBox" name="mode2_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Modo del PWM</string>
+              </property>
+              <property name="maxVisibleItems">
+               <number>3</number>
+              </property>
+              <property name="maxCount">
+               <number>3</number>
+              </property>
+              <property name="placeholderText">
+               <string>...</string>
+              </property>
+              <item>
+               <property name="text">
+                <string>OFF</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>PWM</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>ON</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="frq2_label">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Frecuencia:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QDoubleSpinBox" name="frq2_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Frecuencia del PWM</string>
+              </property>
+              <property name="suffix">
+               <string> Hz</string>
+              </property>
+              <property name="decimals">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <double>400.000000000000000</double>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="dty2_label">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Ciclo:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QSpinBox" name="dty2_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Ciclo del PWM</string>
+              </property>
+              <property name="suffix">
+               <string>%</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="phs2_label">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Fase:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QSpinBox" name="phs2_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Fase del PWM</string>
+              </property>
+              <property name="suffix">
+               <string>%</string>
+              </property>
+              <property name="minimum">
+               <number>-50</number>
+              </property>
+              <property name="maximum">
+               <number>50</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="1">
+         <layout class="QVBoxLayout" name="pwm6_layout">
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="pwm6_label">
+            <property name="maximumSize">
+             <size>
+              <width>1000</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:700;&quot;&gt;PWM 6&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="name6_layout">
+            <property name="spacing">
+             <number>5</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLineEdit" name="name6_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="maxLength">
+               <number>19</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="name6_confirm">
+              <property name="maximumSize">
+               <size>
+                <width>25</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Confirma el cambio de nombre</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normalon>:/icons/tick.png</normalon>
+               </iconset>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="name6_cancel">
+              <property name="maximumSize">
+               <size>
+                <width>25</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Cancela el cambio de nombre</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normalon>:/icons/cross.png</normalon>
+               </iconset>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QFormLayout" name="params6_layout">
+            <property name="sizeConstraint">
+             <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
+            </property>
+            <property name="horizontalSpacing">
+             <number>8</number>
+            </property>
+            <property name="verticalSpacing">
+             <number>0</number>
+            </property>
+            <item row="0" column="0">
+             <widget class="QLabel" name="mode6_label">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Modo:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QComboBox" name="mode6_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Modo del PWM</string>
+              </property>
+              <property name="maxVisibleItems">
+               <number>3</number>
+              </property>
+              <property name="maxCount">
+               <number>3</number>
+              </property>
+              <property name="placeholderText">
+               <string>...</string>
+              </property>
+              <item>
+               <property name="text">
+                <string>OFF</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>PWM</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>ON</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="frq6_label">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Frecuencia:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QDoubleSpinBox" name="frq6_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Frecuencia del PWM</string>
+              </property>
+              <property name="suffix">
+               <string> Hz</string>
+              </property>
+              <property name="decimals">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <double>400.000000000000000</double>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="dty6_label">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Ciclo:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QSpinBox" name="dty6_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Ciclo del PWM</string>
+              </property>
+              <property name="suffix">
+               <string>%</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="phs6_label">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Fase:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QSpinBox" name="phs6_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Fase del PWM</string>
+              </property>
+              <property name="suffix">
+               <string>%</string>
+              </property>
+              <property name="minimum">
+               <number>-50</number>
+              </property>
+              <property name="maximum">
+               <number>50</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="3">
+         <layout class="QVBoxLayout" name="pwm4_layout">
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="pwm4_label">
+            <property name="maximumSize">
+             <size>
+              <width>1000</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:700;&quot;&gt;PWM 4&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="name4_layout">
+            <property name="spacing">
+             <number>5</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLineEdit" name="name4_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="maxLength">
+               <number>19</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="name4_confirm">
+              <property name="maximumSize">
+               <size>
+                <width>25</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Confirma el cambio de nombre</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normalon>:/icons/tick.png</normalon>
+               </iconset>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="name4_cancel">
+              <property name="maximumSize">
+               <size>
+                <width>25</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Cancela el cambio de nombre</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normalon>:/icons/cross.png</normalon>
+               </iconset>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QFormLayout" name="params4_layout">
+            <property name="sizeConstraint">
+             <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
+            </property>
+            <property name="horizontalSpacing">
+             <number>8</number>
+            </property>
+            <property name="verticalSpacing">
+             <number>0</number>
+            </property>
+            <item row="0" column="0">
+             <widget class="QLabel" name="mode4_label">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Modo:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QComboBox" name="mode4_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Modo del PWM</string>
+              </property>
+              <property name="maxVisibleItems">
+               <number>3</number>
+              </property>
+              <property name="maxCount">
+               <number>3</number>
+              </property>
+              <property name="placeholderText">
+               <string>...</string>
+              </property>
+              <item>
+               <property name="text">
+                <string>OFF</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>PWM</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>ON</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="frq4_label">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Frecuencia:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QDoubleSpinBox" name="frq4_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Frecuencia del PWM</string>
+              </property>
+              <property name="suffix">
+               <string> Hz</string>
+              </property>
+              <property name="decimals">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <double>400.000000000000000</double>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="dty4_label">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Ciclo:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QSpinBox" name="dty4_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Ciclo del PWM</string>
+              </property>
+              <property name="suffix">
+               <string>%</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="phs4_label">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Fase:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QSpinBox" name="phs4_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Fase del PWM</string>
+              </property>
+              <property name="suffix">
+               <string>%</string>
+              </property>
+              <property name="minimum">
+               <number>-50</number>
+              </property>
+              <property name="maximum">
+               <number>50</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="0">
+         <layout class="QVBoxLayout" name="pwm5_layout">
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="pwm5_label">
+            <property name="maximumSize">
+             <size>
+              <width>1000</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:700;&quot;&gt;PWM 5&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="name5_layout">
+            <property name="spacing">
+             <number>5</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLineEdit" name="name5_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="maxLength">
+               <number>19</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="name5_confirm">
+              <property name="maximumSize">
+               <size>
+                <width>25</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Confirma el cambio de nombre</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normalon>:/icons/tick.png</normalon>
+               </iconset>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="name5_cancel">
+              <property name="maximumSize">
+               <size>
+                <width>25</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Cancela el cambio de nombre</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normalon>:/icons/cross.png</normalon>
+               </iconset>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QFormLayout" name="params5_layout">
+            <property name="sizeConstraint">
+             <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
+            </property>
+            <property name="horizontalSpacing">
+             <number>8</number>
+            </property>
+            <property name="verticalSpacing">
+             <number>0</number>
+            </property>
+            <item row="0" column="0">
+             <widget class="QLabel" name="mode5_label">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Modo:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QComboBox" name="mode5_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Modo del PWM</string>
+              </property>
+              <property name="maxVisibleItems">
+               <number>3</number>
+              </property>
+              <property name="maxCount">
+               <number>3</number>
+              </property>
+              <property name="placeholderText">
+               <string>...</string>
+              </property>
+              <item>
+               <property name="text">
+                <string>OFF</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>PWM</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>ON</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="frq5_label">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Frecuencia:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QDoubleSpinBox" name="frq5_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Frecuencia del PWM</string>
+              </property>
+              <property name="suffix">
+               <string> Hz</string>
+              </property>
+              <property name="decimals">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <double>400.000000000000000</double>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="dty5_label">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Ciclo:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QSpinBox" name="dty5_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Ciclo del PWM</string>
+              </property>
+              <property name="suffix">
+               <string>%</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="phs5_label">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Fase:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QSpinBox" name="phs5_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Fase del PWM</string>
+              </property>
+              <property name="suffix">
+               <string>%</string>
+              </property>
+              <property name="minimum">
+               <number>-50</number>
+              </property>
+              <property name="maximum">
+               <number>50</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="2" column="3">
+         <layout class="QVBoxLayout" name="pwm8_layout">
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="pwm8_label">
+            <property name="maximumSize">
+             <size>
+              <width>1000</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt; font-weight:700;&quot;&gt;PWM 8&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="name8_layout">
+            <property name="spacing">
+             <number>5</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLineEdit" name="name8_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="maxLength">
+               <number>19</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="name8_confirm">
+              <property name="maximumSize">
+               <size>
+                <width>25</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Confirma el cambio de nombre</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normalon>:/icons/tick.png</normalon>
+               </iconset>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="name8_cancel">
+              <property name="maximumSize">
+               <size>
+                <width>25</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Cancela el cambio de nombre</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normalon>:/icons/cross.png</normalon>
+               </iconset>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QFormLayout" name="params8_layout">
+            <property name="sizeConstraint">
+             <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
+            </property>
+            <property name="horizontalSpacing">
+             <number>8</number>
+            </property>
+            <property name="verticalSpacing">
+             <number>0</number>
+            </property>
+            <item row="0" column="0">
+             <widget class="QLabel" name="mode8_label">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Modo:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QComboBox" name="mode8_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Modo del PWM</string>
+              </property>
+              <property name="maxVisibleItems">
+               <number>3</number>
+              </property>
+              <property name="maxCount">
+               <number>3</number>
+              </property>
+              <property name="placeholderText">
+               <string>...</string>
+              </property>
+              <item>
+               <property name="text">
+                <string>OFF</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>PWM</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>ON</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="frq8_label">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Frecuencia:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QDoubleSpinBox" name="frq8_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Frecuencia del PWM</string>
+              </property>
+              <property name="suffix">
+               <string> Hz</string>
+              </property>
+              <property name="decimals">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <double>400.000000000000000</double>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="dty8_label">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Ciclo:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QSpinBox" name="dty8_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Ciclo del PWM</string>
+              </property>
+              <property name="suffix">
+               <string>%</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="phs8_label">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Fase:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QSpinBox" name="phs8_value">
+              <property name="maximumSize">
+               <size>
+                <width>1000</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Fase del PWM</string>
+              </property>
+              <property name="suffix">
+               <string>%</string>
+              </property>
+              <property name="minimum">
+               <number>-50</number>
+              </property>
+              <property name="maximum">
+               <number>50</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QToolBar" name="tool_bar">
+   <property name="contextMenuPolicy">
+    <enum>Qt::ContextMenuPolicy::PreventContextMenu</enum>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="floatable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="reload_action"/>
+   <addaction name="send_action"/>
+   <addaction name="separator"/>
+   <addaction name="import_action"/>
+   <addaction name="export_action"/>
+   <addaction name="separator"/>
+   <addaction name="pass_action"/>
+  </widget>
+  <action name="import_action">
+   <property name="icon">
+    <iconset resource="../res/res.qrc">
+     <normaloff>:/icons/blue-document-import.png</normaloff>:/icons/blue-document-import.png</iconset>
+   </property>
+   <property name="text">
+    <string>Importar...</string>
+   </property>
+   <property name="toolTip">
+    <string>Importa ranuras de un fichero JSON</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="export_action">
+   <property name="icon">
+    <iconset resource="../res/res.qrc">
+     <normaloff>:/icons/blue-document-export.png</normaloff>:/icons/blue-document-export.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exportar...</string>
+   </property>
+   <property name="toolTip">
+    <string>Exporta ranuras en formato JSON</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="pass_action">
+   <property name="icon">
+    <iconset resource="../res/res.qrc">
+     <normaloff>:/icons/gear.png</normaloff>:/icons/gear.png</iconset>
+   </property>
+   <property name="text">
+    <string>Contraseña</string>
+   </property>
+   <property name="toolTip">
+    <string>Cambia la contraseña</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="reload_action">
+   <property name="icon">
+    <iconset resource="../res/res.qrc">
+     <normaloff>:/icons/arrow-circle-225-left.png</normaloff>:/icons/arrow-circle-225-left.png</iconset>
+   </property>
+   <property name="text">
+    <string>Recargar</string>
+   </property>
+   <property name="toolTip">
+    <string>Recarga las ranuras del dispositivo</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="send_action">
+   <property name="icon">
+    <iconset resource="../res/res.qrc">
+     <normaloff>:/icons/mail-send.png</normaloff>:/icons/mail-send.png</iconset>
+   </property>
+   <property name="text">
+    <string>Enviar...</string>
+   </property>
+   <property name="toolTip">
+    <string>Envia ranuras al dispositivo</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../res/res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

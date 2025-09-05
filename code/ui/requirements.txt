@@ -1,0 +1,5 @@
+jupyterlab
+pyserial
+PyQt6
+PySide6
+qt-themes

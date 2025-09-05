@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PassWindow</class>
+ <widget class="QWidget" name="PassWindow">
+  <property name="windowModality">
+   <enum>Qt::WindowModality::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>360</width>
+    <height>120</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>360</width>
+    <height>120</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>360</width>
+    <height>120</height>
+   </size>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::FocusPolicy::StrongFocus</enum>
+  </property>
+  <property name="windowTitle">
+   <string>GranaSAT PWM Box</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../res/res.qrc">
+    <normaloff>:/icons/granasat.png</normaloff>:/icons/granasat.png</iconset>
+  </property>
+  <property name="locale">
+   <locale language="Spanish" country="Spain"/>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>20</number>
+   </property>
+   <property name="topMargin">
+    <number>20</number>
+   </property>
+   <property name="rightMargin">
+    <number>20</number>
+   </property>
+   <property name="bottomMargin">
+    <number>20</number>
+   </property>
+   <item>
+    <widget class="QLabel" name="pass_label">
+     <property name="maximumSize">
+      <size>
+       <width>1000</width>
+       <height>15</height>
+      </size>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="pass_layout">
+     <property name="spacing">
+      <number>5</number>
+     </property>
+     <item>
+      <widget class="QSpinBox" name="pass_value1">
+       <property name="maximumSize">
+        <size>
+         <width>1000</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="maximum">
+        <number>9</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="pass_value2">
+       <property name="maximumSize">
+        <size>
+         <width>1000</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="maximum">
+        <number>9</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="pass_value3">
+       <property name="maximumSize">
+        <size>
+         <width>1000</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="maximum">
+        <number>9</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pass_confirm">
+       <property name="minimumSize">
+        <size>
+         <width>24</width>
+         <height>24</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>25</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="../res/res.qrc">
+         <normaloff>:/icons/tick.png</normaloff>:/icons/tick.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pass_cancel">
+       <property name="minimumSize">
+        <size>
+         <width>24</width>
+         <height>24</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>25</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="../res/res.qrc">
+         <normaloff>:/icons/cross.png</normaloff>:/icons/cross.png</iconset>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QPushButton" name="close_button">
+     <property name="maximumSize">
+      <size>
+       <width>1000</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>Cerrar</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../res/res.qrc"/>
+ </resources>
+ <connections/>
+</ui>
